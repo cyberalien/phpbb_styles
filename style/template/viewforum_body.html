@@ -1,5 +1,5 @@
 <!-- INCLUDE overall_header.html -->
-<h2<!-- IF S_FORUM_RULES --> class="header"<!-- ENDIF -->><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></h2>
+<h2 class="header"><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></h2>
 
 <!-- IF MODERATORS --><p><strong><!-- IF S_SINGLE_MODERATOR -->{L_MODERATOR}<!-- ELSE -->{L_MODERATORS}<!-- ENDIF -->:</strong> {MODERATORS}</p><!-- ENDIF -->
 
@@ -82,7 +82,7 @@
 
 		<form action="{S_LOGIN_ACTION}" method="post">
 
-		<div class="panel">
+		<div class="panel panel-outer">{$STYLE_PANEL_START}
 			<div class="inner"><span class="corners-top"><span></span></span>
 
 			<div class="content">
@@ -108,7 +108,7 @@
 			</div>
 
 			<span class="corners-bottom"><span></span></span></div>
-		</div>
+		{$STYLE_PANEL_END}</div>
 
 		</form>
 
@@ -140,7 +140,7 @@
 		<ul class="topiclist topics">
 	<!-- ENDIF -->
 
-		<li class="row<!-- IF topicrow.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF --><!-- IF topicrow.S_POST_GLOBAL --> global-announce<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> announce<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> sticky<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> reported<!-- ENDIF --><!-- IF topicrow.S_UNREAD_TOPIC --> unread<!-- ENDIF -->">
+		<li class="row row-outer<!-- IF topicrow.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF --><!-- IF topicrow.S_POST_GLOBAL --> global-announce<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> announce<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> sticky<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> reported<!-- ENDIF --><!-- IF topicrow.S_UNREAD_TOPIC --> unread<!-- ENDIF -->">{$STYLE_ROW_START}
 			<dl class="icon" style="background-image: url({topicrow.TOPIC_FOLDER_IMG_SRC}); background-repeat: no-repeat;">
 				<dt<!-- IF topicrow.TOPIC_ICON_IMG and S_TOPIC_ICONS --> style="background-image: url({T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF --> title="{topicrow.TOPIC_FOLDER_IMG_ALT}"><!-- IF topicrow.S_UNREAD_TOPIC --><a href="{topicrow.U_NEWEST_POST}">{NEWEST_POST_IMG}</a> <!-- ENDIF --><a href="{topicrow.U_VIEW_TOPIC}" class="topictitle">{topicrow.TOPIC_TITLE}</a>
 					<!-- IF topicrow.S_TOPIC_UNAPPROVED or topicrow.S_POSTS_UNAPPROVED --><a href="{topicrow.U_MCP_QUEUE}" class="unapproved">{topicrow.UNAPPROVED_IMG}</a> <!-- ENDIF -->
@@ -155,7 +155,7 @@
 					<!-- IF not S_IS_BOT --><a href="{topicrow.U_LAST_POST}">{LAST_POST_IMG}</a> <!-- ENDIF --><br />{topicrow.LAST_POST_TIME}</span>
 				</dd>
 			</dl>
-		</li>
+		{$STYLE_ROW_END}</li>
 
 	<!-- IF topicrow.S_LAST_ROW -->
 			</ul>
@@ -165,11 +165,11 @@
 
 <!-- BEGINELSE -->
 	<!-- IF S_IS_POSTABLE -->
-	<div class="panel">
+	<div class="panel panel-outer">{$STYLE_PANEL_START}
 		<div class="inner"><span class="corners-top"><span></span></span>
 		<strong>{L_NO_TOPICS}</strong>
 		<span class="corners-bottom"><span></span></span></div>
-	</div>
+	{$STYLE_PANEL_END}</div>
 	<!-- ENDIF -->
 <!-- END topicrow -->
 

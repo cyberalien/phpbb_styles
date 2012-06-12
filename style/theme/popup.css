@@ -4,6 +4,12 @@
 .phpbb .popup-trigger {
 	position: relative;
 }
+.phpbb .top-links .popup-trigger {
+	display: inline-block;
+}
+.phpbb .top-links .popup .popup-trigger {
+	display: block;
+}
 
 .phpbb .popup {
 	display: none;
@@ -11,95 +17,139 @@
 	left: 0;
 	top: 27px;
 	z-index: 10;
-	padding: 4px 5px 6px;
+	padding: 5px;
 	margin: 0;
 	border: 1px solid transparent;
-	border-radius: 5px;
 	min-width: 150px;
 	white-space: nowrap;
 	text-align: left;
 	font-size: 12px;
-	line-height: 1em;
+	line-height: 1.5em;
 	font-family: Verdana;
 }
+.phpbb .popup-list {
+	line-height: 1em;
+	padding: 0;
+}
+
 .ie7 .phpbb .popup {
 	top: 24px;
 }
-.phpbb .menu.left .popup {
-	left: 5px;
+.phpbb .menu .popup {
+	left: 4px;
 }
-.phpbb .menu.left li:first-child .popup {
-	left: 0;
+.phpbb .top-links .popup {
+	top: 28px;
+}
+.phpbb .header-login .popup {
+	top: 18px;
+	left: auto;
+	right: 0;
+}
+.ie7 .phpbb .header-login .popup {
+	top: 20px;
+}
+.phpbb .popup-list .popup {
+	top: 0;
+	left: 198px;
 }
 .phpbb .popup-up .popup {
 	top: auto;
 	bottom: 0;
-}
-.phpbb .popup-list {
-	padding: 2px 5px 4px;
 }
 .phpbb .right .popup {
 	left: auto;
 	right: 0;
 }
 
-.phpbb .popup-trigger:hover .popup, .phpbb .popup.active {
+.phpbb .popup-trigger:hover > .popup, .phpbb .popup.active {
 	display: block;
-}
-
-.phpbb .popup:before {
-	content: '';
-	display: block;
-	height: 2px;
-	position: relative;
-	top: -7px;
-	left: -6px;
-}
-.phpbb .popup-list:before {
-	top: -5px;
-}
-.phpbb .right .popup:before {
-	left: auto;
-	right: -6px;
 }
 
 .phpbb .popup p {
-	padding: 2px 0;
+	padding: 3px 0;
+	line-height: 1.3em;
+	font-family: Helvetica, Arial;
+	font-size: 13px;
+}
+.phpbb .popup p.title {
+	font-size: 14px;
+	padding: 5px 0;
+	font-family: Verdana;
+}
+.phpbb .popup p.title:first-child, .phpbb .popup p:first-child { 
+	padding-top: 0;
+}
+.phpbb .popup p:last-child { 
+	padding-bottom: 0;
+}
+
+/*
+	Login form
+*/
+.phpbb #phpbb-header-login dd {
+	text-align: right;
+}
+.phpbb #phpbb-header-login p.right {
+	padding-right: 4px;
+	padding-bottom: 4px;
 }
 
 /*
 	Links
 */
 .phpbb .popup-list li {
-	padding: 1px 0;
+	padding: 0;
 }
+
 .ie7 .phpbb .popup-list a {
 	width: 100%;
 }
 
-.phpbb .popup-list li > a:first-child, .phpbb .popup-list li.nolink {
-	display: block;
-	padding: 3px 10px 4px 5px;
+
+.phpbb li.popup-link {
 	border: 1px solid transparent;
-	border-radius: 6px;
+	border-width: 0 1px;
+	padding: 0;
+	background: transparent none 0 0 repeat-x;
+}
+.phpbb li.popup-link:first-child {
+	border-top-width: 1px;
+}
+.phpbb li.poup-link:last-child {
+	border-bottom-width: 1px;
+}
+.phpbb .popup.popup-list li.popup-link:hover, .phpbb .show-levels li.level-root, .phpbb .popup-list li.row-new {
+	background-position: 0 -27px !important;
+}
+
+.phpbb li.popup-link > a, .phpbb li.popup-link > span {
+	display: block;
+	line-height: 1em;
+	padding: 7px 20px 0 8px;
+	height: 20px;
 	text-decoration: none !important;
-	max-width: 200px;
+	width: 172px;
+	min-width: 172px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.phpbb .popup-list li.nolink {
-	margin: 1px 0;
+.phpbb li.popup-link.popup-trigger > a {
+	background: transparent none 100% 0 no-repeat;
+}
+.phpbb li.popup-link.popup-trigger:hover > a {
+	background-position: 100% -60px;
+}
+.phpbb li.poup-link:last-child > a, .phpbb li.poup-link:last-child > span {
+	height: 19px;
 }
 
-.phpbb .popup-list ol {
+.phpbb .popup-list > ol {
 	display: table-row;
 }
-.phpbb .popup-list ol > li {
+.phpbb .popup-list > ol > li {
 	display: table-cell;
-	padding-right: 4px;
-}
-.phpbb .popup-list ol > li:last-child {
-	padding-right: 0;
+	padding: 0;
 }
 
 /*

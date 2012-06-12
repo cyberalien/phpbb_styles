@@ -34,6 +34,46 @@ $(document).ready(function()
 	if(phpBB.ie) rootElement.addClass('ie' + phpBB.ie);
 	rootElement.addClass(phpBB.ie && phpBB.ie < 8 ? 'no-tables' : 'display-table');
 	rootElement.addClass(phpBB.ie && phpBB.ie < 9 ? 'no-rgba' : 'has-rgba');
+	if(!phpBB.ie)
+	{
+		var browser = (navigator.userAgent) ? navigator.userAgent : '';
+		if(browser.indexOf('Opera') >= 0)
+		{
+			rootElement.addClass('browser-opera');
+		}
+		else if(browser.indexOf('WebKit') > 0)
+		{
+			rootElement.addClass('browser-webkit');
+		}
+		else if(browser.indexOf('Gecko') > 0)
+		{
+			rootElement.addClass('browser-mozilla');
+		}
+	}
+	
+	/*
+		IE7 stuff
+	*/
+	if(phpBB.ie && phpBB.ie < 8)
+	{
+		$('div.layout-wrapper').each(function(i)
+		{
+			$(this).children().each(function(j)
+			{
+				$(this).wrapInner('<td class="' + $(this).attr('class') + ((j == 0) ? ' first' : '') + '" />').children().unwrap();
+			});
+			$(this).wrapInner('<table class="layout-wrapper" cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table>').children().unwrap();
+		});
+	}
+	$('.phpbb .layout-wrapper > div:last, .phpbb .layout-wrapper > tbody > tr > td:last').css('border-right-width', 0);
+	
+	/*
+		Navigation
+	*/
+	$('p.autologin').each(function()
+	{
+		$(this).attr('title', $(this).text());
+	});
 
 	/*
 		Jump box
@@ -94,7 +134,7 @@ $(document).ready(function()
 				if(title.length)
 				{
 					$('input[type="submit"]', this).remove();
-					$('select', this).replaceWith('<div class="jumpbox popup-trigger popup-up right"><a class="button" href="javascript:void(0);">' + title + '</a><div class="popup popup-list">' + text + '</div></div>');
+					$('select', this).replaceWith('<div class="jumpbox popup-trigger popup-up right"><a class="button" href="javascript:void(0);"><span></span>' + title + '</a><div class="popup popup-list">' + text + '</div></div>');
 					$(this).addClass('jumpbox-js');
 				}
 			});
@@ -200,6 +240,7 @@ $(document).ready(function()
 		Headers
 	*/
 	$('.phpbb .page-content > h2, .phpbb #cp-main > h2').addClass('header');
+	$('.phpbb h2.header').not('.header-outer, .not-header').addClass('header-outer').wrapInner('<div class="header-left"><div class="header-right"><div class="header-inner"></div></div></div>');
 
 	/*
 		Tables
@@ -209,8 +250,13 @@ $(document).ready(function()
 	/*
 		Inner blocks
 	*/
-	$('.post > div, .panel > div').addClass('inner');
-	$('.phpbb div.panel div.post, .phpbb div.panel ul.topiclist, .phpbb div.panel table.table1, .phpbb div.panel dl.panel').parents('.phpbb div.panel').not('.phpbb #confirm .panel').addClass('panel-wrapper');
+	$('.phpbb div.navbar').not('.panel').addClass('panel').wrapInner('<div class="inner"></div>');
+	$('.phpbb ul.navbar').wrap('<div class="panel navbar"><div class="inner"></div></div>');
+	
+	$('.phpbb .post > div').not('.post-outer > div, .post-wrap').addClass('post-content-wrap');
+	$('.phpbb .panel > div').not('.panel-outer > div').addClass('inner');
+	
+	$('.phpbb div.panel div.post, .phpbb div.panel ul.topiclist, .phpbb div.panel table.table1, .phpbb div.panel dl.panel').parents('.phpbb div.panel').not('.phpbb #confirm .panel').addClass('panel-wrapper').find('.inner:first').addClass('inner-first');
 	$('.phpbb #confirm .panel .panel').removeClass('panel');
 	$('.phpbb #cp-main .panel').each(function()
 	{
@@ -221,13 +267,67 @@ $(document).ready(function()
 			$(this).hide();
 		}
 	});
+
+	$('.phpbb .topiclist > li.row').not('.row-outer').addClass('row-outer').wrapInner('<div class="row-wrap row-left"><div class="row-wrap row-right"><div class="row-inner"></div></div></div>').find('.row-wrap.row-left').before('<div class="row-wrap row-top"><span class="row-left"></span><span class="row-right"></span></div>').after('<div class="row-wrap row-bottom"><span class="row-left"></span><span class="row-right"></span></div>');
 	
+	$('.phpbb .panel, .phpbb .rules, .phpbb .cp-mini').not('.panel-outer, .rules').addClass('panel-outer').wrapInner('<div class="panel-wrap row-left"><div class="panel-wrap row-right"><div class="panel-inner"></div></div></div>').find('.panel-wrap.row-left').before('<div class="panel-wrap row-top"><span class="row-left"></span><span class="row-right"></span></div>').after('<div class="panel-wrap row-bottom"><span class="row-left"></span><span class="row-right"></span></div>');
+
+	$('.phpbb .post').not('.post-outer').addClass('post-outer').wrapInner('<div class="post-wrap row-left"><div class="post-wrap row-right"><div class="row-inner"></div></div></div>').find('.post-wrap.row-left').before('<div class="post-wrap row-top"><span class="row-left"></span><span class="row-right"></span></div>').after('<div class="post-wrap row-bottom"><span class="row-left"></span><span class="row-right"></span></div>');
+	
+	/*
+		Toggle forums
+	*/
+	phpBB.hiddenForums = phpBB.getCookie('hidden');
+	if(phpBB.hiddenForums == null)
+	{
+		phpBB.hiddenForums = [];
+	}
+	else
+	{
+		phpBB.hiddenForums = phpBB.hiddenForums.split(',');
+	}
+	$('.phpbb ul.topiclist.forums').each(function(i)
+	{
+		var id = $(this).data('id');
+		if(!id) return;
+		$(this).attr('id', 'phpbb-cat-' + id);
+		if($('li.row.unread', this).length > 0)
+		{
+			$('.header', $(this).prev()).addClass('unread');
+		}
+		$(this).prev().click(function() {
+			if($(this).hasClass('over-link')) return;
+			var hidden = $('.header', this).hasClass('inactive');
+			phpBB.setHiddenForum($(this).next().data('id'), !hidden);
+			$(this).next().slideToggle(150);
+			$('.header', this).toggleClass('inactive');
+		}).addClass('expandable').find('a').hover(function() {
+			$(this).parents('ul').toggleClass('over-link');
+		});
+	});
+	for(var i=0; i<phpBB.hiddenForums.length; i++)
+	{
+		$('#phpbb-cat-' + phpBB.hiddenForums[i]).each(function()
+		{
+			$(this).slideToggle(0);
+			$('.header', $(this).prev()).addClass('inactive');
+		});
+	}
+
+	/*
+		Expand menu
+	*/
+	$('.phpbb .menu > li.expandable').click(function()
+	{
+		$(this).toggleClass('collapsed').parent().next().slideToggle(150);
+	});
 	
 	/*
 		Popups
 	*/
 	$('.phpbb .popup input, .phpbb .popup select').focus(function() { $(this).parents('.popup').addClass('active'); }).blur(function() { $(this).parents('.popup').removeClass('active'); });
-	
+	$('.phpbb .popup-list > ul > li, .phpbb .popup-list > ol > li > ul > li').addClass('popup-link');
+
 	/*
 		Inputs
 	*/
@@ -253,10 +353,12 @@ $(document).ready(function()
 	/*
 		Content size
 	*/
-	if($('.phpbb .page-content').length)
+	if($('.phpbb .forum-wrapper').length)
 	{
+		phpBB.lastWidth = 0;
+		phpBB.lastHeight = 0;
 		phpBB.resizeContent();
-		$(window).resize(function() { phpBB.resizeContent(); });
+		$(window).on('resize load', function() { phpBB.resizeContent(); });
 	}
 });
 
@@ -265,15 +367,34 @@ $(document).ready(function()
 */
 phpBB.resizeContent = function()
 {
-	var content = $('.phpbb .page-content'),
+	var content = $('.phpbb .forum-wrapper'),
 		h = content.height(),
 		pageHeight = $('.phpbb').height();
 	if(!pageHeight)
 	{
-		pageHeight = $('.phpbb .content-wrapper').height() + 50;
+		return;
 	}
 	var diff = pageHeight - h;
-	$('.phpbb .page-content').css('min-height', Math.max(780, Math.floor($(window).height() - diff)) + 'px');
+	h = Math.max(400, Math.floor($(window).height() - diff));
+	if(h != phpBB.lastHeight)
+	{
+		if(phpBB.lastHeight == h) return;
+		phpBB.lastHeight = h;
+		$('.phpbb .forum-wrapper').css('min-height', h + 'px');
+	}
+	// Resize posts
+	if(phpBB.ie && phpBB.ie < 8) return;
+	var width = content.width();
+	if(width != phpBB.lastWidth)
+	{
+		phpBB.lastWidth = width;
+		var diff = $('.phpbb .layout-wrapper').width() - $('.phpbb .layout-wrapper > .layout-middle').width();
+		if(diff > 0)
+		{
+			diff = Math.floor(width - diff);
+			$('.phpbb .layout-middle > div').css('max-width', diff + 'px');
+		}
+	}
 };
 
 /*
@@ -304,7 +425,7 @@ phpBB.jumpBoxText = function(list)
 		count ++;
 		var diff = list[i].level - levelDiff;
 		if(diff > 4) diff = 4;
-		text += '<li class="nowrap level-' + diff;
+		text += '<li class="popup-link nowrap level-' + diff;
 		if(diff == 0)
 		{
 			if(lastLevel != 0) text += ' level-root';
@@ -336,7 +457,7 @@ phpBB.jumpBoxText = function(list)
 	{
 		for(var i=count; i<limit; i++)
 		{
-			text += '<li class="empty"></li>';
+			text += '<li class="popup-link empty"></li>';
 		}
 	}
 	text += '</ul>' + (rows ? '</li></ol>' : '');
@@ -357,3 +478,70 @@ phpBB.jumpBox = function(id)
 	$('#' + itemId + ' form').get(0).submit();
 };
 
+phpBB.setCookie = function(name, value) 
+{
+	var argv = arguments;
+	var argc = arguments.length;
+	var expires = (argc > 2) ? argv[2] : null;
+	var path = (argc > 3) ? argv[3] : null;
+	var domain = (argc > 4) ? argv[4] : null;
+	var secure = (argc > 5) ? argv[5] : false;
+	document.cookie = name + "=" + escape(value) +
+		((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
+		((path == null) ? "" : ("; path=" + path)) +
+		((domain == null) ? "" : ("; domain=" + domain)) +
+		((secure == true) ? "; secure" : "");
+};
+
+phpBB.getCookieVal = function(offset) 
+{
+	var endstr = document.cookie.indexOf(";",offset);
+	if (endstr == -1)
+	{
+		endstr = document.cookie.length;
+	}
+	return unescape(document.cookie.substring(offset, endstr));
+};
+
+phpBB.getCookie = function(name) 
+{
+	var arg = name + "=";
+	var alen = arg.length;
+	var clen = document.cookie.length;
+	var i = 0;
+	while (i < clen) 
+	{
+		var j = i + alen;
+		if (document.cookie.substring(i, j) == arg)
+			return phpBB.getCookieVal(j);
+		i = document.cookie.indexOf(" ", i) + 1;
+		if (i == 0)
+			break;
+	} 
+	return null;
+};
+
+phpBB.setHiddenForum = function(id, hide)
+{
+	function updateCookie()
+	{
+		var str = phpBB.hiddenForums.join(','),
+			d = new Date();
+		d.setTime(d.getTime() + 30*24*60*60*1000);
+		phpBB.setCookie('hidden', str, d);
+	}
+	for(var i=0; i<phpBB.hiddenForums.length; i++)
+	{
+		if(phpBB.hiddenForums[i] == id)
+		{
+			// found it
+			if(hide) return;
+			phpBB.hiddenForums.splice(i, 1);
+			updateCookie();
+			return;
+		}
+	}
+	if(!hide) return;
+	phpBB.hiddenForums.push(id);
+	updateCookie();
+};

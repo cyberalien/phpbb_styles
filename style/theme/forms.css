@@ -2,7 +2,7 @@
 	Forms
 */
 
-.phpbb input[type="text"], .phpbb input[type="password"], .phpbb input[type="email"], .phpbb textarea, .phpbb select, .phpbb input[type="submit"], .phpbb .button1, .phpbb .button2, .phpbb .buttons a, .phpbb a.button {
+.phpbb input[type="text"], .phpbb input[type="password"], .phpbb input[type="email"], .phpbb textarea, .phpbb select, .phpbb input[type="submit"], .phpbb .button1, .phpbb .button2 {
 	margin: 0;
 	padding: 0;
 	font-family: Verdana;
@@ -19,7 +19,7 @@
 	-webkit-appearance: none;
 }
 
-.phpbb a.button1, .phpbb a.button2, .phpbb .buttons a, .phpbb a.button {
+.phpbb a.button1, .phpbb a.button2 {
 	display: inline-block;
 	text-decoration: none;
 }
@@ -28,13 +28,16 @@
 }
 
 .phpbb input[type="text"], .phpbb input[type="password"], .phpbb input[type="email"], .phpbb textarea, .phpbb select {
+	padding: 2px;
+}
+.phpbb.browser-mozilla input[type="text"], .phpbb.browser-mozilla input[type="password"], .phpbb.browser-mozilla input[type="email"] {
 	padding: 1px 2px 2px;
 }
 .phpbb input[type="text"]:invalid, .phpbb input[type="password"]:invalid, .phpbb input[type="email"]:invalid, .phpbb textarea:invalid {
 	box-shadow: none;
 }
 
-.phpbb input[type="submit"], .phpbb .button1, .phpbb .button2, .phpbb .buttons a, .phpbb a.button {
+.phpbb input[type="submit"], .phpbb .button1, .phpbb .button2 {
 	line-height: 1.4em;
 	padding: 2px 8px 3px;
 	cursor: pointer;
@@ -46,19 +49,20 @@
 	padding-bottom: 1px;
 	margin-top: 0;
 }
-.phpbb a.button1, .phpbb a.button2, .phpbb .buttons a, .phpbb a.button {
+
+.phpbb a.button1, .phpbb a.button2 {
 	line-height: 1em;
 	padding: 4px 10px 0;
 	height: 19px;
 }
-.oldie .phpbb a.button1, .oldie .phpbb a.button2, .oldie .phpbb .buttons a, .oldie .phpbb a.button {
+.oldie .phpbb a.button1, .oldie .phpbb a.button2 {
 	padding-top: 5px;
 }
-.ie7 .phpbb a.button1, .ie7 .phpbb a.button2, .ie7 .phpbb .buttons a, .ie7 .phpbb a.button {
+.ie7 .phpbb a.button1, .ie7 .phpbb a.button2 {
 	padding-top: 4px;
 	padding-bottom: 0;
 }
-.ie7 .phpbb .popup a.button1, .ie7 .phpbb .popup a.button2 {
+.ie7 .phpbb .menu a.button1, .ie7 .phpbb .menu a.button2 {
 	position: relative;
 	top: 2px;
 }
@@ -98,37 +102,108 @@
 }
 
 /*
-	Buttons
+	Big post buttons
 */
 .phpbb .buttons a, .phpbb a.button {
-	padding-left: 28px;
-	padding-right: 12px;
+	display: inline-block;
 	position: relative;
+	margin: 0;
+	margin-left: 30px;
+	padding: 4px 12px 0 0;
+	vertical-align: top;
+	height: 26px;
+	font-family: Verdana;
+	font-size: 12px;
+	line-height: 20px;
+	text-decoration: none;
+	outline-style: none;
+	background-position: 100% 0;
+	background-repeat: no-repeat;
+	max-width: 400px;
 }
-.phpbb .buttons a:after, .phpbb a.button:after {
-	content: '';
+.phpbb.browser-webkit .buttons a, .phpbb.browser-webkit a.button {
+	padding-top: 5px;
+	height: 25px;
+}
+
+.phpbb .buttons a span, .phpbb a.button span {
 	display: block;
 	position: absolute;
-	left: 5px;
 	top: 0;
 	bottom: 0;
-	width: 20px;
-	background: transparent none 0 50% no-repeat;
-	opacity: 0.9;
+	left: -30px;
+	width: 30px;
+	background-position: 0 -30px;
+	background-repeat: no-repeat;
 }
-.phpbb .buttons a:hover:after, .phpbb a.button:after:hover {
-	opacity: 1;
+.ie7 .phpbb .topic-actions .buttons, .ie7 .phpbb .panel .buttons, .ie7 .phpbb .popup .buttons {
+	position: relative;
+	left: 30px;
 }
-.phpbb .buttons .newpm-icon a:after {
-	background-position: -20px 50%;
+
+.phpbb .buttons .reply-icon a span, .phpbb .buttons .pmreply-icon a span, .phpbb .buttons .locked-icon a span {
+	background-position: -30px -30px;
 }
-.phpbb .buttons .post-icon a:after {
-	background-position: -40px 50%;
-	opacity: 1;
+.phpbb .buttons .newpm-icon a span {
+	background-position: -60px -30px;
 }
-.phpbb .jumpbox a.button {
-	padding-left: 26px;
+.phpbb .buttons .post-icon a span {
+	background-position: -90px -30px;
 }
-.phpbb .jumpbox a.button:after {
-	background-position: -60px 50%;
+.phpbb #qr_showeditor_div a span, .phpbb .jumpbox a.button span {
+	background-position: -120px -30px;
+}
+.phpbb .buttons a.icon-login span {
+	background-position: -150px -30px;
+}
+.phpbb .buttons a.icon-register span, .phpbb .buttons .forwardpm-icon a span {
+	background-position: -180px -30px;
+}
+
+/*
+	Menu forms
+*/
+.phpbb li.menu-form input.inputbox {
+	width: 156px;
+	border-radius: 6px;
+}
+.phpbb li.menu-form input.inputbox.search, .phpbb li.menu-form input.inputbox.login, .phpbb li.menu-form input.inputbox.password {
+	padding-left: 20px;
+	width: 172px;
+	background-position: 4px 45%;
+	background-repeat: no-repeat;
+}
+.phpbb li.menu-form input.inputbox.search {
+	width: 140px;
+}
+.phpbb li.menu-form input.button-icon {
+	width: 0;
+	height: 0;
+	padding: 24px 0 0 26px;
+	overflow: hidden;
+	font-size: 0;
+	float: right;
+	border-width: 0;
+	border-radius: 0;
+	background: transparent none 0 -60px no-repeat;
+}
+.ie7 .phpbb li.menu-form input.button-icon {
+	width: 26px;
+	height: 24px;
+	padding-top: 0;
+}
+.phpbb li.menu-form label {
+	display: block;
+	font-size: 11px;
+	max-width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.ie7 .phpbb li.menu-form label {
+	white-space: normal;
+}
+.phpbb li.menu-form .buttons {
+	float: none;
+	text-align: right;
 }

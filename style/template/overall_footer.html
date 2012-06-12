@@ -1,5 +1,6 @@
 <!-- IF not S_IS_BOT -->
-<div class="navbar">
+<div class="navbar panel navbar-footer panel-outer">{$STYLE_PANEL_START}
+	<div class="inner">
 	<div class="left">
 		<!-- IF SCRIPT_NAME == 'index' && U_MARK_FORUMS -->
 			<!-- DEFINE $S_FOOTER_NAV = 1 -->
@@ -36,13 +37,19 @@
 			<!-- ENDIF -->
 		</div>
 	<!-- ENDIF -->
-</div>
+	</div>
+{$STYLE_PANEL_END}</div>
 <!-- ENDIF -->
 
 	</div><!-- content -->
-</div><!-- wrap-content -->
+	
+	<!-- INCLUDE _sidebar_right.html -->
+	
+</div><!-- layout-wrapper -->
+</div><!-- forum-wrapper -->
 
-<div class="footer"><div class="inner"><div>
+
+<div class="footer">
 	<!-- IF TRANSLATION_INFO or DEBUG_OUTPUT -->
 	<p class="left">
 		<!-- IF TRANSLATION_INFO -->{TRANSLATION_INFO}<br /><!-- ENDIF -->
@@ -57,7 +64,11 @@
 		<a href="http://www.artodia.com/" class="arty" title="phpBB style by Arty">phpBB style by Arty</a>
 	</p>
 	<div class="clear"><!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF --></div>
-</div></div></div>
+</div>
+
+
+</div><!-- layout-outer -->
+</div><!-- body-wrapper -->
 
 <!-- INCLUDE scripts_footer.html -->
 

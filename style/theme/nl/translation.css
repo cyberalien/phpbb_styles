@@ -1,0 +1,13 @@
+/*
+	Dutch translation for Helion style
+*/
+
+
+/*
+	Edit button
+*/
+.phpbb .profile-icons .edit-icon a {
+	background-position: 0 0;
+	background-image: url("button_edit.png");
+	width: 71px;
+}

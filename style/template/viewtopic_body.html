@@ -58,7 +58,7 @@
 <!-- IF S_HAS_POLL -->
 	<form method="post" action="{S_POLL_ACTION}">
 
-	<div class="panel">
+	<div class="panel panel-outer">{$STYLE_PANEL_START}
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="content">
@@ -101,7 +101,7 @@
 		<span class="corners-bottom"><span></span></span></div>
 		{S_FORM_TOKEN}
 		{S_HIDDEN_FIELDS}
-	</div>
+	{$STYLE_PANEL_END}</div>
 
 
 	</form>
@@ -109,8 +109,8 @@
 
 <!-- BEGIN postrow -->
 	<!-- IF postrow.S_FIRST_UNREAD --><a id="unread"></a><!-- ENDIF -->
-	<div id="p{postrow.POST_ID}" class="post <!-- IF postrow.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF --><!-- IF postrow.S_UNREAD_POST --> unreadpost<!-- ENDIF --><!-- IF postrow.S_POST_REPORTED --> reported<!-- ENDIF --><!-- IF postrow.S_ONLINE and not postrow.S_IGNORE_POST --> online<!-- ENDIF -->">
-		<div class="inner"><span class="corners-top"><span></span></span>
+	<div id="p{postrow.POST_ID}" class="post post-outer <!-- IF postrow.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF --><!-- IF postrow.S_UNREAD_POST --> unreadpost<!-- ENDIF --><!-- IF postrow.S_POST_REPORTED --> reported<!-- ENDIF --><!-- IF postrow.S_ONLINE and not postrow.S_IGNORE_POST --> online<!-- ENDIF -->">{$STYLE_POST_START}
+		<div class="inner post-content-wrap"><span class="corners-top"><span></span></span>
 
 		<!-- IF not postrow.S_IGNORE_POST -->
 		<div class="profile">
@@ -120,15 +120,15 @@
 				<a href="{postrow.U_POST_AUTHOR}">{postrow.POST_AUTHOR_FULL}</a>
 				<div class="popup popup-list">
 					<ul>
-						<li><a href="{postrow.U_PROFILE}">{L_READ_PROFILE}</a></li>
-						<!-- IF postrow.U_PM --><li class="pm-icon"><a href="{postrow.U_PM}" title="{L_PRIVATE_MESSAGE}"><span>{L_PRIVATE_MESSAGE}</span></a></li><!-- ENDIF -->
-						<!-- IF postrow.U_EMAIL --><li class="email-icon"><a href="{postrow.U_EMAIL}" title="{L_SEND_EMAIL_USER} {postrow.POST_AUTHOR}"><span>{L_SEND_EMAIL_USER} {postrow.POST_AUTHOR}</span></a></li><!-- ENDIF -->
-						<!-- IF postrow.U_WWW --><li class="web-icon"><a href="{postrow.U_WWW}" title="{L_VISIT_WEBSITE}: {postrow.U_WWW}"><span>{L_WEBSITE}</span></a></li><!-- ENDIF -->
-						<!-- IF postrow.U_MSN --><li class="msnm-icon"><a href="{postrow.U_MSN}" onclick="popup(this.href, 550, 320); return false;" title="{L_MSNM}"><span>{L_MSNM}</span></a></li><!-- ENDIF -->
-						<!-- IF postrow.U_ICQ --><li class="icq-icon"><a href="{postrow.U_ICQ}" onclick="popup(this.href, 550, 320); return false;" title="{L_ICQ}"><span>{L_ICQ}</span></a></li><!-- ENDIF -->
-						<!-- IF postrow.U_YIM --><li class="yahoo-icon"><a href="{postrow.U_YIM}" onclick="popup(this.href, 780, 550); return false;" title="{L_YIM}"><span>{L_YIM}</span></a></li><!-- ENDIF -->
-						<!-- IF postrow.U_AIM --><li class="aim-icon"><a href="{postrow.U_AIM}" onclick="popup(this.href, 550, 320); return false;" title="{L_AIM}"><span>{L_AIM}</span></a></li><!-- ENDIF -->
-						<!-- IF postrow.U_JABBER --><li class="jabber-icon"><a href="{postrow.U_JABBER}" onclick="popup(this.href, 550, 320); return false;" title="{L_JABBER}"><span>{L_JABBER}</span></a></li><!-- ENDIF -->
+						<li class="popup-link"><a href="{postrow.U_PROFILE}">{L_READ_PROFILE}</a></li>
+						<!-- IF postrow.U_PM --><li class="popup-link pm-icon"><a href="{postrow.U_PM}" title="{L_PRIVATE_MESSAGE}"><span>{L_PRIVATE_MESSAGE}</span></a></li><!-- ENDIF -->
+						<!-- IF postrow.U_EMAIL --><li class="popup-link email-icon"><a href="{postrow.U_EMAIL}" title="{L_SEND_EMAIL_USER} {postrow.POST_AUTHOR}"><span>{L_SEND_EMAIL_USER} {postrow.POST_AUTHOR}</span></a></li><!-- ENDIF -->
+						<!-- IF postrow.U_WWW --><li class="popup-link web-icon"><a href="{postrow.U_WWW}" title="{L_VISIT_WEBSITE}: {postrow.U_WWW}"><span>{L_WEBSITE}</span></a></li><!-- ENDIF -->
+						<!-- IF postrow.U_MSN --><li class="popup-link msnm-icon"><a href="{postrow.U_MSN}" onclick="popup(this.href, 550, 320); return false;" title="{L_MSNM}"><span>{L_MSNM}</span></a></li><!-- ENDIF -->
+						<!-- IF postrow.U_ICQ --><li class="popup-link icq-icon"><a href="{postrow.U_ICQ}" onclick="popup(this.href, 550, 320); return false;" title="{L_ICQ}"><span>{L_ICQ}</span></a></li><!-- ENDIF -->
+						<!-- IF postrow.U_YIM --><li class="popup-link yahoo-icon"><a href="{postrow.U_YIM}" onclick="popup(this.href, 780, 550); return false;" title="{L_YIM}"><span>{L_YIM}</span></a></li><!-- ENDIF -->
+						<!-- IF postrow.U_AIM --><li class="popup-link aim-icon"><a href="{postrow.U_AIM}" onclick="popup(this.href, 550, 320); return false;" title="{L_AIM}"><span>{L_AIM}</span></a></li><!-- ENDIF -->
+						<!-- IF postrow.U_JABBER --><li class="popup-link jabber-icon"><a href="{postrow.U_JABBER}" onclick="popup(this.href, 550, 320); return false;" title="{L_JABBER}"><span>{L_JABBER}</span></a></li><!-- ENDIF -->
 					</ul>
 				</div>
 			</dt>
@@ -138,14 +138,12 @@
 
 			<!-- IF postrow.RANK_TITLE or postrow.RANK_IMG --><dd class="poster-rank"><!-- IF postrow.RANK_IMG -->{postrow.RANK_IMG}<!-- ELSE -->{postrow.RANK_TITLE}<!-- ENDIF --></dd><!-- ENDIF -->
 
-			<!-- IF postrow.ONLINE_IMG --><dd class="poster-online">{postrow.ONLINE_IMG}</dd><!-- ENDIF -->
-
 			<!-- IF postrow.POSTER_AVATAR -->
 			<dd class="poster-avatar">
 				<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}">{postrow.POSTER_AVATAR}</a><!-- ELSE -->{postrow.POSTER_AVATAR}<!-- ENDIF -->
 			</dd>
 			<!-- ELSE -->
-			<dd class="poster-avatar empty"></dd>
+			<dd class="poster-avatar empty"><span></span></dd>
 			<!-- ENDIF -->
 
 		<!-- IF postrow.POSTER_POSTS != '' --><dd><strong>{L_POSTS}:</strong> {postrow.POSTER_POSTS}</dd><!-- ENDIF -->
@@ -221,7 +219,7 @@
 		<div class="back2top"><a href="#wrap" class="top" title="{L_BACK_TO_TOP}">{L_BACK_TO_TOP}</a></div>
 
 		<span class="corners-bottom"><span></span></span></div>
-	</div>
+	{$STYLE_POST_END}</div>
 
 	<hr class="divider" />
 <!-- END postrow -->

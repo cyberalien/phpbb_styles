@@ -30,7 +30,7 @@
 <!-- INCLUDE forumlist_body.html -->
 
 <!-- IF S_DISPLAY_ONLINE_LIST or (S_DISPLAY_BIRTHDAY_LIST and BIRTHDAY_LIST) or NEWEST_USER -->
-<div class="panel stats">
+<div class="panel stats panel-outer">{$STYLE_PANEL_START}
 	<div class="inner">
 		<!-- IF S_DISPLAY_ONLINE_LIST -->
 			<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
@@ -47,7 +47,7 @@
 			<p><!-- IF BIRTHDAY_LIST -->{L_CONGRATULATIONS}: <strong>{BIRTHDAY_LIST}</strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF --></p>
 		<!-- ENDIF -->
 	</div>
-</div>
+{$STYLE_PANEL_END}</div>
 <!-- ENDIF -->
 
 

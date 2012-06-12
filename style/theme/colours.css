@@ -3,12 +3,12 @@
 */
 
 .phpbb h2, .phpbb h3 {
-	color: #1d4d7e;
+	color: #1a4f90;
 	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .phpbb hr {
-	border-top-color: #d0d0d0;
+	border-top-color: #d4d4d4;
 }
 
 
@@ -17,109 +17,103 @@
 	Links
 */
 .phpbb a, .phpbb a:visited { 
-	color: #1d4d7e;
+	color: #1a4f90;
 }
 .phpbb a:hover, .phpbb a:active {
-	color: #af2a2a;
-}
-
-.phpbb a.forumtitle, .phpbb a.topictitle {
-	text-shadow: 1px 1px 1px rgba(128, 128, 128, 0.1);
+	color: #bc2a2a;
 }
 
 /*
 	Layout
 */
-body.phpbb, body.simple {
-	background: #f8f8f8;
+body.phpbb {
+	background-color: #e2e2e2;
+	background-image: url("{T_THEME_PATH}/images/layout_top.png");
 }
-
-.phpbb .wrap-top-top {
-	background-color: #1d4d7e;
-	background-image: url("{T_THEME_PATH}/images/pattern.png");
-	border-bottom-color: #224467;
-}
-.phpbb .wrap-top-top div, .phpbb .wrap-top-mid {
-	background-image: url("{T_THEME_PATH}/images/gradient400.png");
-}
-.phpbb .wrap-top-mid {
-	border-top-color: #fff;
-}
-.phpbb .wrap-top-mid .left {
-	background-image: url("{T_THEME_PATH}/images/c_shadow1.png");
-}
-.phpbb .wrap-top-mid .right {
-	background-image: url("{T_THEME_PATH}/images/c_shadow2.png");
+body.simple {
+	background: #f4f4f4;
 }
 
 .phpbb .logo h1 {
 	color: rgba(255, 255, 255, 0.8);
-	text-shadow: 1px 1px 0 rgba(29, 77, 126, 0.4);
+	text-shadow: 1px 1px 0 rgba(26, 79, 144, 0.7);
 }
 .oldie .phpbb .logo h1 {
-	color: #dde4ea;
+	color: #1a4f90;
 }
 
-.phpbb .sitenav {
-	background-image: url("{T_THEME_PATH}/images/header_bg.png");
-}
-.phpbb .sitenav:before, .phpbb .sitenav:after {
-	background-image: url("{T_THEME_PATH}/images/header_sides.png");
-}
-.ie7 .phpbb .sitenav {
-	border-color: #a1afbf;
+.phpbb .body-wrapper {
+	background-image: url("{T_THEME_PATH}/images/top400.png");
 }
 
-.phpbb .sitenav h2 {
-	background-image: url("{T_THEME_PATH}/images/header_arrow.png");
-	color: rgba(255, 255, 255, 0.8);
-	text-shadow: 1px 1px 0 rgba(29, 77, 126, 0.4);
+.phpbb .layout-outer {
+	background-color: #f4f4f4;
+	border-color: #e0e0e0;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
-.oldie .phpbb .sitenav h2 {
-	color: #dde4ea;
+.phpbb .forum-wrapper {
+	border-color: #fafafa;
 }
-
-.phpbb .sitenav .links a, .phpbb .sitenav .links a:before, .phpbb .sitenav .links a:after {
-	background-image: url("{T_THEME_PATH}/images/buttons.png");
-	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-	color: rgba(255, 255, 255, 0.8);
-}
-.oldie .phpbb .sitenav .links a {
-	color: #dde4ea;
-}
-.phpbb .sitenav .links a:hover {
-	color: #fff;
-}
-.ie7 .phpbb .sitenav .links a {
-	border-color: #889cb1;
-}
-
-.phpbb .page-content {
-	background-color: rgba(248, 248, 248, 0.95);
-}
-.oldie .phpbb .page-content {
-	background-color: #f8f8f8;
+.phpbb .layout-wrapper > div, .phpbb table.layout-wrapper > tbody > tr > td {
+	border-left-color: #fafafa;
+	border-right-color: #e0e0e0;
 }
 
 .phpbb .footer {
-	border-top-color: #fff;
-	background-color: #1d4d7e;
-	background-image: url("{T_THEME_PATH}/images/pattern.png");
+	background-color: #2372bb;
+	background-image: url("{T_THEME_PATH}/images/footer.png");
 }
 .phpbb .footer, .phpbb .footer a, .phpbb .footer a:visited {
-	color: #92a8be;
-	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+	color: #d3e3f1;
 }
 .phpbb .footer a:hover {
 	color: #fff;
 }
-.phpbb .footer .inner {
-	border-top-color: #224467;
-	background-image: url("{T_THEME_PATH}/images/gradient400.png");
-}
 
 .phpbb .footer .arty, .phpbb .footer .phpbb-group {
 	background-image: url("{T_THEME_PATH}/images/copyrights.png");
+}
+
+.phpbb .header-login {
+	background-image: url("{T_THEME_PATH}/images/headermenu.png");
+	background-color: #2372bb;
+	color: #89b3db;
+}
+.phpbb .header-login:hover {
+	background-color: #b01414;
+	color: #db8a8a;
+}
+.phpbb .header-login .popup {
+	color: #000;
+}
+
+.phpbb a.header-menu.menu-login > span, .phpbb a.header-menu.menu-register > span {
+	background-image: url("{T_THEME_PATH}/images/header_login.png");
+}
+
+/*
+	Boxes
+*/
+.phpbb .topiclist > li.row-outer, .phpbb .panel-outer, .phpbb .post-outer {
+	background-image: url("{T_THEME_PATH}/images/topwhite.png");
+}
+
+.phpbb .row-wrap.row-top, .phpbb .row-wrap.row-bottom,
+.phpbb .panel-wrap.row-top, .phpbb .panel-wrap.row-bottom,
+.phpbb .post-wrap.row-top, .phpbb .post-wrap.row-bottom {
+	background-image: url("{T_THEME_PATH}/images/row_tb.png");
+}
+.phpbb .row-wrap span.row-left, .phpbb .panel-wrap span.row-left, .phpbb .post-wrap span.row-left {
+	background-image: url("{T_THEME_PATH}/images/row_cl.png");
+}
+.phpbb .row-wrap span.row-right, .phpbb .panel-wrap span.row-right, .phpbb .post-wrap span.row-right {
+	background-image: url("{T_THEME_PATH}/images/row_cr.png");
+}
+.phpbb .row-wrap.row-left, .phpbb .panel-wrap.row-left, .phpbb .post-wrap.row-left {
+	background-image: url("{T_THEME_PATH}/images/row_l.png");
+}
+.phpbb .row-wrap.row-right, .phpbb .panel-wrap.row-right, .phpbb .post-wrap.row-right {
+	background-image: url("{T_THEME_PATH}/images/row_r.png");
 }
 
 /*
@@ -134,58 +128,137 @@ body.phpbb, body.simple {
 	color: #808080;
 }
 
-.phpbb .menu > li > a, .phpbb .menu > li > a:before, .phpbb .menu > li > a:after {
-	background-image: url("{T_THEME_PATH}/images/menu.png");
-	color: #1d4d7e;
+.phpbb .menu li.menu-item, .phpbb .menu li.menu-section {
+	background-image: url("{T_THEME_PATH}/images/menu_left.png");
 }
-.phpbb .menu > li.active > a, .phpbb .menu > li:hover > a, .phpbb .menu > li:hover > a {
-	color: #fff;
+.phpbb .menu li.menu-item a, .phpbb .menu li.menu-section a, .phpbb .menu li.menu-section p,
+.phpbb li.menu-form input.button-icon {
+	background-image: url("{T_THEME_PATH}/images/menu_right.png");
 }
 
-.ie7 .phpbb .menu > li > a {
-	border-color: #9caec0;
+.phpbb .menu li.menu-item {
+	background-color: #ccc;
 }
-.ie7 .phpbb .menu > li.active > a {
-	border-color: #af2a2a;
+.phpbb .menu li.menu-item:hover {
+	background-color: #2372bb;
 }
-.ie7 .phpbb .menu > li > a:hover {
-	border-color: #43688e;
+.phpbb .menu li.menu-item.active {
+	background-color: #b01414;
+}
+.phpbb .menu li.menu-section, .phpbb li.menu-form input.button-icon {
+	background-color: #2372bb;
+}
+.phpbb .menu li.menu-section:hover, .phpbb li.menu-form input.button-icon:hover {
+	background-color: #b01414;
+}
+
+.phpbb .menu li.menu-item a {
+	color: #1a4f90;
+}
+.phpbb .menu li.menu-item:hover a {
+	color: #2372bb;
+}
+.phpbb .menu li.menu-item.active a {
+	color: #bc2a2a;
+}
+
+.phpbb .menu li.menu-section p, .phpbb .menu li.menu-section a {
+	color: #fff !important;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.phpbb li.menu-form input.inputbox.search {
+	background-image: url("{T_THEME_PATH}/images/input_search.png");
+}
+.phpbb li.menu-form input.inputbox.login {
+	background-image: url("{T_THEME_PATH}/images/input_user.png");
+}
+.phpbb li.menu-form input.inputbox.password {
+	background-image: url("{T_THEME_PATH}/images/input_pass.png");
 }
 
 /*
 	Navbar
 */
 .phpbb .navbar, .phpbb .linkmcp {
-	border-color: #d0d0d0;
+	border-color: #d4d4d4;
 	background-color: #f8f8f8;
-	color: #8aa2bb;
+	background-image: url("{T_THEME_PATH}/images/white50.png");
+	color: #aaa;
+}
+
+/*
+	Header menu
+*/
+.phpbb .top-links .top-link, .phpbb .top-links .top-link > span {
+	background-image: url("{T_THEME_PATH}/images/topmenu.png");
+}
+.phpbb .top-links .top-link {
+	background-color: #2372bb;
+	color: #fff !important;
+}
+.phpbb .top-links .top-link:hover, .phpbb .top-links .popup-trigger:hover .top-link {
+	background-color: #b01414;
 }
 
 /*
 	Popups
 */
 .phpbb .popup {
+	background-color: #f8f8f8;
+	border-color: #e0e0e0;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.phpbb .popup-list {
 	background-color: rgba(248, 248, 248, 0.9);
-	border-color: #9caec0;
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
-.oldie .phpbb .popup {
+.oldie .phpbb .popup-list {
 	background-color: #f8f8f8;
-}
-.phpbb .popup-list li > a:first-child, .phpbb .popup-list li.nolink {
-	border-color: #d0d0d0;
-	background-color: #f8f8f8;
-}
-.phpbb .popup-list li > a:first-child:hover, .phpbb .show-levels li.level-root > a:first-child, .phpbb .popup-list li.row-new > a:first-child:hover {
-	color: #fff;
-	border-color: #43688e;
-	background-color: #43688e;
 }
 
-.phpbb .show-levels li.level-root > a:first-child:hover, .phpbb .popup-list li.row-new > a:first-child {
-	color: #fff;
-	border-color: #af2a2a;
-	background-color: #af2a2a;
+.phpbb .popup.popup-list li.popup-link {
+	border-color: #fbfbfb;
+	border-right-color: #e0e0e0;
+	background-image: url("{T_THEME_PATH}/images/popup_link.png");
+	background-color: #f4f4f4;
+}
+.phpbb .popup-list > ul > li.popup-link, .phpbb li:last-child > ul > li.popup-link {
+	border-right-color: #fbfbfb;
+}
+.phpbb .popup.popup-list li.popup-link:hover {
+	background-color: #f8f8f8;
+}
+.phpbb .popup-link > a {
+	color: #1a4f90;
+}
+
+.phpbb .popup.popup-list li.popup-link:hover, .phpbb .popup.popup-list .show-levels li.level-root {
+	background-color: #2372bb;
+	border-color: #4f8ec9;
+	border-right-color: #1f66a8;
+}
+.phpbb .popup.popup-list .show-levels li.level-root:hover, .phpbb .popup.popup-list ul li.row-new, .phpbb .popup.popup-list ul li.row-new:hover {
+	background-color: #b01414;
+	border-color: #c04343;
+	border-right-color: #9e1212;
+}
+.phpbb .popup-link:hover > a, .phpbb .show-levels li.level-root > a, .phpbb .popup-list li.row-new > a {
+	color: #fff !important;
+}
+
+.phpbb li.popup-link.popup-trigger > a {
+	background-image: url("{T_THEME_PATH}/images/popup_arrows.png");
+}
+
+.phpbb .popup p {
+	color: #808080;
+}
+.phpbb .popup p.title {
+	color: #1a4f90;
+}
+.phpbb .popup p.title:first-child {
+	color: #bc2a2a;
 }
 
 /*
@@ -194,29 +267,29 @@ body.phpbb, body.simple {
 .phpbb input[type="text"], .phpbb input[type="password"], .phpbb input[type="email"], .phpbb textarea, .phpbb select {
 	color: #808080;
 	background-color: #fff;
-	border-color: #d0d0d0;
+	border-color: #d4d4d4;
 }
 .phpbb input[type="text"]:hover, .phpbb input[type="password"]:hover, .phpbb input[type="email"]:hover, .phpbb textarea:hover, .phpbb select:hover {
 	color: #000;
-	border-color: #9caec0;
+	border-color: #a2b1bc;
 }
 .phpbb input[type="text"]:focus, .phpbb input[type="password"]:focus, .phpbb input[type="email"]:focus, .phpbb textarea:focus, .phpbb select:focus {
 	color: #000;
-	border-color: #af2a2a;
+	border-color: #d28484;
 }
 .phpbb input[type="text"]:invalid, .phpbb input[type="password"]:invalid, .phpbb input[type="email"]:invalid, .phpbb textarea:invalid {
-	color: #af2a2a;
+	color: #d28484;
 }
-.phpbb input[type="submit"], .phpbb .button1, .phpbb .button2, .phpbb .buttons a, .phpbb a.button {
+.phpbb input[type="submit"], .phpbb .button1, .phpbb .button2 {
 	color: #fff !important;
-	background-color: #43688e;
+	background-color: #2372bb;
 	background-image: url("{T_THEME_PATH}/images/buttons_bg.png");
-	border-color: #43688e;
+	border-color: #2372bb;
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
 }
-.phpbb input[type="submit"]:hover, .phpbb .button1:hover, .phpbb .button2:hover, .phpbb .buttons a:hover, .phpbb a.button:hover {
-	background-color: #af2a2a;
-	border-color: #af2a2a;
+.phpbb input[type="submit"]:hover, .phpbb .button1:hover, .phpbb .button2:hover, .phpbb .top-links a.top-link:hover, .phpbb .top-links .popup-trigger:hover a.top-link {
+	background-color: #b01414;
+	border-color: #b01414;
 }
 .phpbb #search_keywords {
 	background-image: url("{T_THEME_PATH}/images/search.png");
@@ -227,7 +300,7 @@ body.phpbb, body.simple {
 }
 
 .phpbb p.error, .phpbb dd.error {
-	background-color: #af2a2a;
+	background-color: #b01414;
 }
 .phpbb p.error, .phpbb p.error a, .phpbb dd.error, .phpbb dd.error a {
 	color: #fff !important;
@@ -241,58 +314,92 @@ body.phpbb, body.simple {
 	background-color: #f8f8f8;
 	background-image: url("{T_THEME_PATH}/images/white10.png");
 	color: #808080 !important;
-	border-color: #d0d0d0;
+	border-color: #d4d4d4;
 	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
 }
 .phpbb #format-buttons .button2:hover {
-	background-color: #1d4d7e;
-	border-color: #1d4d7e;
+	background-color: #2372bb;
+	border-color: #2372bb;
 	color: #fff !important;
 	text-shadow: none;
 }
 
-.phpbb .buttons a:after, .phpbb a.button:after {
-	background-image: url("{T_THEME_PATH}/images/button_icons.png");
+.phpbb .buttons a, .phpbb a.button, .phpbb .buttons a span, .phpbb a.button span {
+	background-image: url("{T_THEME_PATH}/images/buttons.png");
+	background-color: #2372bb;
+	color: #fff !important;
 }
-
+.phpbb .buttons a:hover, .phpbb a.button:hover, .phpbb .buttons a:hover span, .phpbb a.button:hover span {
+	background-color: #b01414;
+}
 
 /*
 	Forums list
 */
-.phpbb .topiclist .header, .phpbb h2.header, .oldie .phpbb h2.header, .phpbb table.table1 th, .ie7 .phpbb .topiclist .header dt {
-	background-color: #1d4d7e;
+.phpbb .topiclist .header, .oldie .phpbb .topiclist .header, .phpbb h2.header-outer, .phpbb table.table1 th {
+	background-color: #2372bb;
+	border-color: #2372bb;
 }
-.phpbb h2.header {
-	background-image: url("{T_THEME_PATH}/images/category.png"), url("{T_THEME_PATH}/images/category.png"), url("{T_THEME_PATH}/images/category.png");
+.phpbb .topiclist .header.inactive {
+	background-color: #808080;
+	border-color: #808080;
 }
-.phpbb .topiclist .header, .phpbb .topiclist .header dl, .phpbb .topiclist .header dt, .oldie .phpbb h2.header, .phpbb table.table1 th {
-	background-image: url("{T_THEME_PATH}/images/category.png");
+.phpbb .topiclist .header.inactive.unread, .phpbb .topiclist .header:hover, .oldie .phpbb .topiclist .header:hover, .phpbb h2.header-outer:hover, .phpbb table.table1 th:hover {
+	background-color: #b01414;
+	border-color: #b01414;
 }
-.phpbb .topiclist .header, .phpbb .topiclist .header a, .phpbb .topiclist .header a:visited, .phpbb h2.header, .phpbb h2.header a, .phpbb h2.header a:visited,
-.phpbb table.table1 th, .phpbb table.table1 th a, .phpbb table.table1 th a:visited {
-	color: rgba(255, 255, 255, 0.9);
-	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+.phpbb .topiclist .header {
+	background-image: url("{T_THEME_PATH}/images/topwhite30.png"), url("{T_THEME_PATH}/images/cat_left.png");
 }
-.oldie .phpbb .topiclist .header, .oldie .phpbb .topiclist .header a, .oldie .phpbb .topiclist .header a:visited, .oldie .phpbb h2.header, .oldie .phpbb h2.header a,
-.phpbb .topiclist .header a:hover, .phpbb h2.header a:hover, .oldie .phpbb table.table1 th, .oldie .phpbb table.table1 th a, .oldie .phpbb table.table1 th a:visited .phpbb table.table1 th a:hover {
+.oldie .phpbb .topiclist .header, .phpbb h2.header-outer .header-left {
+	background-image: url("{T_THEME_PATH}/images/cat_left.png");
+}
+.phpbb .topiclist .header dl, .phpbb h2.header-outer .header-right {
+	background-image: url("{T_THEME_PATH}/images/cat_right.png");
+}
+.phpbb .topiclist .header dt, .phpbb h2.header-outer .header-inner {
+	background-image: url("{T_THEME_PATH}/images/cat_bg.png");
+}
+.phpbb table.table1 th {
+	background-image: url("{T_THEME_PATH}/images/white20.png");
+}
+.phpbb h2.header.header-outer {
+	background-image: url("{T_THEME_PATH}/images/topwhite30.png");
+}
+.phpbb .topiclist .header, .phpbb .topiclist .header a, .phpbb .topiclist .header a:visited, .phpbb h2.header-outer, .phpbb h2.header-outer a, .phpbb h2.header-outer a:visited,
+.phpbb table.table1 th, .phpbb table.table1 th a, .phpbb table.table1 th a:visited,
+.phpbb a.header-menu, .phpbb a.header-menu:visited, .phpbb a.header-menu:hover {
+	color: #fff;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.oldie .phpbb .topiclist .header, .oldie .phpbb .topiclist .header a, .oldie .phpbb .topiclist .header a:visited, .oldie .phpbb h2.header-outer, .oldie .phpbb h2.header-outer a,
+.phpbb .topiclist .header a:hover, .phpbb h2.header-outer a:hover, .oldie .phpbb table.table1 th, .oldie .phpbb table.table1 th a, .oldie .phpbb table.table1 th a:visited .phpbb table.table1 th a:hover {
 	color: #fff;
 }
 
-.ie7 .phpbb .topiclist .header, .ie7 .phpbb .topiclist .header dl {
-	background-color: transparent;
-	background-image: none;
+.phpbb .expandable .header:after, .phpbb .menu li.expandable:after {
+	background-image: url("{T_THEME_PATH}/images/cat_expand.png");
 }
-
 
 .phpbb .topiclist > li {
 	background-color: #f8f8f8;
-	border-color: #d0d0d0;
+	border-color: #d4d4d4;
 }
 .phpbb .topiclist > li.row2 {
 	background-color: #fafafa;
 }
 .phpbb .topiclist > li.reported {
-	border-color: #d17e7e;
+	background-color: #f8f4f4;
+	background-image: none;
+}
+.phpbb .topiclist > li:hover {
+	background-color: #fcfcfc;
+}
+.phpbb .topiclist > li.row2:hover {
+	background-color: #fdfdfd;
+}
+.phpbb .topiclist > li.reported:hover {
+	background-color: #f4e9e9;
 }
 .phpbb .topiclist dd {
 	border-color: #e8e8e8;
@@ -306,10 +413,17 @@ body.phpbb, body.simple {
 }
 
 .phpbb a.topictitle, .phpbb a.forumtitle {
-	color: #1d4d7e;
+	color: #1a4f90;
 }
 .phpbb .unread a.topictitle, .phpbb .unread a.forumtitle, .phpbb a.topictitle:hover, .phpbb a.forumtitle:hover, .phpbb a.subforum.unread {
-	color: #af2a2a;
+	color: #bc2a2a;
+}
+
+.phpbb .topiclist .icon dt {
+	color: #808080;
+}
+.phpbb .topiclist .header dt {
+	color: #fff;
 }
 
 .phpbb p.subforums strong, .phpbb p.moderators strong {
@@ -323,16 +437,23 @@ body.phpbb, body.simple {
 	background-color: #f8f8f8;
 	border-color: #d8d8d8;
 }
-.phpbb .panel.stats > .inner {
+.phpbb .panel.stats .inner {
 	background-image: url("{T_THEME_PATH}/images/stats.png");
 }
 
 .phpbb div.rules, .phpbb .postbody .rules {
-	background-color: #eddede;
-	border-color: #c66d6d;
+	background-image: url("{T_THEME_PATH}/images/topwhite30.png");
+	background-color: #f6e7e7;
+	border-color: #eadada;
+}
+.phpbb div.rules:hover, .phpbb .postbody .rules:hover {
+	border-color: #e4c6c6;
+}
+.phpbb .rules .panel-inner {
+	border-color: #f9f2f2;
 }
 .phpbb div.rules span+strong {
-	color: #af2a2a;
+	color: #bc2a2a;
 }
 
 .phpbb .panel-wrapper {
@@ -363,10 +484,9 @@ body.phpbb, body.simple {
 	background-image: url("{T_THEME_PATH}/images/arrow_down.png");
 }
 
-.phpbb .post > .inner > .back2top a {
+.phpbb .post .back2top a {
 	background-image: url("{IMG_ICON_BACK_TOP_SRC}");
 }
-
 
 /*
 	Pagination
@@ -375,11 +495,12 @@ body.phpbb, body.simple {
 	color: #999;
 }
 .phpbb .pagination span a, .phpbb .pagination span strong {
-	background-color: #43688e;
+	background-color: #2372bb;
 	color: #fff;
+	background-image: url("{T_THEME_PATH}/images/pagination.png");
 }
 .phpbb .pagination span strong, .phpbb .pagination span a:hover {
-	background-color: #af2a2a;
+	background-color: #b01414;
 }
 
 /*
@@ -390,11 +511,11 @@ body.phpbb, body.simple {
 }
 .phpbb .polls dd.resultbar > div {
 	color: #fff;
-	background-color: #1d4d7e;
-	background-image: url("{T_THEME_PATH}/images/white20.png");
+	background-color: #2372bb;
+	background-image: url("{T_THEME_PATH}/images/poll.png");
 }
 .phpbb .polls .voted dd.resultbar > div {
-	background-color: #af2a2a;
+	background-color: #b01414;
 }
 
 /*
@@ -407,26 +528,31 @@ body.phpbb, body.simple {
 	font-weight: normal;
 	color: #606060;
 }
-.phpbb .profile .poster-avatar.empty {
+.phpbb .profile .poster-avatar.empty span {
 	background-image: url("{T_THEME_PATH}/images/avatar.png");
 }
-.phpbb .post > .inner > .postbody {
+.phpbb .online .poster-avatar {
+	background-image: url("{T_THEME_PATH}/images/online.png");
+}
+.phpbb .post-content-wrap > .postbody {
 	border-color: #e8e8e8;
 }
 
 .phpbb .profile-icons a {
 	background-image: url("{T_THEME_PATH}/images/buttons_post.png");
+	background-color: #2372bb;
 }
-.phpbb .profile-icons .edit-icon a {
-	background-image: url("{IMG_ICON_POST_EDIT_SRC}");
-}
-.phpbb .profile-icons .quote-icon a {
-	background-image: url("{IMG_ICON_POST_QUOTE_SRC}");
+.phpbb .profile-icons a:hover {
+	background-color: #b01414;
 }
 
-.phpbb .signature, .phpbb .notice {
+.phpbb .signature {
 	color: #444;
 	border-color: #e8e8e8;
+}
+.phpbb .postbody .notice {
+	background-color: #f6e7e7;
+	border-color: #eadada;
 }
 
 .phpbb .posthilit {
@@ -460,19 +586,19 @@ body.phpbb, body.simple {
 	border-color: #d8d8d8;
 }
 .phpbb #tabs li a:hover, .phpbb #minitabs li a:hover {
-	background-color: #43688e;
-	border-color: #43688e;
+	background-color: #2372bb;
+	border-color: #2372bb;
 	color: #fff;
 }
 .phpbb #tabs li.activetab a, .phpbb #tabs #active-subsection a, .phpbb #minitabs li.activetab a {
-	background-color: #43688e;
-	border-color: #43688e;
-	background-image: url("{T_THEME_PATH}/images/category.png");
+	background-color: #2372bb;
+	border-color: #2372bb;
+	background-image: url("{T_THEME_PATH}/images/buttons_bg.png");
 	color: #fff;
 }
 .phpbb #tabs li.activetab a:hover, .phpbb #tabs #active-subsection a:hover, .phpbb #minitabs li.activetab a:hover {
-	background-color: #af2a2a;
-	border-color: #af2a2a;
+	background-color: #b01414;
+	border-color: #b01414;
 	color: #fff;
 }
 
@@ -487,13 +613,13 @@ body.phpbb, body.simple {
 	border-color: #982aaf;
 }
 .phpbb .pm_replied_colour, .phpbb .topiclist > li.pm_replied_colour > dl dt {
-	border-color: #43688e;
+	border-color: #2372bb;
 }
 .phpbb .pm_friend_colour, .phpbb .topiclist > li.pm_friend_colour > dl dt {
 	border-color: #2aaf30;
 }
 .phpbb .pm_foe_colour, .phpbb .topiclist > li.pm_foe_colour > dl dt {
-	border-color: #af2a2a;
+	border-color: #b01414;
 }
 
 .phpbb dl.details dt {
@@ -504,7 +630,7 @@ body.phpbb, body.simple {
 	Avatars gallery
 */
 .phpbb #gallery label:hover {
-	border-color: #d0d0d0;
+	border-color: #d4d4d4;
 	background-color: #fafafa;
 }
 

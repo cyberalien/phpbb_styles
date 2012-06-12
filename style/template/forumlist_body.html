@@ -20,12 +20,12 @@
 					</dl>
 				</li>
 			</ul>
-			<ul class="topiclist forums">
+			<ul class="topiclist forums" data-id="{forumrow.FORUM_ID}">
 			<!-- DEFINE $FIRST_ROW = true -->
 	<!-- ENDIF -->
 
 	<!-- IF not forumrow.S_IS_CAT -->
-		<li class="row<!-- IF forumrow.S_UNREAD_FORUM --> unread<!-- ENDIF --><!-- IF forumrow.S_LOCKED_FORUM --> locked<!-- ENDIF --><!-- IF $FIRST_ROW --> row1<!-- ELSE --> row2<!-- ENDIF -->">
+		<li class="row row-outer<!-- IF forumrow.S_UNREAD_FORUM --> unread<!-- ENDIF --><!-- IF forumrow.S_LOCKED_FORUM --> locked<!-- ENDIF --><!-- IF $FIRST_ROW --> row1<!-- ELSE --> row2<!-- ENDIF -->">{$STYLE_ROW_START}
 			<dl class="icon" style="background-image: url(<!-- IF forumrow.FORUM_IMAGE -->{forumrow.FORUM_IMAGE_SRC}<!-- ELSE -->{forumrow.FORUM_FOLDER_IMG_SRC}<!-- ENDIF -->); background-repeat: no-repeat;">
 				<dt title="{forumrow.FORUM_FOLDER_IMG_ALT}">
 				<!-- IF S_ENABLE_FEEDS and forumrow.S_FEED_ENABLED --><a class="feed-icon-forum" title="{L_FEED} - {forumrow.FORUM_NAME}" href="{U_FEED}?f={forumrow.FORUM_ID}">{L_FEED} - {forumrow.FORUM_NAME}</a><!-- ENDIF -->
@@ -50,7 +50,7 @@
 					<dd class="empty"></dd>
 				<!-- ENDIF -->
 			</dl>
-		</li>
+		{$STYLE_ROW_END}</li>
 		<!-- IF $FIRST_ROW --><!-- DEFINE $FIRST_ROW = false --><!-- ELSE --><!-- DEFINE $FIRST_ROW = true --><!-- ENDIF -->
 	<!-- ENDIF -->
 

@@ -1,0 +1,29 @@
+/*
+	Italian translation for Helion style
+*/
+
+
+/*
+	Quote button
+*/
+.phpbb .profile-icons .quote-icon a {
+	background-position: 0 0;
+	background-image: url("button_quote.png");
+	width: 75px;
+}
+
+/*
+	Edit button
+*/
+.phpbb .profile-icons .edit-icon a {
+	background-position: 0 0;
+	background-image: url("button_edit.png");
+	width: 88px;
+}
+
+/*
+	Online icon
+*/
+.phpbb .online .poster-avatar {
+	background-image: url("online.png");
+}
