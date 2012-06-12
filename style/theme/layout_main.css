@@ -14,7 +14,7 @@ body > header, #header {
     background-size: 128px 100%;
     min-height: 62px;
     overflow: hidden;
-    border: solid 1px #3e6ece;
+    border: solid 1px #223252;
     border-radius: 8px;
     -moz-border-radius: 8px;
     transition-property: top, opacity;
@@ -102,13 +102,13 @@ body > header nav, .old-ie header nav {
     bottom: -1px;
     font-size: 12px;
     line-height: 1em;
-    color: #99aace;
+    color: #7589b3;
     white-space: nowrap;
 }
 body > header nav a, body > header nav a:visited, body > header nav span {
     display: inline-block;
     padding-bottom: 8px;
-    color: #dce2ed;
+    color: #cad2e3;
     text-decoration: none;
 }
 body > header nav a:hover {
@@ -149,7 +149,7 @@ body > header nav strong { font-weight: normal; }
     width: 140px;
     line-height: 1em;
     font-size: 11px;
-    color: #dae1ed;
+    color: #cad2e3;
     outline-style: none;
     -webkit-appearance: none;
 }
@@ -207,7 +207,7 @@ body.simple #page-body { padding-bottom: 0; }
 #page-body > p.rightside { margin: 0; }
 
 body.rounded #page-wrapper {
-    border: solid 1px #3e6ece;
+    border: solid 1px #233d72;
     border-width: 0 2px;
     padding: 10px;
 }
@@ -217,7 +217,7 @@ body.rounded > footer {
     position: relative;
     margin-bottom: 8px;
     padding: 10px;
-    border: solid 2px #3e6ece;
+    border: solid 2px #233d72;
     border-top-width: 0;
     border-radius: 8px;
     -moz-border-radius: 8px;
@@ -260,11 +260,11 @@ footer nav.nav-links .rightside {
 div.rules {
     margin: 6px 0;
     padding: 6px;
-    background: rgba(208, 121, 149, 0.15);
-    border-color: #d07995;
+    background: rgba(108, 59, 75, 0.15);
+    border-color: #6c3b4b;
 }
 div.rules > .inner > strong { 
-    color: #1e438e; 
+    color: #dd225f;
     font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
     font-size: 14px;
     font-weight: normal;

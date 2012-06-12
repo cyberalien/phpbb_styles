@@ -112,7 +112,7 @@ p.linkmcp { color: #999; }
 	color: #dd225f;
     font-size: 20px;
     font-weight: normal;
-    text-shadow: #ddd 2px 3px 1px;
+    text-shadow: #111 2px 3px 1px;
     margin: 14px 2px;
 }
 
@@ -180,7 +180,7 @@ ul.cplist {
 
 /* Friends list */
 .cp-mini {
-	background-color: #f9f9f9;
+	background-color: #222;
 	padding: 0 5px;
 	margin: 5px 5px 0 0;
 	float: left;
@@ -192,7 +192,7 @@ ul.cplist {
 
 dl.mini dt {
 	font-weight: normal;
-	color: #1e438e;
+	color: #3f65b2;
 	font-size: 14px;
 	line-height: 1.3em;
     font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
@@ -269,7 +269,7 @@ ol.def-rules li {
 }
 
 .pmlist li.pm_replied_colour dl, .pm_replied_colour {
-	border-color: #1e438e;
+	border-color: #3f65b2;
 }
 
 .pmlist li.pm_friend_colour dl, .pm_friend_colour {
@@ -313,7 +313,7 @@ ol.def-rules li {
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 1.4em;
-	color: #1e438e;
+	color: #3f65b2;
 }
 
 #topicreview {
@@ -367,7 +367,7 @@ dl.faq dt {
 	font-weight: normal;
     font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
 	font-size: 14px;
-	color: #1e438e;
+	color: #3f65b2;
 	line-height: 1.4em;
 }
 dl.faq dt strong { font-weight: normal; }
@@ -406,13 +406,13 @@ table.table1 th {
     background: url({T_THEME_PATH}/images/popupbg.png) 0 -2px repeat-x;
     border-radius: 6px;
     -moz-border-radius: 6px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 12px;
     line-height: 1.2em;
     padding: 2px 4px;
 }
 table.table1 thead th a, table.table1 thead th a:visited {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
 }
 table.table1 thead th a:hover {
     color: #fff;
@@ -423,13 +423,13 @@ table.table1 thead th span {
 }
 
 table.table1 tbody tr:hover, table.table1 tbody tr.hover {
-	background-color: #fafafa;
+	background-color: #141414;
 }
 
 table.table1 td {
 	font-size: 12px;
 	padding: 4px;
-	border: 1px solid rgba(214, 214, 214, 0.5);
+	border: 1px solid rgba(64, 64, 64, 0.5);
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 }

@@ -43,7 +43,7 @@
 	font-size: 16px;
     font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
 }
-.postbody h3, .postbody h3 a, .postbody h3 a:visited { color: #1e438e; }
+.postbody h3, .postbody h3 a, .postbody h3 a:visited { color: #3f65b2; }
 .postbody h3 a:hover { color: #c8901f; }
 
 .postbody h3 img {
@@ -72,7 +72,7 @@
 	margin: 4px 0;
 	padding: 0;
 	font-size: 16px;
-	color: #1e438e;
+	color: #3f65b2;
 }
 
 .postbody > .notice {
@@ -170,7 +170,7 @@ p.author {
 }
 p.author img { margin-right: 4px; }
 p.author strong { font-weight: normal; }
-p.author a, p.author a:visited { color: #1e438e; }
+p.author a, p.author a:visited { color: #3f65b2; }
 p.author a:hover { color: #c8901f; }
 
 /* Post signature */
@@ -179,7 +179,7 @@ p.author a:hover { color: #c8901f; }
 	padding-top: 0.2em;
 	font-size: 11px;
 	color: #888;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid #444;
 	clear: left;
 	line-height: 140%;
 	overflow: hidden;
@@ -207,14 +207,14 @@ dd .signature {
 .postprofile {
 	margin: 2px 0 10px 0;
 	min-height: 80px;
-	color: #666666;
-	border-left: 1px solid #ddd;
+	color: #888;
+	border-left: 1px solid #333;
 	width: 22%;
 	float: right;
 	word-wrap: break-word;
 }
 .pm .postprofile {
-	border-left: 1px solid #ddd;
+	border-left: 1px solid #333;
 }
 
 .postprofile dd, .postprofile dt {
@@ -230,7 +230,7 @@ dd .signature {
 
 .postprofile strong {
 	font-weight: normal;
-	color: #1e438e;
+	color: #3f65b2;
 }
 
 .avatar {
@@ -261,7 +261,7 @@ dl.pmlist dd {
 ----------------------------------------*/
 fieldset.polls dl {
 	margin-top: 5px;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid #282828;
 	padding: 5px 0 0 0;
 	line-height: 120%;
 }
@@ -306,7 +306,7 @@ fieldset.polls dd div {
 	padding: 0 3px;
 	overflow: visible;
 	min-width: 12px;
-	background: #1e438e url({T_THEME_PATH}/images/poll.png) 0 0 repeat-x;
+	background: #3f65b2 url({T_THEME_PATH}/images/poll.png) 0 0 repeat-x;
 	border: solid 0px transparent;
 	border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -324,8 +324,8 @@ fieldset.polls dl.voted dd div { background-position: 0 -125px; }
 ----------------------------------------*/
 /* Quote block */
 blockquote {
-	background: rgba(255, 255, 255, 0.3) url({T_THEME_PATH}/images/bb_quote.gif) 5px 8px no-repeat;
-	border: 1px solid #ddd;
+	background: rgba(40, 40, 40, 0.3) url({T_THEME_PATH}/images/bb_quote.gif) 5px 8px no-repeat;
+	border: 1px solid #333;
 	border-radius: 8px;
 	-moz-border-radius: 8px;
 	font-size: 12px;
@@ -336,14 +336,14 @@ blockquote {
 
 blockquote blockquote {
 	/* Nested quotes */
-	background-color: #f7f7f7;
+	background-color: #1c1c1c;
 	font-size: 1em;
 	margin: 0.5em 1px 0 15px;	
 }
 
 blockquote blockquote blockquote {
 	/* Nested quotes */
-	background-color: #e4e4e4;
+	background-color: #1c1c1c;
 }
 
 blockquote cite {
@@ -363,8 +363,8 @@ blockquote.uncited {
 /* Code block */
 dl.codebox {
 	padding: 3px;
-	background-color: rgba(255, 255, 255, 0.5);
-	border: 1px solid #ddd;
+	background-color: rgba(40, 40, 40, 0.5);
+	border: 1px solid #333;
 	border-radius: 8px;
 	-moz-border-radius: 8px;
 	margin: 0.5em 1px 0 25px;
@@ -412,8 +412,8 @@ dl.codebox code {
 	width: auto; 
 	margin: 5px 5px 5px 0;
 	padding: 6px;
-	background-color: rgba(255, 255, 255, 0.5);
-	border: 1px dashed #ddd;
+	background-color: rgba(40, 40, 40, 0.5);
+	border: 1px dashed #333;
 	border-radius: 8px;
 	-moz-border-radius: 8px;
 	clear: left;
@@ -429,7 +429,7 @@ dl.codebox code {
 	margin-top: 4px;
 	padding-top: 4px;
 	clear: left;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid #333;
 }
 
 .attachbox dd dd {
@@ -488,7 +488,7 @@ dl.file dd {
 
 dl.thumbnail img {
 	padding: 3px;
-	border: 1px solid #ccc;
+	border: 1px solid #333;
 }
 
 dl.thumbnail dd {
@@ -503,15 +503,15 @@ dl.thumbnail dt a:hover {
 }
 
 dl.thumbnail dt a:hover img {
-	border: 1px solid #aaa;
+	border: 1px solid #333;
 }
 
 /*
     Reported / unapproved
 */
 p.rules {
-    background: rgba(255, 255, 255, 0.5);
-    border: solid 2px rgba(208, 121, 149, 0.5);
+    background: rgba(108, 59, 75, 0.15);
+    border: solid 2px rgba(108, 59, 75, 0.5);
     border-radius: 6px;
     -moz-border-radius: 6px;
 	padding: 6px;
@@ -520,7 +520,7 @@ p.rules {
 	line-height: 1.4em;
 }
 p.rules:hover {
-    border-color: rgba(208, 121, 149, 0.7);
+    border-color: rgba(108, 59, 75, 0.7);
 }
 
 p.rules img {

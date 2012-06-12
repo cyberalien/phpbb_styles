@@ -38,10 +38,10 @@ ul.topiclist li.header {
     background: url({T_THEME_PATH}/images/popupbg.png) 0 -2px repeat-x;
     border-radius: 6px;
     -moz-border-radius: 6px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
 }
 ul.topiclist li.header a, ul.topiclist li.header a:visited { 
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: underline;
 }
 ul.topiclist li.header a:hover, ul.topiclist li.header a:active {
@@ -74,7 +74,7 @@ ul.topiclist dt {
 ul.topiclist dd {
 	display: block;
 	float: left;
-	border-left: 1px solid rgba(214, 214, 214, 0.3);
+	border-left: 1px solid rgba(64, 64, 64, 0.3);
 	padding: 4px 0;
 }
 .old-ie ul.topiclist dd {
@@ -112,8 +112,8 @@ ul.topiclist li.row dt a.subforum.unread {
 }
 
 li.row {
-	border-bottom: 1px solid rgba(214, 214, 214, 0.5);
-	background-color: rgba(250, 250, 250, 0.01);
+	border-bottom: 1px solid rgba(64, 64, 64, 0.5);
+	background-color: rgba(20, 20, 20, 0.01);
     transition: background-color 0.5s ease;
     -webkit-transition: background-color 0.5s ease;
     -moz-transition: background-color 0.5s ease;
@@ -128,11 +128,11 @@ li.row strong {
 }
 
 li.row:hover {
-	background-color: #fafafa;
+	background-color: #141414;
 }
 
 li.header dt, li.header dd {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
 	line-height: 1em;
 	border-left-width: 0;
 	margin: 0;
@@ -198,7 +198,7 @@ a.subforum.unread, a.subforum.unread:visited {
 .forum-link a.forumtitle, .forum-link a.forumtitle:visited, 
 .forum-link a.topictitle, .forum-link a.topictitle:visited,
 .unapproved a.topictitle, .unapproved a.topictitle:visited { 
-    color: #1e438e; 
+    color: #3f65b2; 
 }
 .unread a.forumtitle:hover, .unread a.topictitle:hover, 
 .forum-link a.forumtitle:hover, .forum-link a.topictitle:hover, 
@@ -391,7 +391,7 @@ li.pagination {
 	margin: 0 2px;
 	font-weight: normal;
     border: 1px solid #a2aec7;
-    background-color: #1e438e;
+    background-color: #3f65b2;
     color: #fff;
 }
 
@@ -400,8 +400,8 @@ li.pagination {
 	text-decoration: none;
 	margin: 0 2px;
 	padding: 0 2px;
-    border: solid 1px #ccc;
-    background-color: #f8f8f8;
+    border: solid 1px #333;
+    background-color: #111;
 	line-height: 1.5em;
     transition: none;
     -webkit-transition: none;
@@ -410,13 +410,13 @@ li.pagination {
 }
 
 .pagination span a:hover {
-    border-color: #cfb581;
+    border-color: #111;
     background-color: #c8901f;
     color: #fff;
 	text-decoration: none;
 }
 .pagination span a:active {
-    border-color: #d07995;
+    border-color: #111;
     background-color: #dd225f;
     color: #fff;
 }
