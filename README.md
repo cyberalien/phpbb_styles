@@ -14,6 +14,17 @@ Branches are specific to each style. Each branch starts with style name, stylena
 * stylename/black/style: Black (or other color) version of style.
 * stylename/custom/something: Custom version of style
 
+## STYLES
+
+* [Air](https://github.com/cyberalien/phpbb_styles/tree/air/style)
+* [Black](https://github.com/cyberalien/phpbb_styles/tree/black/style), based on Ultra
+* [ColorizeIt](https://github.com/cyberalien/phpbb_styles/tree/colorizeit/style)
+* [Deluxe](https://github.com/cyberalien/phpbb_styles/tree/deluxe/style)
+* [Elegance](https://github.com/cyberalien/phpbb_styles/tree/elegance/style)
+* [Helion](https://github.com/cyberalien/phpbb_styles/tree/helion/style), based on Ultra
+* [Phantom](https://github.com/cyberalien/phpbb_styles/tree/phantom/style)
+* [Ultra](https://github.com/cyberalien/phpbb_styles/tree/ultra/style)
+
 ## LICENSE
 
 [GNU General Public License v2](http://opensource.org/licenses/gpl-2.0.php)
