@@ -1,6 +1,6 @@
 /*  phpBB3 Style Sheet
 	--------------------------------------------------------------
-	Style name:			Artodia: Elegance
+	Style name:			Artodia: Elegance Black
 	Based on style:		prosilver (the default phpBB 3.0.x style)
 	Original author:	Tom Beddard ( http://www.subblue.com/ )
 	Modified by:		Vjacheslav Trushkin ( http://www.artodia.com/ )
@@ -8,7 +8,7 @@
 */
 
 /*
-    Change "none" to "block" (without quotes) to show website title and description in header
+    Change "none" to "inline-block" (without quotes) to show website title and description in header
 */
 #header > p, #header > h1 { display: none; }
 

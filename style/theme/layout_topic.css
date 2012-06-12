@@ -30,7 +30,7 @@
 
 .postbody h3.first, .postbody h3.first a {
 	/* The first post on the page uses this */
-    color: #cb296a !important;
+    color: #f36b42 !important;
 }
 
 .postbody h3 {
@@ -44,8 +44,8 @@
 	font-size: 16px;
     font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
 }
-.postbody h3, .postbody h3 a, .postbody h3 a:visited { color: #3083aa; }
-.postbody h3 a:hover { color: #cb296a; }
+.postbody h3, .postbody h3 a, .postbody h3 a:visited { color: #36bb55; }
+.postbody h3 a:hover { color: #f36b42; }
 
 .postbody h3 img {
 	/* Also see tweaks.css */
@@ -73,7 +73,7 @@
 	margin: 4px 0;
 	padding: 0;
 	font-size: 16px;
-	color: #3083aa;
+	color: #36bb55;
 }
 
 .postbody > .notice {
@@ -114,7 +114,7 @@ ul.profile-icons li a {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background-color: #f4f4f4;
+	background-color: #282828;
 	background-position: 0 0;
 	opacity: 1;
     transition: opacity 0.25s ease;
@@ -190,7 +190,7 @@ p.author {
 	padding: 0 0 5px;
 	font-size: 11px;
 	line-height: 1.2em;
-	color: #999;
+	color: #888;
 }
 p.author img { margin-right: 4px; }
 p.author strong { font-weight: normal; }
@@ -201,7 +201,7 @@ p.author strong { font-weight: normal; }
 	padding-top: 0.2em;
 	font-size: 11px;
 	color: #888;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid #404040;
 	clear: left;
 	line-height: 140%;
 	overflow: hidden;
@@ -229,14 +229,14 @@ dd .signature {
 .postprofile {
 	margin: 2px 0 10px 0;
 	min-height: 80px;
-	color: #999;
-	border-left: 1px solid #ddd;
+	color: #888;
+	border-left: 1px solid #383838;
 	width: 22%;
 	float: right;
 	word-wrap: break-word;
 }
 .pm .postprofile {
-	border-left: 1px solid #ddd;
+	border-left: 1px solid #383838;
 }
 
 .postprofile dd, .postprofile dt {
@@ -252,7 +252,7 @@ dd .signature {
 
 .postprofile strong {
 	font-weight: normal;
-	color: #3083aa;
+	color: #36bb55;
 }
 
 .avatar {
@@ -283,13 +283,13 @@ dl.pmlist dd {
 ----------------------------------------*/
 fieldset.polls dl {
 	margin-top: 5px;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid #383838;
 	padding: 5px 0 0 0;
 	line-height: 120%;
 }
 
 fieldset.polls dl.voted {
-	color: #cb296a;
+	color: #f36b42;
 }
 
 fieldset.polls dt {
@@ -328,7 +328,7 @@ fieldset.polls dd div {
 	padding: 0 3px;
 	overflow: visible;
 	min-width: 12px;
-	background: #3083aa url({T_THEME_PATH}/images/poll.png) 0 0 repeat-x;
+	background: #36bb55 url({T_THEME_PATH}/images/poll.png) 0 0 repeat-x;
 	border: solid 0px transparent;
 	border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -350,8 +350,8 @@ fieldset.polls dl.voted dd div { background-position: 0 -125px; }
 ----------------------------------------*/
 /* Quote block */
 blockquote {
-	background: rgba(255, 255, 255, 0.3) url({T_THEME_PATH}/images/bb_quote.gif) 5px 8px no-repeat;
-	border: 1px solid #ddd;
+	background: rgba(64, 64, 64, 0.3) url({T_THEME_PATH}/images/bb_quote.gif) 5px 8px no-repeat;
+	border: 1px solid #404040;
 	border-radius: 8px;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
@@ -363,14 +363,14 @@ blockquote {
 
 blockquote blockquote {
 	/* Nested quotes */
-	background-color: #f7f7f7;
+	background-color: #282828;
 	font-size: 1em;
 	margin: 0.5em 1px 0 15px;	
 }
 
 blockquote blockquote blockquote {
 	/* Nested quotes */
-	background-color: #e4e4e4;
+	background-color: #2a2a2a;
 }
 
 blockquote cite {
@@ -380,7 +380,7 @@ blockquote cite {
 	margin-left: 20px;
 	display: block;
 	font-size: 11px;
-	color: #999;
+	color: #888;
 }
 
 blockquote.uncited {
@@ -390,8 +390,8 @@ blockquote.uncited {
 /* Code block */
 dl.codebox {
 	padding: 3px;
-	background-color: rgba(255, 255, 255, 0.5);
-	border: 1px solid #ddd;
+	background-color: #2a2a2a;
+	border: 1px solid #404040;
 	border-radius: 8px;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
@@ -405,7 +405,7 @@ dl.codebox dt {
 	font-size: 11px;
 	font-weight: normal;
 	display: block;
-	color: #999;
+	color: #888;
 }
 
 blockquote dl.codebox {
@@ -422,16 +422,16 @@ dl.codebox code {
 	padding-top: 5px;
 	font: 0.9em Monaco, "Andale Mono","Courier New", Courier, mono;
 	line-height: 1.3em;
-	color: #666;
+	color: #999;
 	margin: 2px 0;
 }
 
-.syntaxbg		{ color: #f7f7f7; }
-.syntaxcomment	{ color: #888; }
-.syntaxdefault	{ color: #444; }
-.syntaxhtml		{ color: #000000; }
-.syntaxkeyword	{ color: #585858; }
-.syntaxstring	{ color: #a7a7a7; }
+.syntaxbg		{ color: #2a2a2a; }
+.syntaxcomment	{ color: #666; }
+.syntaxdefault	{ color: #999; }
+.syntaxhtml		{ color: #999; }
+.syntaxkeyword	{ color: #aaa; }
+.syntaxstring	{ color: #b4b4b4; }
 
 /* Attachments
 ----------------------------------------*/
@@ -440,8 +440,8 @@ dl.codebox code {
 	width: auto; 
 	margin: 5px 5px 5px 0;
 	padding: 6px;
-	background-color: rgba(255, 255, 255, 0.5);
-	border: 1px dashed #ddd;
+	background-color: #2a2a2a;
+	border: 1px dashed #404040;
 	border-radius: 8px;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
@@ -460,7 +460,7 @@ dl.codebox code {
 	margin-top: 4px;
 	padding-top: 4px;
 	clear: left;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid #404040;
 }
 
 .attachbox dd dd {
@@ -534,16 +534,15 @@ dl.thumbnail dt a:hover {
 }
 
 dl.thumbnail dt a:hover img {
-	border: 1px solid #aaa;
+	border: 1px solid #404040;
 }
 
 /*
     Reported / unapproved
 */
 p.rules {
-    background: rgba(255, 255, 255, 0.3);
-    border: solid 2px #efd7e0;
-    border-color: rgba(203, 41, 106, 0.2);
+    background: #2b2220;
+    border: solid 2px #45312c;
     border-radius: 6px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -552,11 +551,8 @@ p.rules {
 	font-size: 12px;
 	line-height: 1.4em;
 }
-.old-ie p.rules {
-    background: #f4e9ee;
-}
 p.rules:hover {
-    border-color: rgba(203, 41, 106, 0.5);
+    border-color: #6d483c;
 }
 
 p.rules img {
@@ -584,5 +580,5 @@ p.rules a {
 /*
     Post highlight
 */
-.posthilit { color: #cb296a; }
+.posthilit { color: #f36b42; }
 

@@ -53,7 +53,7 @@ div#message h2, #confirm h2, #agreement h2 {
     padding-right: 10px;
     height: 18px;
     background: url({T_THEME_PATH}/images/tabs_left.png) top right no-repeat;
-    color: #3083aa;
+    color: #36bb55;
     text-shadow: rgba(0,0,0,0.1) 1px 1px 1px;
 }
 #tabs li a:hover, #tabs li.activetab a, #navigation li a:hover, #navigation li#active-subsection a, #minitabs li a:hover, #minitabs li.activetab a {
@@ -61,7 +61,7 @@ div#message h2, #confirm h2, #agreement h2 {
 }
 #tabs li a:hover span, #tabs li.activetab a span, #navigation li a:hover span, #navigation li#active-subsection a span, #minitabs li a:hover span, #minitabs li.activetab a span {
     background-position: bottom right;
-    color: #cb296a;
+    color: #f36b42;
 }
 #tabs li.first a, #navigation li.first a, #minitabs li.first a {
     background-image: url({T_THEME_PATH}/images/tabs_left.png);
@@ -87,12 +87,12 @@ div#message h2, #confirm h2, #agreement h2 {
     background-position: bottom left;
 }
 #navigation strong, #tabs strong, #minitabs strong { 
-    color: #3083aa; 
+    color: #36bb55; 
     font-weight: normal;
 }
 li.activetab strong, #active-subsection strong,
 #navigation a:hover strong, #tabs a:hover strong, #minitabs a:hover strong {
-    color: #cb296a;
+    color: #f36b42;
 }
 
 
@@ -104,7 +104,7 @@ div.cp-panel {
     background: none;
     padding: 0;
 }
-p.linkmcp { color: #444; }
+p.linkmcp { color: #666; }
 
 #cp-main > h2, #cp-main > form > h2 {
     font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
@@ -112,10 +112,10 @@ p.linkmcp { color: #444; }
 	margin: 8px 0;
 	padding: 0;
 	font-size: 16px;
-	color: #cb296a;
+	color: #f36b42;
     font-size: 20px;
     font-weight: normal;
-    text-shadow: #ddd 2px 3px 1px;
+    text-shadow: #000 2px 3px 1px;
     margin: 14px 2px;
 }
 
@@ -152,9 +152,9 @@ ul.cplist {
 }
 
 #cp-main .pm-message {
-	border: 1px solid #e2e2e2;
+	border: 1px solid #444;
 	margin: 10px 0;
-	background-color: #fff;
+	background-color: #282828;
 	width: auto;
 	float: none;
 }
@@ -187,7 +187,7 @@ div.panel dl.panel, div.panel dl.panel .hdr2-last {
 
 /* Friends list */
 .cp-mini {
-	background-color: #f9f9f9;
+	background-color: #282828;
 	padding: 0 5px;
 	margin: 5px 5px 0 0;
 	float: left;
@@ -199,7 +199,7 @@ div.panel dl.panel, div.panel dl.panel .hdr2-last {
 
 dl.mini dt {
 	font-weight: normal;
-	color: #000;
+	color: #ccc;
 	font-size: 14px;
 	line-height: 1.3em;
     font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
@@ -242,7 +242,7 @@ dl.mini dd {
 
 /* PM Message history */
 .current {
-	color: #888;
+	color: #ccc;
 }
 
 /* Defined rules list for PM options */
@@ -261,8 +261,7 @@ ol.def-rules li {
 }
 
 .pmlist li.bg1 dl, .pmlist li.bg2 dl {
-    border: solid 1px #e8e8e8;
-    border-color: rgba(214, 214, 214, 0.5);
+    border: solid 1px #323232;
 	border-width: 0 3px;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -270,23 +269,23 @@ ol.def-rules li {
 }
 
 .pmlist li.pm_message_reported_colour dl, .pm_message_reported_colour {
-	border-color: #cb296a;
+	border-color: #e14796;
 }
 
 .pmlist li.pm_marked_colour dl, .pm_marked_colour {
-	border-color: #cc8b29;
+	border-color: #f36b42;
 }
 
 .pmlist li.pm_replied_colour dl, .pm_replied_colour {
-	border-color: #3083aa;
+	border-color: #666;
 }
 
 .pmlist li.pm_friend_colour dl, .pm_friend_colour {
-	border-color: #30ab57;
+	border-color: #36bb55;
 }
 
 .pmlist li.pm_foe_colour dl, .pm_foe_colour {
-	border-color: #cb296a;
+	border-color: #e14796;
 }
 
 
@@ -306,13 +305,13 @@ ol.def-rules li {
 	margin: 10px;
 	padding: 5px;
 	width: auto;
-	background: #f8f8f8;
-	border: 1px solid #ccc;
+	background: #282828;
+	border: 1px solid #444;
 	text-align: center;
 }
 
 #gallery label:hover {
-	border-color: #cf6690;
+	border-color: #9d553f;
 }
 
 /* Topic review panel
@@ -322,7 +321,7 @@ ol.def-rules li {
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 1.4em;
-	color: #3083aa;
+	color: #f36b42;
 }
 
 #topicreview {
@@ -376,7 +375,7 @@ dl.faq dt {
 	font-weight: normal;
     font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
 	font-size: 14px;
-	color: #cb296a;
+	color: #f36b42;
 	line-height: 1.4em;
 }
 dl.faq dt strong { font-weight: normal; }
@@ -411,40 +410,40 @@ table.table1 {
 
 table.table1 th {
 	font-weight: normal;
-    border: solid 1px #d3d3d3;
-    background: #4089ab url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
+    border: solid 1px #0d0d0d;
+    background: #43a359 url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
     border-radius: 6px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
-    color: rgba(255, 255, 255, 0.9);
+    text-shadow: rgba(255, 255, 255, 0.1) 1px 1px 1px;
     font-size: 12px;
     font-family: 'Droid Sans', Verdana;
     line-height: 1.2em;
     padding: 3px 4px;
 }
 table.table1 thead th a, table.table1 thead th a:visited {
-    color: rgba(255, 255, 255, 0.8);
+    color: #000;
 }
 .old-ie table.table1 th, .old-ie table.table1 thead th a, .old-ie table.table1 thead th a:visited {
-    color: #fff;
+    color: #000;
 }
 table.table1 thead th a:hover {
-    color: #fff;
+    color: #000;
 }
 
 table.table1 thead th span {
 	padding-left: 7px;
 }
 
-table.table1 tbody tr:hover, table.table1 tbody tr.hover {
-	background-color: #f4f4f4;
+table.table1 tbody tr:hover td, table.table1 tbody tr.hover td {
+	background-color: #2a2a2a;
 }
 
 table.table1 td {
 	font-size: 12px;
 	padding: 4px;
-	border: 1px solid #e8e8e8;
-	border-color: rgba(214, 214, 214, 0.5);
+	background-color: #282828;
+	border: 1px solid #383838;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -474,7 +473,7 @@ table.info tbody th {
 	padding: 3px;
 	text-align: right;
 	vertical-align: top;
-	color: #000;
+	color: #999;
 	font-weight: normal;
 }
 
@@ -502,6 +501,7 @@ form#login, form#register {
 }
 
 
+
 /*
     Dropdown tabs
 */
@@ -526,27 +526,27 @@ div.dropdown-tabs > a {
     padding-top: 6px;
     padding-right: 24px;
     height: 18px;
-    color: #3083AA;
+    color: #36BB55;
     text-shadow: rgba(0,0,0,0.1) 1px 1px 1px;
     background: url({T_THEME_PATH}/images/tabs_popup.png) top right no-repeat;
 }
 div.dropdown-tabs:hover { background-position: bottom left; }
-div.dropdown-tabs:hover > a { background-position: bottom right; color: #CB296A; }
+div.dropdown-tabs:hover > a { background-position: bottom right; color: #F36B42; }
 div.dropdown-tabs > ul { 
     display: none;
     position: absolute;
     top: 24px;
     left: 0;
     z-index: 2;
-    background: #f8f8f8;
+    background: #222;
     padding: 0;
-    border: solid 1px #ccc;
+    border: solid 1px #000;
     border-radius: 6px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 }
 div.dropdown-tabs:hover > ul { display: block; }
 .dropdown-tabs li a, .dropdown-tabs span,
@@ -565,8 +565,8 @@ div.dropdown-tabs:hover > ul { display: block; }
     padding: 0;
     display: block;
     float: none;
-    border-top: solid 1px #fff;
-    border-bottom: solid 1px #ddd;
+    border-top: solid 1px #333;
+    border-bottom: solid 1px #000;
 }
 .dropdown-tabs li:first-child, #tabs .dropdown-tabs li:first-child { border-top-width: 0; }
 .dropdown-tabs li:last-child, #tabs .dropdown-tabs li:last-child { border-bottom-width: 0; }

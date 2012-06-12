@@ -40,28 +40,28 @@ ul.topiclist li {
 ul.topiclist li.header {
     margin: 4px 4px 2px;
     padding: 0;
-    border: solid 1px #d3d3d3;
-    background: #4089ab url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
+    border: solid 1px #0d0d0d;
+    background: #43a359 url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
     border-radius: 6px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
+    color: rgba(0, 0, 0, 0.9);
+    text-shadow: rgba(255, 255, 255, 0.1) 1px 1px 1px;
     font-family: 'Droid Sans', Verdana;
 }
 ul.topiclist li.header a, ul.topiclist li.header a:visited { 
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.9);
     text-decoration: underline;
 }
 ul.topiclist li.header a:hover, ul.topiclist li.header a:active {
-    color: #fff;
+    color: #000;
 }
 ul.topiclist li.header dt, ul.topiclist li.header dd {
     font-size: 12px;
     line-height: 1.2em;
 }
 .old-ie li.header, .old-ie li.header a {
-    color: #fff !important;
+    color: #000 !important;
 }
 
 ul.topiclist dl { 
@@ -84,7 +84,7 @@ ul.topiclist dd {
 	display: block;
 	float: left;
 	padding: 4px 0;
-	border-left: 1px solid #e8e8e8;
+	border-left: 1px solid #343434;
     transition: border-left-color 0.25s ease;
     -webkit-transition: border-left-color 0.25s ease;
     -moz-transition: border-left-color 0.25s ease;
@@ -92,7 +92,7 @@ ul.topiclist dd {
     -ms-transition: border-left-color 0.25s ease;
 }
 ul.topiclist li:hover dd {
-	border-left-color: #d8d8d8;
+	border-left-color: #444;
 }
 
 ul.topiclist dfn {
@@ -142,14 +142,14 @@ li.row strong {
 }
 
 li.header dt, li.header dd {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(0, 0, 0, 0.8) !important;
 	line-height: 1em;
 	border-left-width: 0;
 	margin: 0;
 	padding: 4px 0;
 }
 .old-ie li.header dt, .old-ie li.header dd {
-    color: #fff;
+    color: #000;
 }
 
 li.header dd {
@@ -203,11 +203,11 @@ a.forumtitle, a.topictitle {
 .unread a.topictitle, .unread a.topictitle:visited, 
 .reported a.topictitle, .reported a.topictitle:visited,
 .unapproved a.topictitle, .unapproved a.topictitle:visited { 
-    color: #cb296a; 
+    color: #f36b42; 
 }
 .unread a.forumtitle:hover, .unread a.topictitle:hover, 
 .reported a.topictitle:hover, .unapproved a.topictitle:hover  { 
-    color: #cc8b29; 
+    color: #f36b42; 
 }
 
 
@@ -288,7 +288,7 @@ ul.topiclist dd.searchextra {
 	margin-left: 5px;
 	padding: 0.2em 0;
 	font-size: 11px;
-	color: #000;
+	color: #999;
 	border-left: none;
 	clear: both;
 	width: 98%;
@@ -338,8 +338,7 @@ div[class].topic-actions {
     height: 24px;
 }
 .buttons div.locked-icon a, .buttons div.locked-icon a:visited { color: #888; }
-.buttons div.locked-icon a:hover { color: #cb296a; }
-.buttons div.locked-icon a:active { color: #cc8b29; }
+.buttons div.locked-icon a:hover { color: #000; }
 
 .buttons div a, .buttons div a:hover, .buttons div a:active {
     text-decoration: none;
@@ -358,9 +357,11 @@ div[class].topic-actions {
 
 .buttons div a:hover {
     background-position: right -30px;
+    color: #000;
 }
 .buttons div a:active {
     background-position: right bottom;
+    color: #000;
 }
 .buttons div a:hover span {
     background-position: left -30px;
@@ -396,9 +397,9 @@ li.pagination {
 	padding: 0 2px;
 	margin: 0 2px;
 	font-weight: normal;
-    border: 1px solid #a2aec7;
-    background-color: #3083aa;
-    color: #fff;
+    border: 1px solid #000;
+    background-color: #f36b42;
+    color: #000;
 }
 
 .pagination span a, .pagination span a:link, .pagination span a:visited, .pagination span a:active {
@@ -406,8 +407,9 @@ li.pagination {
 	text-decoration: none;
 	margin: 0 2px;
 	padding: 0 2px;
-    border: solid 1px #ccc;
-    background-color: #f8f8f8;
+    border: solid 1px #337141;
+    background-color: #36bb55;
+    color: #000;
 	line-height: 1.5em;
     transition: none;
     -webkit-transition: none;
@@ -417,14 +419,14 @@ li.pagination {
 }
 
 .pagination span a:hover {
-    border-color: #d1799c;
-    background-color: #cb296a;
-    color: #fff;
+    border-color: #955643;
+    background-color: #f36b42;
+    color: #000;
 }
 .pagination span a:active {
-    border-color: #cfaf80;
-    background-color: #cc8b29;
-    color: #fff;
+    border-color: #743656;
+    background-color: #e14796;
+    color: #000;
 }
 
 .pagination img {

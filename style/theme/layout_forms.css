@@ -9,10 +9,10 @@ fieldset {
 
 input[type="text"], input[type="password"], select, textarea {
 	font-weight: normal;
-    background: #f2f2f2;
-    color: #000;
+    background: #282828;
+    color: #888;
     outline-style: none;
-    border: solid 1px #d4d4d4;
+    border: solid 1px #444;
     border-radius: 6px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -32,14 +32,12 @@ input[type="text"], input[type="password"], select, textarea {
 }
 
 input[type="text"]:hover, input[type="password"]:hover, select:hover, textarea:hover {
-    color: #444;
-    border-color: #cf6690;
-    background-color: #f8f8f8;
+    color: #999;
+    border-color: #7a4332;
 }
 input[type="text"]:focus, input[type="password"]:focus, select:focus, textarea:focus {
-    border-color: #cc8b29;
-    background-color: #fafafa;
-    color: #000;
+    border-color: #348f49;
+    color: #ccc;
 }
 
 
@@ -141,7 +139,7 @@ fieldset.fields2 dd {
 /* Form elements */
 dt label {
 	font-weight: bold;
-	color: #000;
+	color: #aaa;
 	font-size: 12px;
     font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
 	text-align: left;
@@ -329,9 +327,9 @@ a.button1, input.button1, input.button3, a.button2, input.button2 {
 
 a.button1, input.button1 {
 	font-weight: bold;
-	color: #3083aa;
-    background: #f2f2f2;
-    border: solid 1px #d4d4d4;
+	color: #36bb55;
+    background: #282828;
+    border: solid 1px #444;
     border-radius: 6px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -347,9 +345,9 @@ input.button3 {
 
 /* Alternative button */
 a.button2, input.button2, input.button3 {
-	border: 1px solid #d4d4d4;
-    background: #f2f2f2;
-	color: #444;
+	border: 1px solid #444;
+    background: #282828;
+	color: #999;
 	padding-left: 6px;
 	padding-right: 6px;
 	font-size: 12px;
@@ -361,7 +359,7 @@ a.button2, input.button2, input.button3 {
 /* <a> button in the style of the form buttons */
 a.button1, a.button1:link, a.button1:visited, a.button1:active, a.button2, a.button2:link, a.button2:visited, a.button2:active {
 	text-decoration: none;
-	color: #3083aa;
+	color: #36bb55;
 	padding: 2px 8px;
 	line-height: 250%;
 	vertical-align: text-bottom;
@@ -369,9 +367,9 @@ a.button1, a.button1:link, a.button1:visited, a.button1:active, a.button2, a.but
 
 /* Hover states */
 a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover {
-    color: #cb296a;
-    border-color: #d7b2c1;
-    background-color: #f8f8f8;
+    color: #f36b42;
+    border-color: #505050;
+    background-color: #282828;
 }
 
 input.disabled {

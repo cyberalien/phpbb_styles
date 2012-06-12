@@ -4,8 +4,8 @@
 #header {
     margin: 0;
     padding: 0 8px;
-    background: #4283a1 url({T_THEME_PATH}/images/top2.png) top left repeat-x;
-    border-bottom: solid 1px #fff;
+    background: #3c884e url({T_THEME_PATH}/images/top2.png) top left repeat-x;
+    border-bottom: solid 1px #3e3e3e;
     text-align: center;
 }
 
@@ -35,18 +35,18 @@
     color: rgba(255, 255, 255, 0.85);
 }
 .old-ie #header > h1 {
-    color: #cadce5; 
+    color: #d4ecda;
 }
 #header > p {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.7);
 }
 .old-ie #header > p {
-    color: #cadce5;
+    color: #e9f4eb;
 }
 
 #page-header {
-    background-color: #eee;
+    background-color: #282828;
 }
 
 #nav-header {
@@ -65,7 +65,7 @@
     height: 12px;
     line-height: 1em;
     font-size: 12px;
-    color: #205d7a;
+    color: #36bb55;
     background: url({T_THEME_PATH}/images/menu2_right.png) 100% 0 repeat-x;
     text-decoration: none;
     transition: none;
@@ -76,7 +76,7 @@
 }
 #nav-header a:hover, #nav-header a.new {
     background-position: 100% -40px;
-    color: #fff;
+    color: #fbf0ec;
     text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 0;
 }
 #nav-header a span {
@@ -128,12 +128,12 @@
     width: 140px;
     line-height: 1em;
     font-size: 12px;
-    color: #28769a;
+    color: #36bb55;
     outline-style: none;
     -webkit-appearance: none;
 }
 #search-box input[type="text"]:hover, #search-box input[type="text"]:focus {
-    color: #2d6680;
+    color: #f36b42;
 }
 .browser-ie #search-box {
     padding-top: 2px;
@@ -158,30 +158,30 @@
     padding-bottom: 6px;
     padding-top: 30px;
     font-size: 11px;
-    color: #444;
+    color: #666;
     max-height: 60px;
     overflow: hidden;
-    background: #4685a3 url({T_THEME_PATH}/images/footer.png) 0 0 repeat-x;
+    background: #1c7931 url({T_THEME_PATH}/images/footer.png) 0 0 repeat-x;
 }
 #footer .copyright {
-    color: rgba(255, 255, 255, 0.8);
-    text-shadow: rgba(0, 0, 0, 0.1) 1px 2px 1px;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: rgba(255, 255, 255, 0.1) 1px 2px 1px;
 }
 #footer .copyright a, #footer .copyright a:visited {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     text-decoration: underline;
 }
 .old-ie #footer .copyright, .old-ie #footer .copyright a, .old-ie #footer .copyright a:visited {
-    color: #eee;
+    color: #000;
 }
 #footer .copyright a:hover, #footer .copyright strong a {
-    color: #fff;
+    color: #000;
     text-decoration: underline;
 }
 
 body.simple .copyright {
     text-align: center;
-    color: #444;
+    color: #666;
     font-size: 11px;
 }
 
@@ -202,7 +202,7 @@ body.simple .copyright {
 #page-body { 
     padding: 0 6px 100px;
     background: url({T_THEME_PATH}/images/content_top.png) 0 -1px repeat-x;
-    border-top: solid 1px #e2e2e2;
+    border-top: solid 1px #101010;
 }
 body.simple #page-body { 
     padding: 0 6px; 
@@ -226,24 +226,34 @@ body.simple #page-body > h2.solo {
     margin: 0;
     padding: 8px 10px 8px 16px;
     text-align: left;
-    color: #888;
+    color: #666;
     background: url({T_THEME_PATH}/images/nav_links.gif) 6px 51% no-repeat;
 }
 .nav-links:hover { background-position: 8px 51%; }
 .nav-links .rightside { float: right; }
-.nav-links .time { color: #444; }
+.nav-links .time { color: #999; }
 
+.old-ie .nav-links {
+    background: url({T_THEME_PATH}/images/content_top.png) 1px left repeat-x;
+    border-bottom: 1px solid #202020;
+    border-top: 1px solid #383838;
+    margin: 0 -6px;
+}
+.old-ie #footer .nav-links {
+    border-bottom-width: 0;
+    background: none;
+}
 .nav-extra {
     float: right;
     font-size: 11px;
     margin: 8px;
-    color: #888;
+    color: #999;
 }
+#page-body .nav-extra { margin-right: 6px; }
 
 #footer .nav-links {
     margin-bottom: 6px;
 }
-#page-body .nav-extra { margin-right: 6px; }
 
 /*
     Rules
@@ -251,15 +261,15 @@ body.simple #page-body > h2.solo {
 div.rules {
     margin: 6px 4px;
     padding: 6px;
-    background: #edd4de;
-    border: solid 1px #dd92b0;
+    background: #2b2220;
+    border: solid 1px #45312c;
     border-radius: 6px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     text-shadow: none;
 }
 div.rules .inner > strong { 
-    color: #3083aa; 
+    color: #f36b42; 
     font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
     font-size: 14px;
     font-weight: normal;
