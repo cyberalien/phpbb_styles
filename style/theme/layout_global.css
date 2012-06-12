@@ -357,14 +357,3 @@ fieldset.display-options {
 	font-weight: bold;
 	font-size: 12px;
 }
-
-/*
-    Old browser
-*/
-#old-browser {
-    text-align: center;
-    padding: 4px;
-    color: #000;
-    background-color: #faf685;
-}
-#old-browser a { color: #000 !important; }
