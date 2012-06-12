@@ -1,0 +1,502 @@
+/*
+	Global CSS definitions, overall layout
+*/
+
+
+/*
+	CSS Reset
+*/
+html, body.phpbb, .phpbb div, .phpbb span, .phpbb applet, .phpbb object, .phpbb iframe, .phpbb
+h1, .phpbb h2, .phpbb h3, .phpbb h4, .phpbb h5, .phpbb h6, .phpbb p, .phpbb blockquote, .phpbb pre, .phpbb
+a, .phpbb abbr, .phpbb acronym, .phpbb address, .phpbb big, .phpbb cite, .phpbb code, .phpbb
+del, .phpbb dfn, .phpbb em, .phpbb img, .phpbb ins, .phpbb kbd, .phpbb q, .phpbb s, .phpbb samp, .phpbb
+small, .phpbb strike, .phpbb strong, .phpbb sub, .phpbb sup, .phpbb tt, .phpbb var, .phpbb
+b, .phpbb u, .phpbb i, .phpbb center, .phpbb
+dl, .phpbb dt, .phpbb dd, .phpbb ol, .phpbb ul, .phpbb li, .phpbb
+fieldset, .phpbb form, .phpbb label, .phpbb legend, .phpbb
+table, .phpbb caption, .phpbb tbody, .phpbb tfoot, .phpbb thead, .phpbb tr, .phpbb th, .phpbb td, .phpbb
+article, .phpbb aside, .phpbb canvas, .phpbb details, .phpbb embed, .phpbb 
+figure, .phpbb figcaption, .phpbb footer, .phpbb header, .phpbb hgroup, .phpbb 
+menu, .phpbb nav, .phpbb output, .phpbb ruby, .phpbb section, .phpbb summary, .phpbb
+time, .phpbb mark, .phpbb audio, .phpbb video, .phpbb meter {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+.phpbb article, .phpbb aside, .phpbb details, .phpbb figcaption, .phpbb figure, .phpbb 
+footer, .phpbb header, .phpbb hgroup, .phpbb menu, .phpbb nav, .phpbb section {
+	display: block;
+}
+body.phpbb {
+	line-height: 1em;
+}
+.phpbb ol, .phpbb ul {
+	list-style: none;
+}
+.phpbb blockquote, .phpbb q {
+	quotes: none;
+}
+.phpbb blockquote:before, .phpbb blockquote:after, .phpbb
+q:before, .phpbb q:after {
+	content: '';
+	content: none;
+}
+.phpbb table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+	Font
+*/
+body.phpbb {
+	font-family: Verdana;
+	font-size: 12px;
+}
+body.simple {
+	padding: 8px;
+}
+
+/*
+	Common stuff
+*/
+.phpbb .clear, .phpbb span.corners-bottom {
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+.phpbb .right {
+	text-align: right;
+}
+.phpbb .nowrap {
+	white-space: nowrap;
+}
+
+.phpbb p {
+	padding: 6px 0;
+	line-height: 1.5em;
+}
+
+.phpbb .rightside {
+	float: right;
+	text-align: right;
+}
+.phpbb .leftside {
+	float: left;
+	text-align: left;
+}
+.phpbb .left-box {
+	display: block;
+	float: left;
+	margin-right: 5px;
+}
+.phpbb .right-box {
+	display: block;
+	float: right;
+	margin-left: 5px;
+}
+
+.phpbb hr {
+	border-width: 0;
+	border-top: 1px solid transparent;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+
+
+/*
+	Layout
+*/
+.phpbb .wrap-top {
+	height: 800px;
+}
+.phpbb .wrap-top-top {
+	border-bottom: 1px solid transparent;
+}
+.phpbb .wrap-top-top div, .phpbb .wrap-top-mid, .phpbb .wrap-top-mid .right {
+	background: transparent none left top repeat-x;
+	height: 399px;
+}
+.phpbb .wrap-top-mid {
+	border-top: 1px solid transparent;
+	padding: 0 15px;
+}
+.phpbb .wrap-top-mid .left {
+	background: transparent none left top no-repeat;
+	margin: -1px auto 0;
+}
+.phpbb.fixed-width .wrap-top-mid .left {
+	width: 1010px;
+}
+.phpbb .wrap-top-mid .right {
+	background: transparent none right top no-repeat;
+}
+
+.phpbb .content-wrapper {
+	margin: -800px auto 0;
+	padding: 0 20px;
+}
+.phpbb.fixed-width .content-wrapper {
+	width: 1000px;
+}
+.phpbb .logo {
+	text-align: center;
+	padding: 10px 0 0;
+}
+.phpbb .logo h1 {
+	display: none; /* remove this line to show forum name in header */
+	font-size: 24px;
+	font-weight: normal;
+	padding: 10px;
+}
+
+.phpbb .sitenav {
+	margin: 0 240px;
+	padding: 13px 0 11px;
+	background: transparent none left bottom repeat-x;
+	position: relative;
+}
+.phpbb .sitenav:before, .phpbb .sitenav:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 240px;
+	pointer-events: none;
+}
+.phpbb .sitenav:before {
+	left: -240px;
+	background: transparent none 0 100% no-repeat;
+}
+.phpbb .sitenav:after {
+	right: -240px;
+	background: transparent none -240px 100% no-repeat;
+}
+.ie7 .phpbb .sitenav {
+	margin: 0;
+	margin-top: 9px;
+	padding-top: 4px;
+	border: 1px solid transparent;
+	border-width: 0 1px;
+}
+.phpbb .sitenav h2 {
+	display: block;
+	font-size: 16px;
+	font-family: Arial;
+	font-weight: 300;
+	margin: 6px 0 0 -230px;
+	padding: 0;
+	padding-left: 15px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: transparent none 0 50% no-repeat;
+}
+.ie7 .phpbb .sitenav h2 {
+	margin-left: 10px;
+}
+.phpbb .sitenav .links {
+	position: absolute;
+	top: 6px;
+	bottom: 0;
+	right: -240px;
+	z-index: 2;
+}
+.ie7 .phpbb .sitenav .links {
+	right: 10px;
+	top: -2px;
+}
+.phpbb .sitenav .links a {
+	display: block;
+	float: left;
+	height: 20px;
+	padding: 7px 2px 0 0;
+	margin: 9px 25px 0 10px;
+	background: transparent none 0 0 repeat-x;
+	white-space: nowrap;
+	text-decoration: none !important;
+	position: relative;
+}
+.ie7 .phpbb .sitenav .links a {
+	margin: 9px 0 0 10px;
+	padding: 7px 8px 0;
+	border: 1px solid transparent;
+	border-width: 0 1px;
+}
+.phpbb .sitenav .links a:before, .phpbb .sitenav .links a:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+.phpbb .sitenav .links a:before {
+	width: 10px;
+	left: -10px;
+	background: transparent none 0 -60px no-repeat;
+}
+.phpbb .sitenav .links a:after {
+	width: 20px;
+	right: -20px;
+	background: transparent none 0 -90px no-repeat;
+}
+
+.phpbb .sitenav .links a:hover { background-position: 0 -30px; }
+.phpbb .sitenav .links a:hover:before { background-position: -10px -60px; }
+.phpbb .sitenav .links a:hover:after { background-position: 0 -120px; }
+
+.phpbb .page-content {
+	min-height: 780px;
+	padding: 8px 8px 12px;
+}
+.phpbb .page-content > h3 {
+	clear: both;
+}
+
+/*
+	Footer
+*/
+.phpbb p.time {
+	margin-bottom: 6px;
+	padding: 0;
+}
+.phpbb p.time.first {
+	float: right;
+	text-align: right;
+}
+.phpbb .footer {
+	background: transparent none 0 0 repeat;
+	border-top: 1px solid transparent;
+}
+.phpbb .footer > .inner {
+	background: transparent none 0 0 repeat-x;
+	border-top: 1px solid transparent;
+}
+.phpbb .footer .inner > div {
+	margin: 0 auto;
+	padding: 10px 28px;
+}
+.phpbb.fixed-width .footer .inner > div {
+	width: 984px;
+}
+
+.phpbb .footer .left { 
+	float: left; 
+	padding: 0;
+}
+.phpbb .footer .copyright { 
+	float: right;
+	text-align: right;
+	padding: 0;
+}
+.oldie .phpbb .footer .copyright {
+	float: none;
+}
+.phpbb .footer .arty, .phpbb .footer .phpbb-group {
+	display: block;
+	float: right;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	padding-top: 28px;
+	padding-left: 60px;
+	background: transparent none 0 0 no-repeat;
+	opacity: 0.5;
+}
+.phpbb .footer .arty { 
+	background-position: -60px 0;
+}
+.phpbb .footer .arty:hover, .phpbb .footer .phpbb-group:hover {
+	opacity: 1;
+}
+
+/*
+	Menu
+*/
+.phpbb ul.menu {
+	float: left;
+}
+.phpbb ul.menu.right {
+	float: right;
+}
+
+.phpbb .menu > li {
+	display: block;
+	float: left;
+}
+
+.phpbb .menu > li > a {
+	display: block;
+	float: left;
+	background: transparent none 0 0 repeat-x;
+	text-decoration: none !important;
+	white-space: nowrap;
+	padding: 5px 0 0;
+	margin: 0 10px 0 15px;
+	height: 20px;
+	line-height: 1.2em;
+	position: relative;
+}
+.ie7 .phpbb .menu > li > a {
+	margin: 0 0 0 5px;
+	border: 1px solid transparent;
+	border-width: 0 1px;
+	padding: 5px 8px 0;
+	cursor: pointer;
+}
+.phpbb .menu > li > a:before, .phpbb .menu > li > a:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -10px;
+	width: 10px;
+	background-position: 0 -120px;
+	background-repeat: no-repeat;
+}
+.phpbb .menu > li > a:after {
+	left: auto;
+	right: -10px;
+	background-position: -17px -90px;
+}
+.phpbb .menu.left > li:first-child > a {
+	margin-left: 0;
+}
+
+.phpbb .menu > li > a > span {
+	white-space: nowrap;
+	max-width: 200px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+}
+
+.phpbb .menu > li.active > a { background-position: 0 -60px; }
+.phpbb .menu > li.active > a:before { background-position: -60px -120px; }
+.phpbb .menu > li.active > a:after { background-position: -77px -90px; }
+
+.phpbb .menu > li:hover > a { background-position: 0 -30px; }
+.phpbb .menu > li:hover > a:before { background-position: -30px -120px; }
+.phpbb .menu > li:hover > a:after { background-position: -47px -90px; }
+
+/* Menu: login */
+.phpbb .menu > li > a.menu-login { 
+	margin-left: 30px;
+	padding-left: 2px;
+}
+.phpbb .menu > li > a.menu-login:before { 
+	background-position: 0 -180px;
+	left: -25px;
+	width: 25px;
+}
+.phpbb .menu > li.active > a.menu-login:before { background-position: -60px -180px; }
+.phpbb .menu > li:hover > a.menu-login:before { background-position: -30px -180px; }
+
+/* Menu: pm */
+.phpbb .menu > li > a.menu-pm { 
+	margin-left: 30px;
+	padding-left: 3px;
+}
+.phpbb .menu > li > a.menu-pm:before { 
+	background-position: 0 -210px;
+	left: -25px;
+	width: 25px;
+}
+.phpbb .menu > li.active > a.menu-pm:before { background-position: -60px -210px; }
+.phpbb .menu > li:hover > a.menu-pm:before { background-position: -30px -210px; }
+
+.ie7 .phpbb .menu > li > a.menu-login, .ie7 .phpbb .menu > li > a.menu-pm { 
+	padding-left: 6px; 
+	margin-left: 5px;
+}
+
+
+/* Menu: icons */
+.phpbb .menu > li > a.menu-home, .phpbb .menu > li > a.menu-search, .phpbb .menu > li > a.menu-users, .phpbb .menu > li > a.menu-faq, .phpbb .menu > li > a.menu-ucp, .phpbb .menu > li > a.menu-down {
+	width: 0;
+	height: 0;
+	margin: 0;
+	margin-left: 5px;
+	padding: 25px 0 0 27px;
+	overflow: hidden;
+	background-position: 0 -360px;
+	background-repeat: no-repeat;
+	border-width: 0 !important;
+}
+.phpbb .menu > li > a.menu-home span, .phpbb .menu > li > a.menu-search span, .phpbb .menu > li > a.menu-users span, .phpbb .menu > li > a.menu-faq span, .phpbb .menu > li > a.menu-ucp span, .phpbb .menu > li > a.menu-down span { display: none; }
+
+.phpbb .menu > li > a.menu-home:before, .phpbb .menu > li > a.menu-search:before, .phpbb .menu > li > a.menu-users:before, .phpbb .menu > li > a.menu-faq:before, .phpbb .menu > li > a.menu-ucp:before, .phpbb .menu > li > a.menu-down:before,
+.phpbb .menu > li > a.menu-home:after, .phpbb .menu > li > a.menu-search:after, .phpbb .menu > li > a.menu-users:after, .phpbb .menu > li > a.menu-faq:after, .phpbb .menu > li > a.menu-ucp:after, .phpbb .menu > li > a.menu-down:after {
+	display: none;
+}
+.phpbb .menu > li.active > a.menu-down { background-position: -60px -360px; }
+.phpbb .menu > li:hover > a.menu-down { background-position: -30px -360px; }
+
+/* Menu: home */
+.phpbb .menu > li > a.menu-home { background-position: 0 -390px; }
+.phpbb .menu > li.active > a.menu-home { background-position: -60px -390px; }
+.phpbb .menu > li:hover > a.menu-home { background-position: -30px -390px; }
+
+/* Menu: search */
+.phpbb .menu > li > a.menu-search { background-position: 0 -240px; }
+.phpbb .menu > li.active > a.menu-search { background-position: -60px -240px; }
+.phpbb .menu > li:hover > a.menu-search { background-position: -30px -240px; }
+
+/* Menu: users */
+.phpbb .menu > li > a.menu-users { background-position: 0 -270px; }
+.phpbb .menu > li.active > a.menu-users { background-position: -60px -270px; }
+.phpbb .menu > li:hover > a.menu-users { background-position: -30px -270px; }
+
+/* Menu: faq */
+.phpbb .menu > li > a.menu-faq { background-position: 0 -300px; }
+.phpbb .menu > li.active > a.menu-faq { background-position: -60px -300px; }
+.phpbb .menu > li:hover > a.menu-faq { background-position: -30px -300px; }
+
+/* Menu: ucp */
+.phpbb .menu > li > a.menu-ucp { background-position: 0 -330px; }
+.phpbb .menu > li.active > a.menu-ucp { background-position: -60px -330px; }
+.phpbb .menu > li:hover > a.menu-ucp { background-position: -30px -330px; }
+
+/*
+	Navbar
+*/
+.phpbb .navbar, .phpbb .linkmcp {
+	margin: 6px 0;
+	padding: 6px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	clear: both;
+}
+.ie7 .phpbb .navbar, .ie7 .phpbb .linkmcp {
+	height: 12px;
+}
+.phpbb .navbar:after, .phpbb .linklist:after, .phpbb .topic-actions:after, .phpbb #tabs ul:after, .phpbb #minitabs ul:after, .phpbb dl.details:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.phpbb .navbar .left {
+	float: left;
+}
+.phpbb .navbar .right {
+	float: right;
+}
+.phpbb .navbar a {
+	text-decoration: none;
+}
+.phpbb .navbar a:hover {
+	text-decoration: underline;
+}
+.phpbb .linkmcp {
+	text-align: right;
+}

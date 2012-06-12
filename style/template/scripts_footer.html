@@ -1,0 +1,45 @@
+<script src="{T_TEMPLATE_PATH}/jquery-1.7.1.min.js"></script>
+<script src="{T_THEME_PATH}/theme.js"></script>
+<!-- IF $JUMPBOX and not $SIMPLE -->
+	<!-- IF $JUMPBOX == 1 -->
+	<script>
+		phpBB.jumpBoxAction = '{S_JUMPBOX_ACTION}';
+		phpBB.jumpBoxData = [
+			<!-- BEGIN jumpbox_forums -->
+			<!-- IF not jumpbox_forums.S_IS_LINK -->
+			{
+				'id'	: {jumpbox_forums.FORUM_ID},
+				<!-- IF jumpbox_forums.SELECTED -->'selected'  : true,
+				<!-- ENDIF -->'level'	 : '<!-- BEGIN level -->.<!-- END level -->'
+			}<!-- IF not jumpbox_forums.S_LAST_ROW -->,<!-- ENDIF -->
+			<!-- ENDIF -->
+			<!-- END jumpbox_forums -->
+		];
+	</script>
+	<!-- ELSE -->
+	<script>
+		phpBB.jumpBoxAction = true;
+		phpBB.jumpBoxData = [
+			<!-- BEGIN forumrow -->
+			<!-- IF not forumrow.S_IS_LINK -->
+			{
+				'id'	: {forumrow.FORUM_ID},
+				'url'   : '{forumrow.U_VIEWFORUM}',
+				'level' : '<!-- IF not forumrow.S_IS_CAT -->.<!-- ENDIF -->'
+			}<!-- BEGIN subforum -->,
+			{
+				'id'	: 0,
+				'url'   : '{forumrow.subforum.U_SUBFORUM}',
+				'level' : '..'
+			}<!-- END subforum --><!-- IF not forumrow.S_LAST_ROW -->,<!-- ENDIF -->
+			<!-- ENDIF -->
+			<!-- END forumrow -->
+		];
+	</script>
+	<!-- ENDIF -->
+	<datalist id="jumpbox-data"><select id="jumpbox-data-select" style="display: none;">
+		<!-- IF $JUMPBOX == 1 --><!-- BEGIN jumpbox_forums --><!-- IF not jumpbox_forums.S_IS_LINK --><option>{jumpbox_forums.FORUM_NAME}</option><!-- ENDIF --><!-- END jumpbox_forums -->
+		<!-- ELSE --><!-- BEGIN forumrow --><!-- IF not forumrow.S_IS_LINK --><option>{forumrow.FORUM_NAME}</option><!-- BEGIN subforum --><option>{forumrow.subforum.SUBFORUM_NAME}</option><!-- END subforum --><!-- ENDIF --><!-- END forumrow -->
+		<!-- ENDIF -->
+	</select></datalist>
+<!-- ENDIF -->

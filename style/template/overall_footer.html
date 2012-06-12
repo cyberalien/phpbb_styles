@@ -1,0 +1,65 @@
+<!-- IF not S_IS_BOT -->
+<div class="navbar">
+	<div class="left">
+		<!-- IF SCRIPT_NAME == 'index' && U_MARK_FORUMS -->
+			<!-- DEFINE $S_FOOTER_NAV = 1 -->
+			<a href="{U_MARK_FORUMS}">{L_MARK_FORUMS_READ}</a>
+		<!-- ENDIF -->
+		<!-- IF S_WATCH_FORUM_LINK -->
+			<!-- IF $S_FOOTER_NAV --><span class="bull">&bull;</span><!-- ELSE --><!-- DEFINE $S_FOOTER_NAV = 1 --><!-- ENDIF -->
+			<a href="{S_WATCH_FORUM_LINK}">{S_WATCH_FORUM_TITLE}</a>
+		<!-- ENDIF -->
+		<!-- IF SCRIPT_NAME == 'viewforum' && U_MARK_TOPICS -->
+			<!-- IF $S_FOOTER_NAV --><span class="bull">&bull;</span><!-- ELSE --><!-- DEFINE $S_FOOTER_NAV = 1 --><!-- ENDIF -->
+			<a href="{U_MARK_TOPICS}">{L_MARK_TOPICS_READ}</a>
+		<!-- ENDIF -->
+		<!-- IF U_WATCH_TOPIC -->
+			<!-- IF $S_FOOTER_NAV --><span class="bull">&bull;</span><!-- ELSE --><!-- DEFINE $S_FOOTER_NAV = 1 --><!-- ENDIF -->
+			<a href="{U_WATCH_TOPIC}">{L_WATCH_TOPIC}</a>
+		<!-- ENDIF -->
+		<!-- IF U_BOOKMARK_TOPIC -->
+			<!-- IF $S_FOOTER_NAV --><span class="bull">&bull;</span><!-- ELSE --><!-- DEFINE $S_FOOTER_NAV = 1 --><!-- ENDIF -->
+			<a href="{U_BOOKMARK_TOPIC}">{L_BOOKMARK_TOPIC}</a>
+		<!-- ENDIF -->
+		<!-- IF U_BUMP_TOPIC -->
+			<!-- IF $S_FOOTER_NAV --><span class="bull">&bull;</span><!-- ELSE --><!-- DEFINE $S_FOOTER_NAV = 1 --><!-- ENDIF -->
+			<a href="{U_BUMP_TOPIC}">{L_BUMP_TOPIC}</a>
+		<!-- ENDIF -->
+		<!-- IF not $S_FOOTER_NAV --><a href="{U_INDEX}">{L_INDEX}</a><!-- ENDIF -->
+	</div>
+	<!-- IF not S_IS_BOT -->
+		<div class="right">
+			<a href="{U_DELETE_COOKIES}">{L_DELETE_COOKIES}</a>
+			<!-- IF U_ACP -->
+				<span class="bull">&bull;</span>
+				<a href="{U_ACP}">{L_ACP}</a>
+			<!-- ENDIF -->
+		</div>
+	<!-- ENDIF -->
+</div>
+<!-- ENDIF -->
+
+	</div><!-- content -->
+</div><!-- wrap-content -->
+
+<div class="footer"><div class="inner"><div>
+	<!-- IF TRANSLATION_INFO or DEBUG_OUTPUT -->
+	<p class="left">
+		<!-- IF TRANSLATION_INFO -->{TRANSLATION_INFO}<br /><!-- ENDIF -->
+		<!-- IF DEBUG_OUTPUT -->{DEBUG_OUTPUT}<!-- ENDIF -->
+	</p>
+	<!-- ENDIF -->
+	<p class="copyright">
+		<a href="http://www.phpbb.com/" class="phpbb-group" title="Powered by phpBB">Powered by phpBB&reg; Forum Software &copy; phpBB Group</a> 
+<!--
+    Please do not remove style author's link below. For updates and support visit http://www.artodia.com/
+//-->
+		<a href="http://www.artodia.com/" class="arty" title="phpBB style by Arty">phpBB style by Arty</a>
+	</p>
+	<div class="clear"><!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF --></div>
+</div></div></div>
+
+<!-- INCLUDE scripts_footer.html -->
+
+</body>
+</html>

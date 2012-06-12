@@ -1,0 +1,70 @@
+
+<!-- BEGIN forumrow -->
+	<!-- IF (forumrow.S_IS_CAT and not forumrow.S_FIRST_ROW) or forumrow.S_NO_CAT  -->
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	<!-- ENDIF -->
+
+	<!-- IF forumrow.S_IS_CAT or forumrow.S_FIRST_ROW  or forumrow.S_NO_CAT  -->
+		<div class="forabg">
+			<div class="inner"><span class="corners-top"><span></span></span>
+			<ul class="topiclist">
+				<li class="header">
+					<dl class="icon">
+						<dt><!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a><!-- ELSE -->{L_FORUM}<!-- ENDIF --></dt>
+						<dd class="topics">{L_TOPICS}</dd>
+						<dd class="posts">{L_POSTS}</dd>
+						<dd class="lastpost"><span>{L_LAST_POST}</span></dd>
+					</dl>
+				</li>
+			</ul>
+			<ul class="topiclist forums">
+			<!-- DEFINE $FIRST_ROW = true -->
+	<!-- ENDIF -->
+
+	<!-- IF not forumrow.S_IS_CAT -->
+		<li class="row<!-- IF forumrow.S_UNREAD_FORUM --> unread<!-- ENDIF --><!-- IF forumrow.S_LOCKED_FORUM --> locked<!-- ENDIF --><!-- IF $FIRST_ROW --> row1<!-- ELSE --> row2<!-- ENDIF -->">
+			<dl class="icon" style="background-image: url(<!-- IF forumrow.FORUM_IMAGE -->{forumrow.FORUM_IMAGE_SRC}<!-- ELSE -->{forumrow.FORUM_FOLDER_IMG_SRC}<!-- ENDIF -->); background-repeat: no-repeat;">
+				<dt title="{forumrow.FORUM_FOLDER_IMG_ALT}">
+				<!-- IF S_ENABLE_FEEDS and forumrow.S_FEED_ENABLED --><a class="feed-icon-forum" title="{L_FEED} - {forumrow.FORUM_NAME}" href="{U_FEED}?f={forumrow.FORUM_ID}">{L_FEED} - {forumrow.FORUM_NAME}</a><!-- ENDIF -->
+					<a href="{forumrow.U_VIEWFORUM}" class="forumtitle">{forumrow.FORUM_NAME}</a><br />
+					{forumrow.FORUM_DESC}
+					<!-- IF forumrow.MODERATORS -->
+						<p class="moderators"><strong>{forumrow.L_MODERATOR_STR}:</strong> {forumrow.MODERATORS}</p>
+					<!-- ENDIF -->
+					<!-- IF forumrow.SUBFORUMS and forumrow.S_LIST_SUBFORUMS --><p class="subforums"><strong>{forumrow.L_SUBFORUM_STR}</strong> {forumrow.SUBFORUMS}</p><!-- ENDIF -->
+				</dt>
+				<!-- IF forumrow.CLICKS -->
+					<dd class="redirect"><span>{L_REDIRECTS}: {forumrow.CLICKS}</span></dd>
+				<!-- ELSEIF not forumrow.S_IS_LINK -->
+					<dd class="topics">{forumrow.TOPICS} <dfn>{L_TOPICS}</dfn></dd>
+					<dd class="posts">{forumrow.POSTS} <dfn>{L_POSTS}</dfn></dd>
+					<dd class="lastpost"><span>
+						<!-- IF forumrow.U_UNAPPROVED_TOPICS --><a href="{forumrow.U_UNAPPROVED_TOPICS}">{UNAPPROVED_IMG}</a><!-- ENDIF -->
+						<!-- IF forumrow.LAST_POST_TIME --><dfn>{L_LAST_POST}</dfn> <span class="by">{L_POST_BY_AUTHOR}</span> {forumrow.LAST_POSTER_FULL}
+						<!-- IF not S_IS_BOT --><a href="{forumrow.U_LAST_POST}">{LAST_POST_IMG}</a> <!-- ENDIF --><br />{forumrow.LAST_POST_TIME}<!-- ELSE -->{L_NO_POSTS}<!-- ENDIF --></span>
+					</dd>
+				<!-- ELSE -->
+					<dd class="empty"></dd>
+				<!-- ENDIF -->
+			</dl>
+		</li>
+		<!-- IF $FIRST_ROW --><!-- DEFINE $FIRST_ROW = false --><!-- ELSE --><!-- DEFINE $FIRST_ROW = true --><!-- ENDIF -->
+	<!-- ENDIF -->
+
+	<!-- IF forumrow.S_LAST_ROW -->
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	<!-- ENDIF -->
+
+<!-- BEGINELSE -->
+	<div class="panel">
+		<div class="inner"><span class="corners-top"><span></span></span>
+		<strong>{L_NO_FORUMS}</strong>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+<!-- END forumrow -->

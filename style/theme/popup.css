@@ -1,0 +1,131 @@
+/*
+	Popups
+*/
+.phpbb .popup-trigger {
+	position: relative;
+}
+
+.phpbb .popup {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 27px;
+	z-index: 10;
+	padding: 4px 5px 6px;
+	margin: 0;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	min-width: 150px;
+	white-space: nowrap;
+	text-align: left;
+	font-size: 12px;
+	line-height: 1em;
+	font-family: Verdana;
+}
+.ie7 .phpbb .popup {
+	top: 24px;
+}
+.phpbb .menu.left .popup {
+	left: 5px;
+}
+.phpbb .menu.left li:first-child .popup {
+	left: 0;
+}
+.phpbb .popup-up .popup {
+	top: auto;
+	bottom: 0;
+}
+.phpbb .popup-list {
+	padding: 2px 5px 4px;
+}
+.phpbb .right .popup {
+	left: auto;
+	right: 0;
+}
+
+.phpbb .popup-trigger:hover .popup, .phpbb .popup.active {
+	display: block;
+}
+
+.phpbb .popup:before {
+	content: '';
+	display: block;
+	height: 2px;
+	position: relative;
+	top: -7px;
+	left: -6px;
+}
+.phpbb .popup-list:before {
+	top: -5px;
+}
+.phpbb .right .popup:before {
+	left: auto;
+	right: -6px;
+}
+
+.phpbb .popup p {
+	padding: 2px 0;
+}
+
+/*
+	Links
+*/
+.phpbb .popup-list li {
+	padding: 1px 0;
+}
+.ie7 .phpbb .popup-list a {
+	width: 100%;
+}
+
+.phpbb .popup-list li > a:first-child, .phpbb .popup-list li.nolink {
+	display: block;
+	padding: 3px 10px 4px 5px;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	text-decoration: none !important;
+	max-width: 200px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.phpbb .popup-list li.nolink {
+	margin: 1px 0;
+}
+
+.phpbb .popup-list ol {
+	display: table-row;
+}
+.phpbb .popup-list ol > li {
+	display: table-cell;
+	padding-right: 4px;
+}
+.phpbb .popup-list ol > li:last-child {
+	padding-right: 0;
+}
+
+/*
+	Definition lists
+*/
+.phpbb .popup dl {
+	clear: both;
+	width: 254px;
+	margin: 0;
+	padding: 4px;
+}
+.phpbb .popup dt {
+	float: left;
+	width: 100px;
+	margin: 0;
+	padding: 3px 0 0;
+}
+.phpbb .popup dd {
+	width: 150px;
+	margin: 0;
+	margin-left: 104px;
+	padding: 0;
+}
+.ie7 .phpbb .popup dd {
+	margin-left: 0;
+}
+.phpbb .popup dd input {
+	width: 140px;
+}

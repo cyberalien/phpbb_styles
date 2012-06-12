@@ -1,0 +1,52 @@
+<!-- IF S_JUMPBOX_ACTION and .jumpbox_forums -->
+	<!-- DEFINE $JUMPBOX = 1 -->
+<!-- ELSEIF .forumrow -->
+	<!-- DEFINE $JUMPBOX = 2 -->
+<!-- ENDIF -->
+<script>
+
+	var phpBB = {
+		currentPage: '{$CURRENT_PAGE}',
+		themePath: '{T_THEME_PATH}',
+		lang: '{S_USER_LANG}'
+	};
+
+	var jump_page = '{LA_JUMP_PAGE}:';
+	var on_page = '{ON_PAGE}';
+	var per_page = '{PER_PAGE}';
+	var base_url = '{A_BASE_URL}';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '{A_COOKIE_SETTINGS}';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+	/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (var i = 0; i < onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	};
+
+	window.onunload = function()
+	{
+		for (var i = 0; i < onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	};
+
+</script>
+<script src="{T_SUPER_TEMPLATE_PATH}/forum_fn.js"></script>
