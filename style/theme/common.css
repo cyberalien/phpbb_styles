@@ -116,26 +116,9 @@ body.simple {
 .phpbb .wrap-top {
 	height: 800px;
 }
-.phpbb .wrap-top-top {
-	border-bottom: 1px solid transparent;
-}
-.phpbb .wrap-top-top div, .phpbb .wrap-top-mid, .phpbb .wrap-top-mid .right {
+.phpbb .wrap-top-top, .phpbb .wrap-top-mid {
 	background: transparent none left top repeat-x;
-	height: 399px;
-}
-.phpbb .wrap-top-mid {
-	border-top: 1px solid transparent;
-	padding: 0 15px;
-}
-.phpbb .wrap-top-mid .left {
-	background: transparent none left top no-repeat;
-	margin: -1px auto 0;
-}
-.phpbb.fixed-width .wrap-top-mid .left {
-	width: 1010px;
-}
-.phpbb .wrap-top-mid .right {
-	background: transparent none right top no-repeat;
+	height: 400px;
 }
 
 .phpbb .content-wrapper {
@@ -145,116 +128,43 @@ body.simple {
 .phpbb.fixed-width .content-wrapper {
 	width: 1000px;
 }
-.phpbb .logo {
-	text-align: center;
-	padding: 10px 0 0;
-}
-.phpbb .logo h1 {
-	display: none; /* remove this line to show forum name in header */
-	font-size: 24px;
-	font-weight: normal;
-	padding: 10px;
-}
 
-.phpbb .sitenav {
-	margin: 0 240px;
-	padding: 13px 0 11px;
-	background: transparent none left bottom repeat-x;
-	position: relative;
+.phpbb ul.page-header {
+	display: table;
 }
-.phpbb .sitenav:before, .phpbb .sitenav:after {
-	content: '';
+.phpbb ul.page-header li {
+	display: table-cell;
+	text-align: left;
+	vertical-align: middle;
+}
+.ie7 .phpbb ul.page-header {
 	display: block;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 240px;
-	pointer-events: none;
+	height: 1%;
 }
-.phpbb .sitenav:before {
-	left: -240px;
-	background: transparent none 0 100% no-repeat;
-}
-.phpbb .sitenav:after {
-	right: -240px;
-	background: transparent none -240px 100% no-repeat;
-}
-.ie7 .phpbb .sitenav {
-	margin: 0;
-	margin-top: 9px;
-	padding-top: 4px;
-	border: 1px solid transparent;
-	border-width: 0 1px;
-}
-.phpbb .sitenav h2 {
-	display: block;
-	font-size: 16px;
-	font-family: Arial;
-	font-weight: 300;
-	margin: 6px 0 0 -230px;
-	padding: 0;
-	padding-left: 15px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	background: transparent none 0 50% no-repeat;
-}
-.ie7 .phpbb .sitenav h2 {
-	margin-left: 10px;
-}
-.phpbb .sitenav .links {
-	position: absolute;
-	top: 6px;
-	bottom: 0;
-	right: -240px;
-	z-index: 2;
-}
-.ie7 .phpbb .sitenav .links {
-	right: 10px;
-	top: -2px;
-}
-.phpbb .sitenav .links a {
+.ie7 .phpbb ul.page-header li {
 	display: block;
 	float: left;
-	height: 20px;
-	padding: 7px 2px 0 0;
-	margin: 9px 25px 0 10px;
-	background: transparent none 0 0 repeat-x;
-	white-space: nowrap;
-	text-decoration: none !important;
-	position: relative;
-}
-.ie7 .phpbb .sitenav .links a {
-	margin: 9px 0 0 10px;
-	padding: 7px 8px 0;
-	border: 1px solid transparent;
-	border-width: 0 1px;
-}
-.phpbb .sitenav .links a:before, .phpbb .sitenav .links a:after {
-	content: '';
-	display: block;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-}
-.phpbb .sitenav .links a:before {
-	width: 10px;
-	left: -10px;
-	background: transparent none 0 -60px no-repeat;
-}
-.phpbb .sitenav .links a:after {
-	width: 20px;
-	right: -20px;
-	background: transparent none 0 -90px no-repeat;
 }
 
-.phpbb .sitenav .links a:hover { background-position: 0 -30px; }
-.phpbb .sitenav .links a:hover:before { background-position: -10px -60px; }
-.phpbb .sitenav .links a:hover:after { background-position: 0 -120px; }
+.phpbb ul.page-header .site-title {
+	padding-left: 10px;
+}
+.phpbb ul.page-header h1, .phpbb ul.page-header h2 {
+	font-weight: normal;
+	margin: 0;
+	line-height: 1em;
+	padding: 6px;
+	font-size: 24px;
+}
+.phpbb ul.page-header h2 {
+	font-size: 16px;
+	opacity: 0.8;
+}
 
 .phpbb .page-content {
 	min-height: 780px;
 	padding: 8px 8px 12px;
+	border-radius: 8px;
 }
 .phpbb .page-content > h3 {
 	clear: both;
@@ -276,14 +186,10 @@ body.simple {
 	border-top: 1px solid transparent;
 }
 .phpbb .footer > .inner {
-	background: transparent none 0 0 repeat-x;
-	border-top: 1px solid transparent;
-}
-.phpbb .footer .inner > div {
 	margin: 0 auto;
 	padding: 10px 28px;
 }
-.phpbb.fixed-width .footer .inner > div {
+.phpbb.fixed-width .footer .inner {
 	width: 984px;
 }
 

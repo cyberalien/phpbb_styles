@@ -222,7 +222,6 @@ $(document).ready(function()
 		}
 	});
 	
-	
 	/*
 		Popups
 	*/
