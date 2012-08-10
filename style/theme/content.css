@@ -1235,3 +1235,14 @@
 	background: transparent none 100% 0 repeat-y;
 	zoom: 1;
 }
+
+/*
+	Link to switch to mobile style
+*/
+.mobile-style-switch a {
+	padding: 5px 10px 6px;
+	border: 1px solid #D8D8D8;
+	border-radius: 5px;
+	background: #F8F8F8;
+	box-shadow: #fff 0 0 0 1px inset;
+}
