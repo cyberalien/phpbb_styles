@@ -1066,6 +1066,7 @@
 	Link to switch to mobile style
 */
 .mobile-style-switch a {
+	display: inline-block;
 	padding: 5px 10px 6px;
 	border: 1px solid #D8D8D8;
 	border-radius: 10px;
