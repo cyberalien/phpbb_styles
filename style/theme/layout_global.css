@@ -79,13 +79,13 @@ nav.nav-links:hover {
 
 .corners-top, .corners-bottom { display: none; }
 
-div.rules, div.forabg, div.forumbg, div.post, .panel, .cp-mini {
+div.rules, div.forabg, div.forumbg, div.post, .panel, .cp-mini, .mobile-style-switch a {
     transition: opacity 2s ease;
     -webkit-transition: opacity 2s ease;
     -moz-transition: opacity 2s ease;
     -o-transition: opacity 2s ease;
 }
-body.transform nav.nav-links {
+body.transform nav.nav-links, .mobile-style-switch a {
     transition-property: border-color, background-color, opacity;
     -webkit-transition-property: border-color, background-color, opacity;
     -moz-transition-property: border-color, background-color, opacity;
