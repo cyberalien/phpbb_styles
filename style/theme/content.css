@@ -1063,3 +1063,13 @@
 .phpbb a.feed-icon-forum:hover {
 	background-position: 0 -20px;
 }
+
+/*
+	Link to switch to mobile style
+*/
+.mobile-style-switch a {
+	padding: 5px 10px 6px;
+	border: 1px solid #D8D8D8;
+	border-radius: 10px;
+	background: #F8F8F8;
+}
