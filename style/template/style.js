@@ -185,5 +185,21 @@ $(document).ready(function() {
         $('body').prepend('<div id="old-browser" style="display: none;"></div>');
         $('#old-browser').load(imagesetLang + '/oldie.txt', function() { $('#old-browser').slideDown(); });
     }
+    
+    // show full footer
+    function resizeFooter()
+    {
+    	var height = Math.floor($('#footer .copyright').height() + $('#footer .nav-links').height());
+    	if (!height)
+    	{
+    		return;
+		}
+		$('#footer').css('min-height', (height + 24) + 'px');
+		$('#page-body').css('padding-bottom', (height + 60) + 'px');
+    }
+    resizeFooter();
+    $('#footer').css('max-height', 'auto');
+    $(document).load(resizeFooter);
+    $(window).resize(resizeFooter);
 });
 
