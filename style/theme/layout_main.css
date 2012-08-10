@@ -259,3 +259,16 @@ div.rules > .inner > strong {
     padding: 20px;
 }
 
+/*
+	Link to switch to mobile style
+*/
+.mobile-style-switch a {
+	padding: 5px 10px 6px;
+	border: 2px solid #ddd;
+	border-radius: 10px;
+	background: #fafafa;
+}
+.mobile-style-switch a:hover {
+	border-color: #a2aec7;
+}
+
