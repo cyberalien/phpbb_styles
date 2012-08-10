@@ -290,10 +290,10 @@ div.rules .inner > strong {
 */
 .mobile-style-switch a {
 	padding: 5px 10px 6px;
-	border: 1px solid #ddd;
+	border: 1px solid #111;
 	border-radius: 10px;
-	background: #f8f8f8;
-	box-shadow: #fff 0 0 0 1px inset;
+	background: #282828;
+	box-shadow: #333 0 0 0 1px inset;
 }
 
 
