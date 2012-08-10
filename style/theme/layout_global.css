@@ -79,10 +79,7 @@ nav.nav-links:hover {
 
 .corners-top, .corners-bottom { display: none; }
 
-nav.nav-links, img, .topic-actions, .profile-icons {
-    opacity: 0;
-}
-nav.nav-links, img, .topic-actions, .profile-icons, div.rules, div.forabg, div.forumbg, div.post, .panel, .cp-mini {
+div.rules, div.forabg, div.forumbg, div.post, .panel, .cp-mini {
     transition: opacity 2s ease;
     -webkit-transition: opacity 2s ease;
     -moz-transition: opacity 2s ease;
