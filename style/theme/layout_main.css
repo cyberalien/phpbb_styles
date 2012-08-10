@@ -187,6 +187,11 @@
     height: 30px;
     overflow: hidden;
 }
+#footer .copyright:after {
+	content: '';
+	display: block;
+	clear: both;
+}
 #footer .copyright > strong { 
     display: block;
     clear: both; 
