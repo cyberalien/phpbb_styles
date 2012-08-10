@@ -335,3 +335,13 @@ div.rules .inner > strong {
     padding: 20px;
 }
 
+/*
+	Link to switch to mobile style
+*/
+.mobile-style-switch a {
+	padding: 5px 10px 6px;
+	border: 2px solid #a5c2d1;
+	border-radius: 10px;
+	background: #F1F4F5;
+}
+
