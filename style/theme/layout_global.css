@@ -132,7 +132,7 @@ div.forabg, div.forumbg, div.panel-wrapper {
 
 .corners-top, .corners-bottom { display: none; }
 
-div.nav-links, img, .topic-actions, .profile-icons {
+.topic-actions, .profile-icons {
     opacity: 0;
 }
 div.nav-links, img, .topic-actions, .profile-icons, div.rules, div.forabg, div.forumbg, div.post, .panel, .cp-mini {
