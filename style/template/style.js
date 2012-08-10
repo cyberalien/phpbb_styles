@@ -198,6 +198,21 @@ $(document).ready(function() {
         $('body').prepend('<div id="old-browser" style="display: none;"></div>');
         $('#old-browser').load(imagesetLang + '/oldie.txt', function() { $('#old-browser').slideDown(); });
     }
+    
+    // show full footer
+    function resizeFooter()
+    {
+    	var height = Math.floor($('#footer .copyright').height());
+    	if (!height)
+    	{
+    		return;
+		}
+		$('#footer').css('min-height', height + 'px');
+		$('#page-body').css('padding-bottom', (height + 15) + 'px');
+    }
+    resizeFooter();
+    $(document).onload(resizeFooter);
+    $(window).resize(resizeFooter);
 });
 
 $(window).load(function() {

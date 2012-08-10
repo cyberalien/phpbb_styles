@@ -224,6 +224,11 @@
     padding: 0;
     max-height: auto;
 }
+#footer .copyright:after {
+	content: '';
+	display: block;
+	clear: both;
+}
 #footer .copyright > strong { 
     display: block;
     clear: both; 
