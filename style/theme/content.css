@@ -1069,7 +1069,7 @@
 */
 .mobile-style-switch a {
 	padding: 5px 10px 6px;
-	border: 1px solid #D8D8D8;
+	border: 1px solid #000;
 	border-radius: 10px;
-	background: #F8F8F8;
+	background: #383838;
 }
