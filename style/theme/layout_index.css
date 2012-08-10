@@ -35,7 +35,7 @@ ul.topiclist li {
 ul.topiclist li.header {
     margin: 2px 2px 0;
     border: solid 1px transparent; /* rgba(30, 67, 142, 0.2); */
-    background: url({T_THEME_PATH}/images/popupbg.png) 0 -2px repeat-x;
+    background: url("{T_THEME_PATH}/images/popupbg.png") 0 -2px repeat-x;
     border-radius: 6px;
     -moz-border-radius: 6px;
     color: rgba(255, 255, 255, 0.8);
@@ -323,7 +323,7 @@ div[class].topic-actions {
     height: 20px;
     text-decoration: none;
     text-align: center;
-    background: url({T_THEME_PATH}/images/buttons.png) top right no-repeat;
+    background: url("{T_THEME_PATH}/images/buttons.png") top right no-repeat;
     text-shadow: rgba(0,0,0,0.1) 1px 1px 1px;
 }
 .browser-ie .buttons div a {

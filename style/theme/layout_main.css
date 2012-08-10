@@ -5,7 +5,7 @@ body > header, #header {
     position: relative;
     margin: 8px 0 10px;
     padding: 0;
-    background: url({T_THEME_PATH}/images/header.png) 0 0 repeat-x;
+    background: url("{T_THEME_PATH}/images/header.png") 0 0 repeat-x;
     background-size: 128px 100%;
     min-height: 62px;
     overflow: hidden;
@@ -93,7 +93,7 @@ body > header nav a, body > header nav a:visited, body > header nav span {
 }
 body > header nav a:hover {
     color: #fff;
-    background: url({T_THEME_PATH}/images/menu_border.gif) bottom left repeat-x;
+    background: url("{T_THEME_PATH}/images/menu_border.gif") bottom left repeat-x;
 }
 body > header nav strong { font-weight: normal; }
 
@@ -103,7 +103,7 @@ body > header nav strong { font-weight: normal; }
     bottom: auto;
     top: 8px;
     right: 8px;
-    background: rgba(41, 83, 170, 0.3) url({T_THEME_PATH}/images/search.png) center left no-repeat;
+    background: rgba(41, 83, 170, 0.3) url("{T_THEME_PATH}/images/search.png") center left no-repeat;
     border: solid 1px #27447e;
     -moz-border-radius: 8px;
     border-radius: 8px;

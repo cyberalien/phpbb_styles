@@ -22,7 +22,7 @@ body.simple {
     padding: 8px;
 }
 html, body.simple, body.rounded #page-wrapper, body.rounded > footer {
-    background: #f1f1f1 url({T_THEME_PATH}/images/bg.png);
+    background: #f1f1f1 url("{T_THEME_PATH}/images/bg.png");
 }
 
 a, a:visited {
@@ -66,7 +66,7 @@ header, footer, section, figure, legend, nav {
 */
 nav.nav-links, div.rules, div.forabg, div.forumbg, div.post, .panel, .cp-mini {
     border: 2px solid #ddd;
-    background: rgba(255, 255, 255, 0.3) url({T_THEME_PATH}/images/roundedbg.png) 0 0 repeat-x;
+    background: rgba(255, 255, 255, 0.3) url("{T_THEME_PATH}/images/roundedbg.png") 0 0 repeat-x;
     border-radius: 8px;
     -moz-border-radius: 8px;
 }
@@ -100,10 +100,10 @@ body.transform nav.nav-links, body.transform img, body.transform .topic-actions,
 /* 
     Arrow links  
 */
-a.up		{ background: url({T_THEME_PATH}/images/arrow_up.gif) no-repeat left center; }
-a.down		{ background: url({T_THEME_PATH}/images/arrow_down.gif) no-repeat right center; }
-a.left		{ background: url({T_THEME_PATH}/images/arrow_left.gif) no-repeat 3px 60%; }
-a.right		{ background: url({T_THEME_PATH}/images/arrow_right.gif)  no-repeat 95% 60%; }
+a.up		{ background: url("{T_THEME_PATH}/images/arrow_up.gif") no-repeat left center; }
+a.down		{ background: url("{T_THEME_PATH}/images/arrow_down.gif") no-repeat right center; }
+a.left		{ background: url("{T_THEME_PATH}/images/arrow_left.gif") no-repeat 3px 60%; }
+a.right		{ background: url("{T_THEME_PATH}/images/arrow_right.gif")  no-repeat 95% 60%; }
 
 a.up, a.up:link, a.up:active, a.up:visited {
 	padding-left: 10px;
