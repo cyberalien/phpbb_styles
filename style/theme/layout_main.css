@@ -3,13 +3,8 @@
 */
 body > header, #header {
     position: relative;
-    margin: 0;
-    margin-bottom: 10px;
+    margin: 8px 0 10px;
     padding: 0;
-    top: -20px;
-    opacity: 0;
-    left: 0;
-    right: 0;
     background: url({T_THEME_PATH}/images/header.png) 0 0 repeat-x;
     background-size: 128px 100%;
     min-height: 62px;
@@ -17,64 +12,45 @@ body > header, #header {
     border: solid 1px #223252;
     border-radius: 8px;
     -moz-border-radius: 8px;
-    transition-property: top, opacity;
-    -webkit-transition-property: top, opacity;
-    -moz-transition-property: top, opacity;
-    -o-transition-property: top, opacity;
-    transition-duration: 1s;
-    -webkit-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    -o-transition-duration: 1s;
-    transition-timing-function: ease;
-    -webkit-transition-timing-function: ease;
-    -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-}
-body.transform > header, #header {
-    opacity: 1;
-    top: 8px;
 }
 
 body.rounded > header, body.rounded #header {
     margin-top: 8px;
     margin-bottom: 0;
-    top: 0;
     border-bottom-right-radius: 0;
     -moz-border-radius-bottomright: 0;
     border-bottom-left-radius: 0;
     -moz-border-radius-bottomleft: 0;
 }
 
+body > header:after, #header:after, #site-description:after {
+	content: '';
+	display: block;
+	clear: both;
+}
 
 #site-description {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
     vertical-align: center;
-}
-.old-ie #site-description {
-    position: static;
     float: left;
+    position: relative;
+    left: 50%;
 }
-#site-description > a {
-    float: left;
+#site-description > div {
+	margin-left: -50%;
+}
+#site-description #logo, #site-description .site-description-data {
+	display: block;
+	float: left;
+	text-align: left;
     padding: 0;
-    line-height: 1em;
-    font-size: 1px;
     text-decoration: none;
     border-width: 0;
 }
-#site-description > a > img { 
-    margin: 0; 
-    padding: 0;
-    opacity: 1 !important;
+#site-description #logo img { 
+	display: block;
 }
-#site-description > p, #site-description > h1 {
-    position: absolute;
-    left: {IMG_SITE_LOGO_WIDTH}px;
-    margin: 0;
-    padding: 0;
+#site-description p, #site-description h1 {
+	text-align: left;
     padding-left: 8px;
     white-space: nowrap;
     font-weight: normal;
@@ -83,27 +59,31 @@ body.rounded > header, body.rounded #header {
     text-shadow: rgba(0, 0, 0, 0.2) 1px 2px 1px;
 }
 
-#site-description > h1 {
+#site-description h1 {
+	padding-top: 5px;
     font-size: 20px;
     color: rgba(255, 255, 255, 0.8);
-    padding-top: 6px;
 }
-#site-description > p {
+#site-description p {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.6);
-    padding-top: 35px;
 }
 #site-description .skiplink { display: none; }
 
 body > header nav, .old-ie header nav {
-    display: inline-block;
-    position: absolute;
-    right: 10px;
+    display: block;
+    position: relative;
     bottom: -1px;
+    float: left;
+    clear: both;
+    left: 50%;
     font-size: 12px;
     line-height: 1em;
     color: #7589b3;
     white-space: nowrap;
+}
+body > header nav div {
+	margin-left: -50%;
 }
 body > header nav a, body > header nav a:visited, body > header nav span {
     display: inline-block;
