@@ -5,11 +5,11 @@ body > header, #header {
     position: relative;
     margin: 8px 0 10px;
     padding: 0;
-    background: url("{T_THEME_PATH}/images/header.png") 0 0 repeat-x;
+    background: #1e438e url("{T_THEME_PATH}/images/header.png") 0 0 repeat-x;
     background-size: 128px 100%;
     min-height: 62px;
     overflow: hidden;
-    border: solid 1px #3e6ece;
+    border: solid 0px #3e6ece;
     border-radius: 8px;
     -moz-border-radius: 8px;
 }
@@ -23,10 +23,14 @@ body.rounded > header, body.rounded #header {
     -moz-border-radius-bottomleft: 0;
 }
 
-body > header:after, #header:after, #site-description:after {
+body > header .inner:after, #header .inner:after, #site-description:after {
 	content: '';
 	display: block;
 	clear: both;
+}
+
+body > header .inner, #header .inner {
+	background: url("{T_THEME_PATH}/images/pattern.png") 0 0 repeat;
 }
 
 #site-description {
