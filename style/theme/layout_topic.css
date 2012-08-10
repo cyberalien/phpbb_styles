@@ -306,7 +306,7 @@ fieldset.polls dd div {
 	padding: 0 3px;
 	overflow: visible;
 	min-width: 12px;
-	background: #3f65b2 url({T_THEME_PATH}/images/poll.png) 0 0 repeat-x;
+	background: #3f65b2 url("{T_THEME_PATH}/images/poll.png") 0 0 repeat-x;
 	border: solid 0px transparent;
 	border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -324,7 +324,7 @@ fieldset.polls dl.voted dd div { background-position: 0 -125px; }
 ----------------------------------------*/
 /* Quote block */
 blockquote {
-	background: rgba(40, 40, 40, 0.3) url({T_THEME_PATH}/images/bb_quote.gif) 5px 8px no-repeat;
+	background: rgba(40, 40, 40, 0.3) url("{T_THEME_PATH}/images/bb_quote.gif") 5px 8px no-repeat;
 	border: 1px solid #333;
 	border-radius: 8px;
 	-moz-border-radius: 8px;
