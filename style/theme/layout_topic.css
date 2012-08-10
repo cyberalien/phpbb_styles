@@ -117,11 +117,6 @@ ul.profile-icons li a {
 	background-color: #f4f4f4;
 	background-position: 0 0;
 	opacity: 1;
-    transition: opacity 0.25s ease;
-    -webkit-transition: opacity 0.25s ease;
-    -moz-transition: opacity 0.25s ease;
-    -o-transition: opacity 0.25s ease;
-    -ms-transition: opacity 0.25s ease;
 }
 
 /* Hide <a> text and hide off-state image when rolling over (prevents flicker in IE) */
