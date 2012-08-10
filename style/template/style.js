@@ -211,7 +211,7 @@ $(document).ready(function() {
 		$('#page-body').css('padding-bottom', (height + 15) + 'px');
     }
     resizeFooter();
-    $(document).onload(resizeFooter);
+    $(document).load(resizeFooter);
     $(window).resize(resizeFooter);
 });
 
