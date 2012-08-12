@@ -360,6 +360,59 @@ $(document).ready(function()
 		phpBB.resizeContent();
 		$(window).on('resize load', function() { phpBB.resizeContent(); });
 	}
+	
+	/*
+		Resize big images
+	*/
+	function imageClicked(event)
+	{
+		var $this = $(this);
+		if ($this.hasClass('zoomed-in'))
+		{
+			$this.removeClass('zoomed-in').css('max-width', $(this).attr('data-max-width') + 'px');
+		}
+		else
+		{
+			$this.addClass('zoomed-in').css('max-width', '100%');
+		}
+	}
+	function zoomClicked(event)
+	{
+		imageClicked.apply($(this).prev().get(0), arguments);
+		event.stopPropagation();
+	}
+	function resizeImage(width)
+	{
+		var $this = $(this);
+		$this.wrap('<span class="zoom-container" />').attr('data-max-width', width).css({
+			'max-width': width + 'px',
+			cursor: 'pointer'
+			}).addClass('zoom').click(imageClicked).after('<span class="zoom-image" />').next().click(zoomClicked);
+	}
+	function checkImage()
+	{
+		var maxWidth = 639;
+		if (this.width > maxWidth)
+		{
+			resizeImage.call(this, maxWidth);
+		}
+	}
+	$('.postbody img').each(function() {
+		var $this = $(this);
+		if ($this.closest('a').length)
+		{
+			return;
+		}
+		if (this.complete)
+		{
+			checkImage.call(this);
+		}
+		else
+		{
+			$this.load(checkImage);
+		}
+	});
+
 });
 
 /*
