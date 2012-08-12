@@ -278,13 +278,9 @@ body.simple #page-body > h2.solo {
     overflow: hidden;
     color: #216d94;
 }
-.nav-links a.first span {
+.nav-links a:first-child span {
     background-image: url({T_THEME_PATH}/images/nav2a.png);
     padding-left: 25px;
-}
-.nav-links a.first2 span {
-    padding-left: 6px;
-    background-position: -20px 0;
 }
 .nav-links a:hover {
     background-position: right -40px;
@@ -292,9 +288,6 @@ body.simple #page-body > h2.solo {
 .nav-links a:hover span {
     background-position: 0 -40px;
     color: #b42c2c;
-}
-.nav-links a.first2:hover span {
-    background-position: -20px -80px;
 }
 
 .nav-extra {
