@@ -170,6 +170,56 @@ $(document).ready(function() {
         if(this.value == '') this.value = laSearchMini;
         $('#search-box').removeClass('focused');
     });
+
+    // resize big images
+    function imageClicked(event)
+    {
+    	var $this = $(this);
+    	if ($this.hasClass('zoomed-in'))
+		{
+			$this.removeClass('zoomed-in').css('max-width', $(this).attr('data-max-width') + 'px');
+		}
+		else
+		{
+			$this.addClass('zoomed-in').css('max-width', '');
+		}
+    }
+    function zoomClicked(event)
+    {
+		imageClicked.apply($(this).prev().get(0), arguments);
+		event.stopPropagation();
+    }
+	function resizeImage(width)
+	{
+		var $this = $(this);
+		$this.wrap('<span class="zoom-container" />').attr('data-max-width', width).css({
+			'max-width': width + 'px',
+			cursor: 'pointer'
+			}).addClass('zoom').click(imageClicked).after('<span class="zoom-image" />').next().click(zoomClicked);
+	}
+    function checkImage()
+    {
+		var maxWidth = Math.floor(this.parentNode.clientWidth - 10);
+		if (this.width > maxWidth)
+		{
+			resizeImage.call(this, maxWidth);
+		}
+    }
+    $('.postbody img').each(function() {
+    	var $this = $(this);
+    	if ($this.closest('a').length)
+    	{
+    		return;
+		}
+		if (this.complete)
+		{
+			checkImage.call(this);
+		}
+		else
+		{
+			$this.load(checkImage);
+		}
+	});
     
     // old browser warning
     function hasCookie(search)
