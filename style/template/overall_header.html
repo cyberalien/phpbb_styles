@@ -97,10 +97,15 @@
 <body id="phpbb" class="section-{SCRIPT_NAME} {S_CONTENT_DIRECTION}">
 
 <header>
+	<div class="inner">
     <div id="site-description">
-        <a href="{U_INDEX}" title="{L_INDEX}" id="logo">{SITE_LOGO_IMG}</a>
-        <h1>{SITENAME}</h1>
-        <p>{SITE_DESCRIPTION}</p>
+    	<div>
+			<a href="{U_INDEX}" title="{L_INDEX}" id="logo">{SITE_LOGO_IMG}</a>
+			<div class="site-description-data">
+				<h1>{SITENAME}</h1>
+				<p>{SITE_DESCRIPTION}</p>
+			</div>
+		</div>
     </div>
 
     <!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
@@ -113,6 +118,7 @@
     <!-- ENDIF -->
 
     <nav class="nav-header">
+    	<div>
         <!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
             <a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e">{L_PROFILE}</a>
             <!-- IF S_DISPLAY_PM --> (<a href="{U_PRIVATEMSGS}">{PRIVATE_MESSAGE_INFO}</a>)<!-- ENDIF -->
@@ -130,7 +136,9 @@
             <!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) --> &bull; <a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF -->
              &bull; <a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x">{L_LOGIN_LOGOUT}</a>
         <!-- ENDIF -->
+        </div>
     </nav>
+    </div>
 </header>
 
 <div id="page-wrapper">

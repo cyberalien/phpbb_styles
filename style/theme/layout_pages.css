@@ -40,7 +40,7 @@ div#message h2, #confirm h2, #agreement h2 {
     padding: 0;
     height: 24px;
     padding-left: 10px;
-    background: url({T_THEME_PATH}/images/tabs_right.png) top left no-repeat;
+    background: url("{T_THEME_PATH}/images/tabs_right.png") top left no-repeat;
     border-width: 0;
     outline-style: none;
     text-decoration: none;
@@ -53,7 +53,7 @@ div#message h2, #confirm h2, #agreement h2 {
     padding-top: 6px;
     padding-right: 10px;
     height: 18px;
-    background: url({T_THEME_PATH}/images/tabs_left.png) top right no-repeat;
+    background: url("{T_THEME_PATH}/images/tabs_left.png") top right no-repeat;
     color: #469f1a;
     text-shadow: rgba(0,0,0,0.1) 1px 1px 1px;
 }
@@ -65,7 +65,7 @@ div#message h2, #confirm h2, #agreement h2 {
     color: #c8901f;
 }
 #tabs li.first a, #navigation li.first a, #minitabs li.first a {
-    background-image: url({T_THEME_PATH}/images/tabs_left.png);
+    background-image: url("{T_THEME_PATH}/images/tabs_left.png");
     padding-left: 14px;
 }
 
@@ -75,7 +75,7 @@ div#message h2, #confirm h2, #agreement h2 {
     padding-left: 0;
 }
 #tabs li.last a span, #navigation li.last a span, #minitabs li.last a span {
-    background-image: url({T_THEME_PATH}/images/tabs_right.png);
+    background-image: url("{T_THEME_PATH}/images/tabs_right.png");
     background-position: top left;
     padding-left: 10px;
     padding-right: 0;
@@ -403,7 +403,7 @@ table.table1 {
 table.table1 th {
 	font-weight: normal;
     border: solid 1px transparent; /* rgba(30, 67, 142, 0.2); */
-    background: url({T_THEME_PATH}/images/popupbg.png) 0 -2px repeat-x;
+    background: url("{T_THEME_PATH}/images/popupbg.png") 0 -2px repeat-x;
     border-radius: 6px;
     -moz-border-radius: 6px;
     color: rgba(255, 255, 255, 0.8);

@@ -17,9 +17,9 @@
 /* body { max-width: 900px; } */
 
 /*
-    Change "none" to "inline-block" (without quotes) to show website title and description in header
+    Change "none" to "block" (without quotes) to show website title and description in header
 */
-#site-description > p, #site-description > h1 { display: none; }
+#site-description p, #site-description h1 { display: none; }
 
 
 /*
