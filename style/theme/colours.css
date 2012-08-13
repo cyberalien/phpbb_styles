@@ -49,7 +49,6 @@ body.simple {
 .phpbb .layout-outer {
 	background-color: #f4f4f4;
 	border-color: #e0e0e0;
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 .phpbb .forum-wrapper {
 	border-color: #fafafa;
@@ -251,15 +250,13 @@ body.simple {
 	background-image: url("{T_THEME_PATH}/images/popup_arrows.png");
 }
 
-.phpbb .popup p {
-	color: #808080;
-}
 .phpbb .popup p.title {
 	color: #1a4f90;
 }
 .phpbb .popup p.title:first-child {
 	color: #bc2a2a;
 }
+
 
 /*
 	Forms

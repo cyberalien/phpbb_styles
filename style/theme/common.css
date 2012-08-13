@@ -531,3 +531,27 @@ body.simple {
 	z-index: 2;
 }
 
+/*
+	Styles demo
+*/
+.phpbb .top-link-color {
+	display: none;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	height: 29px;
+	width: 25px;
+	vertical-align: top;
+	background: transparent none 50% 50% no-repeat;
+	text-decoration: none !important;
+}
+.phpbb .top-link-color span {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	padding: 29px 0 0 25px;
+	background: transparent url("{T_THEME_PATH}/images/menu_colors.png") -2px 0 repeat-x;
+}
+.phpbb .top-link-color.selected span, .phpbb .top-link-color:hover span { background-position: -2px -29px; }
+

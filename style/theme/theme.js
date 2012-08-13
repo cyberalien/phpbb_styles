@@ -74,7 +74,7 @@ $(document).ready(function()
 	{
 		$(this).attr('title', $(this).text());
 	});
-
+	
 	/*
 		Jump box
 	*/
