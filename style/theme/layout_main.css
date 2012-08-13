@@ -187,6 +187,11 @@
     height: 30px;
     overflow: hidden;
 }
+#footer .copyright:after {
+	content: '';
+	display: block;
+	clear: both;
+}
 #footer .copyright > strong { 
     display: block;
     clear: both; 
@@ -273,13 +278,9 @@ body.simple #page-body > h2.solo {
     overflow: hidden;
     color: #216d94;
 }
-.nav-links a.first span {
+.nav-links a:first-child span {
     background-image: url({T_THEME_PATH}/images/nav2a.png);
     padding-left: 25px;
-}
-.nav-links a.first2 span {
-    padding-left: 6px;
-    background-position: -20px 0;
 }
 .nav-links a:hover {
     background-position: right -40px;
@@ -287,9 +288,6 @@ body.simple #page-body > h2.solo {
 .nav-links a:hover span {
     background-position: 0 -40px;
     color: #b42c2c;
-}
-.nav-links a.first2:hover span {
-    background-position: -20px -80px;
 }
 
 .nav-extra {
@@ -328,5 +326,15 @@ div.rules .inner > strong {
 #information, #newpm {
     text-align: center;
     padding: 20px;
+}
+
+/*
+	Link to switch to mobile style
+*/
+.mobile-style-switch a {
+	padding: 5px 10px 6px;
+	border: 2px solid #a5c2d1;
+	border-radius: 10px;
+	background: #F1F4F5;
 }
 
