@@ -310,7 +310,7 @@ body.simple #page-body > h2.solo {
 .nav-links a, .nav-links a:visited, .nav-links a:hover, .nav-links a:active {
     outline-style: none;
 }
-.nav-links a.first {
+.nav-links a:first-child {
     background-position: right 0;
 }
 .nav-links a span {
@@ -330,7 +330,7 @@ body.simple #page-body > h2.solo {
 .old-ie .nav-links a span {
     color: #dadee7;
 }
-.nav-links a.first span {
+.nav-links a:first-child span {
     padding-left: 6px;
     background-position: -20px 0;
 }
@@ -340,13 +340,13 @@ body.simple #page-body > h2.solo {
 .nav-links a:hover span {
     background-position: 0 -80px;
 }
-.nav-links a.first:hover span {
+.nav-links a:first-child:hover span {
     background-position: -20px -80px;
 }
-.nav-links a.first span, .nav-links a:hover span {
+.nav-links a:first-child span, .nav-links a:hover span {
     color: rgba(255, 255, 255, 0.7);
 }
-.old-ie .nav-links a.first span, .old-ie .nav-links a:hover span {
+.old-ie .nav-links a:first-child span, .old-ie .nav-links a:hover span {
     color: #e5dad4;
 }
 
@@ -391,3 +391,14 @@ div.rules .inner > strong {
     padding: 20px;
 }
 
+
+/*
+	Link to switch to mobile style
+*/
+.mobile-style-switch a {
+	padding: 5px 10px 6px;
+	border: 1px solid #c0c0c0;
+	border-radius: 10px;
+	background: #dfdfdf;
+	box-shadow: #e8e8e8 0 0 0 1px inset;
+}
