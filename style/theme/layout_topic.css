@@ -306,7 +306,7 @@ fieldset.polls dd div {
 	padding: 0 3px;
 	overflow: visible;
 	min-width: 12px;
-	background: #3f65b2 url({T_THEME_PATH}/images/poll.png) 0 0 repeat-x;
+	background: #3f65b2 url("{T_THEME_PATH}/images/poll.png") 0 0 repeat-x;
 	border: solid 0px transparent;
 	border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -324,7 +324,7 @@ fieldset.polls dl.voted dd div { background-position: 0 -125px; }
 ----------------------------------------*/
 /* Quote block */
 blockquote {
-	background: rgba(40, 40, 40, 0.3) url({T_THEME_PATH}/images/bb_quote.gif) 5px 8px no-repeat;
+	background: rgba(40, 40, 40, 0.3) url("{T_THEME_PATH}/images/bb_quote.gif") 5px 8px no-repeat;
 	border: 1px solid #333;
 	border-radius: 8px;
 	-moz-border-radius: 8px;
@@ -550,3 +550,37 @@ p.rules a {
 */
 .posthilit { color: #dd225f; }
 
+
+/*
+	Zoom in image
+*/
+span.zoom-container {
+	position: relative;
+	display: inline-block;
+	min-height: 34px;
+}
+span.zoom-image { 
+	display: none; 
+    transition: opacity 0.25s ease;
+    -webkit-transition: opacity 0.25s ease;
+    -moz-transition: opacity 0.25s ease;
+    -o-transition: opacity 0.25s ease;
+    -ms-transition: opacity 0.25s ease;
+	opacity: 0.7;
+}
+img.zoom + span.zoom-image {
+	display: block;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 30px;
+	height: 30px;
+	background: url("{T_THEME_PATH}/images/zoom.png") 0 0 no-repeat;
+	cursor: pointer;
+}
+.zoom-container:hover span.zoom-image { opacity: 1; }
+img.zoom.zoomed-in + span.zoom-image { 
+	background-position: 0 -30px;
+	opacity: 0;
+}
+.zoom-container:hover img.zoom.zoomed-in + span.zoom-image { opacity: 0.7; }

@@ -22,7 +22,7 @@ body.simple {
     padding: 8px;
 }
 html, body.simple, body.rounded #page-wrapper, body.rounded > footer {
-    background: #222 url({T_THEME_PATH}/images/bg.png);
+    background: #222 url("{T_THEME_PATH}/images/bg.png");
 }
 
 a, a:visited {
@@ -66,7 +66,7 @@ header, footer, section, figure, legend, nav {
 */
 nav.nav-links, div.rules, div.forabg, div.forumbg, div.post, .panel, .cp-mini {
     border: 2px solid #333;
-    background: rgba(0, 0, 0, 0.3) url({T_THEME_PATH}/images/roundedbg.png) 0 0 repeat-x;
+    background: rgba(0, 0, 0, 0.3) url("{T_THEME_PATH}/images/roundedbg.png") 0 0 repeat-x;
     border-radius: 8px;
     -moz-border-radius: 8px;
 }
@@ -79,16 +79,13 @@ nav.nav-links:hover {
 
 .corners-top, .corners-bottom { display: none; }
 
-nav.nav-links, img, .topic-actions, .profile-icons {
-    opacity: 0;
-}
-nav.nav-links, img, .topic-actions, .profile-icons, div.rules, div.forabg, div.forumbg, div.post, .panel, .cp-mini {
+div.rules, div.forabg, div.forumbg, div.post, .panel, .cp-mini, .mobile-style-switch a {
     transition: opacity 2s ease;
     -webkit-transition: opacity 2s ease;
     -moz-transition: opacity 2s ease;
     -o-transition: opacity 2s ease;
 }
-body.transform nav.nav-links {
+body.transform nav.nav-links, .mobile-style-switch a {
     transition-property: border-color, background-color, opacity;
     -webkit-transition-property: border-color, background-color, opacity;
     -moz-transition-property: border-color, background-color, opacity;
@@ -103,10 +100,10 @@ body.transform nav.nav-links, body.transform img, body.transform .topic-actions,
 /* 
     Arrow links  
 */
-a.up		{ background: url({T_THEME_PATH}/images/arrow_up.gif) no-repeat left center; }
-a.down		{ background: url({T_THEME_PATH}/images/arrow_down.gif) no-repeat right center; }
-a.left		{ background: url({T_THEME_PATH}/images/arrow_left.gif) no-repeat 3px 60%; }
-a.right		{ background: url({T_THEME_PATH}/images/arrow_right.gif)  no-repeat 95% 60%; }
+a.up		{ background: url("{T_THEME_PATH}/images/arrow_up.gif") no-repeat left center; }
+a.down		{ background: url("{T_THEME_PATH}/images/arrow_down.gif") no-repeat right center; }
+a.left		{ background: url("{T_THEME_PATH}/images/arrow_left.gif") no-repeat 3px 60%; }
+a.right		{ background: url("{T_THEME_PATH}/images/arrow_right.gif")  no-repeat 95% 60%; }
 
 a.up, a.up:link, a.up:active, a.up:visited {
 	padding-left: 10px;
