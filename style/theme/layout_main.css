@@ -167,6 +167,11 @@
     color: rgba(0, 0, 0, 0.8);
     text-shadow: rgba(255, 255, 255, 0.1) 1px 2px 1px;
 }
+#footer .copyright:after {
+	content: '';
+	display: block;
+	clear: both;
+}
 #footer .copyright a, #footer .copyright a:visited {
     color: rgba(0, 0, 0, 0.8);
     text-decoration: underline;
@@ -279,4 +284,17 @@ div.rules .inner > strong {
     text-align: center;
     padding: 20px;
 }
+
+/*
+	Link to switch to mobile style
+*/
+.mobile-style-switch a {
+	padding: 5px 10px 6px;
+	border: 1px solid #111;
+	border-radius: 10px;
+	background: #282828;
+	box-shadow: #333 0 0 0 1px inset;
+}
+
+
 
