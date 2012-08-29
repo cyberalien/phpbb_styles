@@ -335,6 +335,12 @@
 	margin-top: 4px;
 }
 
+.phpbb .panel-inner .inner:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
 
 /*
 	Tables
