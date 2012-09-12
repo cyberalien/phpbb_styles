@@ -260,6 +260,24 @@ $(document).ready(function()
 	}
 	
 	/*
+		Links in posts
+	*/
+	$('a.postlink').each(function() {
+		var $this = $(this);
+		
+		if ($this.children().length)
+		{
+			return;
+		}
+		
+		var html = $this.html();
+		if (html.length > 50 && html.indexOf('://') > 0 && html.indexOf(' ') < 0)
+		{
+			$this.html(html.substr(0, 39) + ' ... ' + html.substr(-10));
+		}
+	});
+
+	/*
 		Resize big images
 	*/
 	function imageClicked(event)
