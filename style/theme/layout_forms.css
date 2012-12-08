@@ -30,7 +30,6 @@ input[type="text"], input[type="password"], select, textarea {
     -moz-transition-duration: 0.25s;
     -o-transition-duration: 0.25s;
     -ms-transition-duration: 0.25s;
-	-webkit-appearance: none;
 }
 
 input[type="text"]:hover, input[type="password"]:hover, select:hover, textarea:hover {
