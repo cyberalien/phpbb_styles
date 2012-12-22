@@ -54,7 +54,7 @@
 }
 
 .postbody .content {
-	font-size: 12px;
+	font-size: 13px;
 }
 
 .search .postbody {
@@ -355,7 +355,7 @@ blockquote {
 	border-radius: 8px;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
-	font-size: 12px;
+	font-size: 13px;
 	margin: 0.5em 1px 0 25px;
 	overflow: hidden;
 	padding: 5px;
@@ -379,7 +379,7 @@ blockquote cite {
 	font-weight: normal;
 	margin-left: 20px;
 	display: block;
-	font-size: 11px;
+	font-size: 12px;
 	color: #444;
 }
 
@@ -402,7 +402,7 @@ dl.codebox {
 dl.codebox dt {
 	margin-bottom: 3px;
 	padding-left: 2px;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: normal;
 	display: block;
 	color: #444;

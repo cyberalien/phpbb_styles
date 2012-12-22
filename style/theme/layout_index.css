@@ -92,7 +92,7 @@ ul.topiclist dt {
 ul.topiclist dd {
 	display: block;
 	float: left;
-	padding: 4px 0;
+	padding: 4px 0 2px;
 	border-left: 1px solid #e0e0e0;
     transition: border-left-color 0.25s ease;
     -webkit-transition: border-left-color 0.25s ease;
@@ -188,9 +188,10 @@ dl.icon dt {
 	padding-left: 30px;					/* Space for folder icon */
 	background-repeat: no-repeat;
 	background-position: 12px 100%;		/* Position of topic icon */
-	font-size: 11px;
-	line-height: 1.3em;
+	font-size: 12px;
+	line-height: 1.28em;
 }
+
 dl.icon dt div.extra {
     float: right;
     padding-top: 4px;
@@ -204,9 +205,9 @@ dd.posts, dd.topics, dd.views {
 }
 
 a.forumtitle, a.topictitle {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
-    line-height: 1.4em;
+    line-height: 1.28em;
     font-family: Arial;
 }
 .unread a.forumtitle, .unread a.forumtitle:visited, 
@@ -448,8 +449,8 @@ li.pagination {
 	display: block;
 	float: right;
 	width: auto;
-	margin-top: 0;
-	padding: 1px 0 1px 15px;
+	margin-top: -4px;
+	padding: 1px 0 0 15px;
 	font-size: 0.9em;
 	background: none 0 50% no-repeat;
 }
