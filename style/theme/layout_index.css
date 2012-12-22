@@ -87,7 +87,10 @@ ul.topiclist dt {
 	width: 50%;
 	padding-left: 5px;
 	padding-right: 5px;
+	min-height: 35px;
 }
+
+ul.topiclist .header dt { min-height: 0; }
 
 ul.topiclist dd {
 	display: block;
