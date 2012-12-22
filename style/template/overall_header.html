@@ -154,20 +154,6 @@
 </div>
 
 <div id="page-header">
-    <!-- IF S_DISPLAY_SEARCH -->
-        <div id="search-adv">
-            <a href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}"><span>{L_SEARCH_ADV}</span></a>
-        </div>
-    <!-- ENDIF -->
-    <!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
-        <div id="search-box">
-            <form action="{U_SEARCH}" method="get" id="search">
-                <input name="keywords" id="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="inputbox search" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" />
-                {S_SEARCH_HIDDEN_FIELDS}
-            </form>
-        </div>
-    <!-- ENDIF -->
-
     <div id="nav-header">
         <!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
             <a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e"><span>{L_PROFILE}</span></a> 
@@ -183,6 +169,19 @@
         <!-- ENDIF -->
     </div>
 
+    <!-- IF S_DISPLAY_SEARCH -->
+        <div id="search-adv">
+            <a href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}"><span>{L_SEARCH_ADV}</span></a>
+        </div>
+    <!-- ENDIF -->
+    <!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
+        <div id="search-box">
+            <form action="{U_SEARCH}" method="get" id="search">
+                <input name="keywords" id="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="inputbox search" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" />
+                {S_SEARCH_HIDDEN_FIELDS}
+            </form>
+        </div>
+    <!-- ENDIF -->
 </div>
 
 <div id="page-body">
