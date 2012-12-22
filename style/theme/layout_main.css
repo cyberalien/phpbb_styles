@@ -57,10 +57,12 @@
     text-decoration: none;
     border-width: 0;
 }
-#header a > img { 
+#header a img {
+	display: inline-block;
     margin: 0; 
     padding: 0;
     opacity: 1 !important;
+    max-width: 100%;
 }
 
 #header p, #header h1 {
