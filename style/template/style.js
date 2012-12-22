@@ -281,15 +281,3 @@ $(document).ready(function() {
     $(window).resize(resizeFooter);
 });
 
-$(window).load(function() {
-    // set min width
-    var min = 40;
-    $('#nav-header a, #search-adv, #search-box').each(function()
-    {
-        min += $(this).width() + 20;
-    });
-    $('body').css('min-width', Math.min(
-        Math.floor(min),
-        Math.floor($('body').width())
-        ) + 'px');
-});
