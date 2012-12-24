@@ -153,8 +153,12 @@
     <p>{SITE_DESCRIPTION}</p>
 </div>
 
-<div id="page-header">
-    <div id="nav-header">
+<div id="page-header" class="responsive-menu-nojs">
+	<div class="menu-buttons responsive-menu" style="display:none;">
+		<a href="javascript:void(0);"><!-- IF L_MENU --><span>{L_MENU}</span><!-- ELSE --><span class="arrow">&darr;&darr;&darr;</span><!-- ENDIF --></span></a>
+	</div>
+
+    <div id="nav-header" class="menu-buttons">
         <!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
             <a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e"><span>{L_PROFILE}</span></a> 
             <!-- IF U_RESTORE_PERMISSIONS -->
@@ -167,6 +171,7 @@
             <!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) --><a href="{U_REGISTER}"><span>{L_REGISTER}</span></a> <!-- ENDIF -->
              <a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x"><span>{L_LOGIN_LOGOUT}</span></a> 
         <!-- ENDIF -->
+        <a href="javascript:void(0);" class="responsive-menu-hide" style="display:none;"><span>X</span></a>
     </div>
 
     <!-- IF S_DISPLAY_SEARCH -->

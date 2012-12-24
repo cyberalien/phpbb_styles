@@ -1,13 +1,48 @@
 @media only screen and (max-width: 700px), only screen and (max-device-width: 700px)
 {
+	/* main stuff */
+	body { min-width: 320px; }
+
+	/* navigation */
+	.responsive-menu { display: block !important; }
+	#search-box { display: none !important; }
+	#page-header { position: relative; }
+	#nav-header {
+		float: none;
+		margin: 0 0 0 -5px;
+		padding: 6px 4px;
+		width: auto;
+		max-width: 320px;
+		position: absolute;
+		top: 30px;
+		background: rgba(240, 240, 240, 0.9);
+		border: 1px solid #c8c8c8;
+		border-radius: 10px;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 2px 2px 5px rgba(0, 0, 0, 0.1);
+	}
+	#nav-header a {
+		float: none;
+		display: block;
+	}
+	#nav-header a span {
+		display: block;
+		max-width: 320px;
+		text-align: center;
+	}
+	#nav-header { display: none !important; }
+	.responsive-menu-nojs:hover #nav-header, .responsive-menu-visible #nav-header { display: block !important; }
+
+	.responsive-menu-visible .responsive-menu-hide { display: block !important; }
+
+	/* forums/topics lists */
 	ul.topiclist dt { width: 60%; }
 	ul.topiclist dd.topics, ul.topiclist dd.posts { display: none; }
 	ul.topiclist dd.lastpost { width: 30%; }
 }
 
-
 @media only screen and (max-width: 500px), only screen and (max-device-width: 500px)
 {
+	/* forums/topics lists */
 	ul.topiclist dt { 
 		float: none;
 		width: auto;
