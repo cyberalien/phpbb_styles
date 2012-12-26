@@ -101,7 +101,7 @@
     line-height: 1em;
     text-align: center;
 }
-#nav-header a, #nav-header a:visited, #search-adv a, #search-adv a:visited {
+.menu-buttons a, .menu-buttons a:visited, #search-adv a, #search-adv a:visited {
     display: block;
     float: left;
     margin: 0;
@@ -117,7 +117,7 @@
     -o-transition: none;
     -ms-transition: none;
 }
-#nav-header a span, #search-adv a span {
+.menu-buttons a span, #search-adv a span {
     display: inline-block;
     margin: 0;
     margin-right: -10px;
@@ -131,10 +131,10 @@
     text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 0;
 }
 
-#nav-header a:hover, #nav-header a.new, #search-adv a:hover {
+.menu-buttons a:hover, .menu-buttons a.new, #search-adv a:hover {
     background-position: bottom left;
 }
-#nav-header a:hover span, #nav-header a.new span, #search-adv a:hover span {
+.menu-buttons a:hover span, .menu-buttons a.new span, #search-adv a:hover span {
     background-position: bottom right;
     color: #fff;
     text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 0;
