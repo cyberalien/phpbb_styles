@@ -66,11 +66,13 @@
 #page-header {
     clear: both;
     margin: 0 10px;
+    padding: 1px 0 0;
     min-height: 10px;
     background: url({T_THEME_PATH}/images/hdr_tr.gif) top right no-repeat, url({T_THEME_PATH}/images/hdr_tl.gif) top left no-repeat, url({T_THEME_PATH}/images/hdr_l.gif) top left repeat-y, url({T_THEME_PATH}/images/hdr_r.gif) top right repeat-y, url({T_THEME_PATH}/images/hdr_t.gif) top left repeat-x, #dadada url({T_THEME_PATH}/images/innerbg.gif) top left repeat;
 }
 .old-ie #page-header {
     background: #dadada url({T_THEME_PATH}/images/innerbg.gif) top left repeat;
+    padding: 0;
 }
 .old-ie #page-header .hdr1 {
     background: url({T_THEME_PATH}/images/hdr_t.gif) top left repeat-x;
@@ -87,16 +89,18 @@
 .old-ie #page-header .hdr5 {
     background: url({T_THEME_PATH}/images/hdr_tr.gif) top right no-repeat;
     min-height: 10px;
+    padding: 1px 0 0;
 }
 
+#menu-wrapper {
+	margin: -20px 0 0;
+}
 
 #nav-header, #search-adv {
     display: block;
     float: left;
     z-index: 1;
     margin-left: 5px;
-    position: relative;
-    top: -19px;
     font-size: 12px;
     line-height: 1em;
     text-align: center;
@@ -148,10 +152,8 @@
     margin-right: 5px;
 }
 #search-box {
-    position: relative;
     float: right;
     z-index: 1;
-    top: -19px;
     width: 180px;
     height: 29px;
     background: url({T_THEME_PATH}/images/header_search.png) center left no-repeat;
@@ -293,11 +295,8 @@ body.simple #page-body > h2.solo {
 */
 .nav-links {
     clear: left;
-    position: relative;
-    left: -4px;
-    top: -14px;
-    height: 34px;
-    margin: 0;
+    height: 40px;
+    margin: 0 -4px;
     padding: 0;
     text-align: left;
 }
@@ -308,6 +307,7 @@ body.simple #page-body > h2.solo {
     height: 34px;
     padding-right: 15px;
     margin-right: -9px;
+    margin-bottom: 5px;
     background: url({T_THEME_PATH}/images/nav2.png) right -40px no-repeat;
 }
 .old-ie .nav-links a { color: #fff !important; }
@@ -355,16 +355,12 @@ body.simple #page-body > h2.solo {
 }
 
 .nav-extra {
-    z-index: 2;
     clear: right;
     float: right;
-    position: relative;
-    top: -8px;
     font-size: 11px;
     margin: 8px;
     color: #888;
 }
-.nav-extra-footer { top: 0; }
 .nav-extra .time { color: #444; }
 
 /*
