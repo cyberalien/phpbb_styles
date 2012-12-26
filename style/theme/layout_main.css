@@ -9,7 +9,9 @@
     padding-bottom: 5px;
     background: url({T_THEME_PATH}/images/header_g1.png) top left repeat-x;
     background: url({T_THEME_PATH}/images/header_g2.png) top center repeat-y, url({T_THEME_PATH}/images/header_g1.png) top left repeat-x;
+    background-size: 100% 1px, 1px 100px;
 }
+.old-ie #header { background: url({T_THEME_PATH}/images/header_g1.png) top left repeat-x; }
 .old-ie #header {
     padding-bottom: 0;
 }
@@ -27,10 +29,12 @@
     text-decoration: none;
     border-width: 0;
 }
-#header a > img { 
+#header a img {
+	display: inline-block;
     margin: 0; 
     padding: 0;
     opacity: 1 !important;
+    max-width: 100%;
 }
 
 #header p, #header h1 {
