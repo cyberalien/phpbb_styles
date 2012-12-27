@@ -94,9 +94,15 @@
 
 #menu-wrapper {
 	margin: -20px 0 0;
+	position: relative;
+}
+#menu-wrapper:after {
+	content: '';
+	display: block;
+	clear: both;
 }
 
-#nav-header, #search-adv {
+.menu-buttons, #search-adv {
     display: block;
     float: left;
     z-index: 1;
@@ -300,7 +306,6 @@ body.simple #page-body > h2.solo {
     padding: 0;
     text-align: left;
 }
-.nav-links-footer { top: 0; }
 .nav-links a {
     display: block;
     float: left;
@@ -358,7 +363,7 @@ body.simple #page-body > h2.solo {
     clear: right;
     float: right;
     font-size: 11px;
-    margin: 8px;
+    margin: 0 8px;
     color: #888;
 }
 .nav-extra .time { color: #444; }

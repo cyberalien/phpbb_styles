@@ -153,36 +153,41 @@
     <p>{SITE_DESCRIPTION}</p>
 </div>
 
-<div id="page-header">
+<div id="page-header" class="responsive-menu-nojs">
 	<div id="menu-wrapper">
-    <!-- IF S_DISPLAY_SEARCH -->
-        <div id="search-adv">
-            <a href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}"><span>{L_SEARCH_ADV}</span></a>
-        </div>
-    <!-- ENDIF -->
-    <!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
-        <div id="search-box">
-            <form action="{U_SEARCH}" method="get" id="search">
-                <input name="keywords" id="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="inputbox search" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" />
-                {S_SEARCH_HIDDEN_FIELDS}
-            </form>
-        </div>
-    <!-- ENDIF -->
+		<div class="menu-buttons responsive-menu" style="display:none;">
+			<a href="javascript:void(0);"><!-- IF L_MENU --><span>{L_MENU}</span><!-- ELSE --><span class="arrow">&darr;&darr;&darr;</span><!-- ENDIF --></span></a>
+		</div>
+	
+		<div id="nav-header" class="menu-buttons">
+			<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+				<a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e"><span>{L_PROFILE}</span></a> 
+				<!-- IF U_RESTORE_PERMISSIONS -->
+					<a href="{U_RESTORE_PERMISSIONS}"><span>{L_RESTORE_PERMISSIONS}</span></a> 
+				<!-- ENDIF -->
+			<!-- ENDIF -->
+			<a href="{U_FAQ}" title="{L_FAQ_EXPLAIN}"><span>{L_FAQ}</span></a> 
+			<!-- IF not S_IS_BOT -->
+				<!-- IF S_DISPLAY_MEMBERLIST --><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}"><span>{L_MEMBERLIST}</span></a> <!-- ENDIF -->
+				<!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) --><a href="{U_REGISTER}"><span>{L_REGISTER}</span></a> <!-- ENDIF -->
+				 <a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x"><span>{L_LOGIN_LOGOUT}</span></a> 
+			<!-- ENDIF -->
+			<a href="javascript:void(0);" class="responsive-menu-hide" style="display:none;"><span>X</span></a>
+		</div>
 
-    <div id="nav-header" class="menu-buttons">
-        <!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
-            <a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e"><span>{L_PROFILE}</span></a> 
-            <!-- IF U_RESTORE_PERMISSIONS -->
-                <a href="{U_RESTORE_PERMISSIONS}"><span>{L_RESTORE_PERMISSIONS}</span></a> 
-            <!-- ENDIF -->
-        <!-- ENDIF -->
-        <a href="{U_FAQ}" title="{L_FAQ_EXPLAIN}"><span>{L_FAQ}</span></a> 
-        <!-- IF not S_IS_BOT -->
-            <!-- IF S_DISPLAY_MEMBERLIST --><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}"><span>{L_MEMBERLIST}</span></a> <!-- ENDIF -->
-            <!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) --><a href="{U_REGISTER}"><span>{L_REGISTER}</span></a> <!-- ENDIF -->
-             <a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x"><span>{L_LOGIN_LOGOUT}</span></a> 
-        <!-- ENDIF -->
-    </div>
+		<!-- IF S_DISPLAY_SEARCH -->
+			<div id="search-adv">
+				<a href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}"><span>{L_SEARCH_ADV}</span></a>
+			</div>
+		<!-- ENDIF -->
+		<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
+			<div id="search-box">
+				<form action="{U_SEARCH}" method="get" id="search">
+					<input name="keywords" id="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="inputbox search" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" />
+					{S_SEARCH_HIDDEN_FIELDS}
+				</form>
+			</div>
+		<!-- ENDIF -->
 	</div>
 </div>
 
