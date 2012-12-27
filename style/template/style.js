@@ -43,6 +43,16 @@ $(document).ready(function() {
         if(i > 0) $(this).before(' &bull; ');
     });
     
+    $('.responsive-menu-nojs .responsive-menu').each(function()
+    {
+    	var $this = $(this),
+    		link = $this.children('a'),
+    		parent = $this.parents('.responsive-menu-nojs');
+    	if (!link.length || !parent.length) return;
+    	parent.removeClass('responsive-menu-nojs');
+    	link.add(parent.find('.responsive-menu-hide')).click(function() { parent.toggleClass('responsive-menu-visible'); });
+    });
+
     // clear divs
     $('#page-body, #footer').append('<div class="clear"></div>');
     $('.cp-mini:last').after('<div class="clear"></div>');
