@@ -182,6 +182,7 @@
 		border-width: 0;
 		border-radius: 0;
 		z-index: 0;
+		box-shadow: none;
 	}
 	#tabs li, #navigation li, .dropdown-tabs li, #tabs .dropdown-tabs li {
 		float: none;
@@ -194,7 +195,7 @@
 	#tabs li a, #navigation li a {
 		display: block;
 		float: none;
-		background: #f4f4f4 none !important;
+		background: #e8e8e8 none !important;
 		padding: 7px 12px !important;
 		line-height: 1.3em;
 		width: auto;
@@ -202,8 +203,14 @@
 		height: auto;
 		text-align: center;
 		margin: 5px auto !important;
-		border: 1px solid #c8c8c8;
+		border: 1px solid #3d4a6a;
 		border-radius: 15px;
+	}
+	#tabs li.activetab a, #tabs li#active-subsection a, #navigation li.activetab a { 
+		border-color: #CE6F36; 
+	}
+	#tabs li.activetab a span, #tabs li#active-subsection a span, #navigation li.activetab a span { 
+		color: #CE6F36; 
 	}
 	#tabs li a span, #navigation li a span {
 		background: transparent none !important;
