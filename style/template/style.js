@@ -53,6 +53,12 @@ $(document).ready(function() {
     	link.add(parent.find('.responsive-menu-hide')).click(function() { parent.toggleClass('responsive-menu-visible'); });
     });
 
+    // clear logo width/height
+    $('#logo img').attr({
+    	width	: '',
+    	height	: ''
+    });
+
     // clear divs
     $('#page-body, #footer').append('<div class="clear"></div>');
     $('.cp-mini:last').after('<div class="clear"></div>');
