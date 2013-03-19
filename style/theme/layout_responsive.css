@@ -157,6 +157,8 @@
 		-webkit-box-sizing: border-box;
 	}
 	.autowidth { width: 98% !important; max-width: 240px !important; }
+
+	fieldset.quickmod { width: auto; }
 	
 	/* tabs */
 	div.dropdown-tabs { 
