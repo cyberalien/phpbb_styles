@@ -126,6 +126,17 @@
 		clear: both; 
 	}
 	
+	/* message */
+	.postbody .post-header {
+		overflow: hidden;
+	}
+	.postbody .post-header h3 {
+		float: left;
+	}
+	.postbody .post-header .profile-icons {
+		float: right;
+	}
+
 	/* forms */
 	select { max-width: 220px; }
 	dd label { white-space: normal; }

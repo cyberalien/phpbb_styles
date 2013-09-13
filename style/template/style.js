@@ -267,6 +267,13 @@ $(document).ready(function() {
         });
     });
 
+    // swap title and buttons in posts and wrap them in div
+    $('.postbody > .profile-icons:first-child + h3').each(function() {
+        var $this = $(this);
+        $this.prev().wrapAll('<div class="post-header" />');
+        $this.prev().prepend($this);
+    });
+
     // show full footer
     function resizeFooter()
     {
