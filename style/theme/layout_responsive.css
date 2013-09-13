@@ -34,21 +34,6 @@
 
 	.responsive-menu-visible .responsive-menu-hide { display: block !important; }
 
-	/* forums/topics lists */
-	ul.topiclist dt { width: 60%; }
-	ul.topiclist dd.topics, ul.topiclist dd.posts, ul.topiclist dd.views { display: none; }
-	ul.topiclist dd.lastpost { width: 30%; }
-	.section-mcp ul.topiclist dd.lastpost { width: 25%; }
-	ul.topiclist dd.mark {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 5px;
-		width: auto;
-		border-left-width: 0;
-		text-align: right;
-	}
-	
 	/* topic */
 	.postprofile, .signature { display: none; }
 	.postbody { 
@@ -130,6 +115,17 @@
 		clear: both; 
 	}
 	
+	/* message */
+	.postbody .post-header {
+		overflow: hidden;
+	}
+	.postbody .post-header h3 {
+		float: left;
+	}
+	.postbody .post-header .profile-icons {
+		float: right;
+	}
+
 	/* forms */
 	select { max-width: 220px; }
 	dd label { white-space: normal; }

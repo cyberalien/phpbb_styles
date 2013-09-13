@@ -64,6 +64,13 @@ $(document).ready(function() {
     	link.add(parent.find('.responsive-menu-hide')).click(function() { parent.toggleClass('responsive-menu-visible'); });
     });
     
+    // swap title and buttons in posts and wrap them in div
+    $('.postbody > .profile-icons:first-child + h3').each(function() {
+        var $this = $(this);
+        $this.prev().wrapAll('<div class="post-header" />');
+        $this.prev().prepend($this);
+    });
+
     // clear divs
     $('#page-body, #footer').append('<div class="clear"></div>');
     $('.cp-mini:last').after('<div class="clear"></div>');
