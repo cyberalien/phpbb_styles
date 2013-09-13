@@ -252,6 +252,21 @@ $(document).ready(function() {
 		}
 	});
 
+    // responsive menu
+    $('.responsive-menu-nojs').each(function() {
+        var $this = $(this),
+            button = $('.responsive-menu a', this),
+            menu = $('.menu-buttons', this);
+        if (!button.length || !menu.length) return;
+        $this.removeClass('responsive-menu-nojs');
+        button.click(function() {
+            $this.toggleClass('responsive-menu-visible');
+        });
+        $('a.responsive-menu-hide', this).click(function() {
+            $this.removeClass('responsive-menu-visible');
+        });
+    });
+
     // show full footer
     function resizeFooter()
     {
