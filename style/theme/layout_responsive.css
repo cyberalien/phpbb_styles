@@ -4,7 +4,6 @@
 
 	/* navigation */
 	.responsive-menu { display: block !important; }
-	#search-box { display: none !important; }
 	#page-header { position: relative; }
 	.menu-buttons { 
 		display: none; 
@@ -157,9 +156,14 @@
 	}
 	#message-box textarea, input.inputbox { 
 		width: 98%; 
-		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	#search-box input.inputbox {
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box;
 	}
 	.autowidth { width: 98% !important; max-width: 240px !important; }
 
