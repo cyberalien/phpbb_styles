@@ -44,8 +44,6 @@ ul.topiclist li.header {
     background: #384461 url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
     background: url({T_THEME_PATH}/images/header_g2.png) top center repeat-y, #384461 url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
     color: rgba(255, 255, 255, 0.9);
     text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
     font-family: 'Droid Sans', Verdana;
@@ -88,11 +86,11 @@ ul.topiclist dd {
 	float: left;
 	padding: 4px 0;
 	border-left: 1px solid #d4d4d4;
-    transition: border-left-color 0.25s ease;
     -webkit-transition: border-left-color 0.25s ease;
     -moz-transition: border-left-color 0.25s ease;
     -o-transition: border-left-color 0.25s ease;
     -ms-transition: border-left-color 0.25s ease;
+    transition: border-left-color 0.25s ease;
 }
 ul.topiclist li:hover dd {
 	border-left-color: #c8c8c8;
@@ -418,11 +416,11 @@ li.pagination {
     border: solid 1px #ccc;
     background-color: #f4f4f4;
 	line-height: 1.5em;
-    transition: none;
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
     -ms-transition: none;
+    transition: none;
 }
 
 .pagination span a:hover {

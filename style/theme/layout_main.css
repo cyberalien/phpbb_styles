@@ -121,11 +121,11 @@
     line-height: 1em;
     background: url({T_THEME_PATH}/images/menu.png) top left no-repeat;
     text-decoration: none;
-    transition: none;
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
     -ms-transition: none;
+    transition: none;
 }
 .menu-buttons a span, #search-adv a span {
     display: inline-block;
@@ -182,8 +182,6 @@
     margin: 0;
     padding: 4px 3px;
     border-width: 0;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
     border-radius: 0;
     background: transparent;
     height: 16px;
@@ -377,8 +375,6 @@ div.rules {
     background: rgba(206, 111, 54, 0.1);
     border: solid 1px #cba68f;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
     text-shadow: none;
 }
 .old-ie div.rules {

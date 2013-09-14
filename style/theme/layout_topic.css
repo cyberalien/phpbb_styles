@@ -87,11 +87,11 @@
 ----------------------------------------*/
 .post ul.profile-icons li {
     opacity: 0;
-    transition: opacity 0.25s ease;
     -webkit-transition: opacity 0.25s ease;
     -moz-transition: opacity 0.25s ease;
     -o-transition: opacity 0.25s ease;
     -ms-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
 }
 .post:hover ul.profile-icons li {
     opacity: 1;
@@ -117,11 +117,11 @@ ul.profile-icons li a {
 	background-color: #dfdfdf;
 	background-position: 0 0;
 	opacity: 1;
-    transition: opacity 0.25s ease;
     -webkit-transition: opacity 0.25s ease;
     -moz-transition: opacity 0.25s ease;
     -o-transition: opacity 0.25s ease;
     -ms-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
 }
 
 /* Hide <a> text and hide off-state image when rolling over (prevents flicker in IE) */
@@ -331,8 +331,6 @@ fieldset.polls dd div {
 	background: #3e5795 url({T_THEME_PATH}/images/poll.png) 0 0 repeat-x;
 	border: solid 0px transparent;
 	border-radius: 6px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
 	border-top-color: #eee;
 }
 .old-ie fieldset.polls dd div { color: #fff; }
@@ -351,8 +349,6 @@ blockquote {
 	background: rgba(255, 255, 255, 0.3) url({T_THEME_PATH}/images/bb_quote.gif) 5px 8px no-repeat;
 	border: 1px solid #ccc;
 	border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
 	font-size: 13px;
 	margin: 0.5em 1px 0 25px;
 	overflow: hidden;
@@ -391,8 +387,6 @@ dl.codebox {
 	background-color: rgba(255, 255, 255, 0.5);
 	border: 1px solid #ccc;
 	border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
 	margin: 0.5em 1px 0 25px;
 	font-size: 1em;
 }
@@ -442,12 +436,10 @@ dl.codebox code {
 	background-color: rgba(255, 255, 255, 0.5);
 	border: 1px dashed #ccc;
 	border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
 	clear: left;
 	max-width: 98%;
-	max-width: calc(100% - 14px);
 	max-width: -moz-calc(100% - 14px);
+	max-width: calc(100% - 14px);
 }
 
 .attachbox dt {
@@ -543,8 +535,6 @@ p.rules {
     background: rgba(206, 111, 54, 0.1);
     border: solid 1px #cba68f;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
 	padding: 6px;
 	margin: 5px 10px;
 	font-size: 12px;
@@ -594,11 +584,11 @@ span.zoom-container {
 }
 span.zoom-image { 
 	display: none; 
-    transition: opacity 0.25s ease;
     -webkit-transition: opacity 0.25s ease;
     -moz-transition: opacity 0.25s ease;
     -o-transition: opacity 0.25s ease;
     -ms-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
 	opacity: 0.7;
 }
 img.zoom + span.zoom-image {

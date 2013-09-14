@@ -163,9 +163,9 @@
 	}
 	#message-box textarea, input.inputbox { 
 		width: 98%; 
-		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
 	}
 	.autowidth { width: 98% !important; max-width: 240px !important; }
 
