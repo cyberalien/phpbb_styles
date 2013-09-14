@@ -300,8 +300,6 @@ ol.def-rules li {
 	background: #f4f7f9;
 	border: 2px solid #c4d7e1;
 	border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
 	text-align: center;
 }
 
@@ -410,8 +408,6 @@ table.table1 th {
     background: #478aad url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
     background: url({T_THEME_PATH}/images/header_g2.png) top center repeat-y, #478aad url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
     color: rgba(255, 255, 255, 0.9);
     font-size: 12px;
     font-family: Arial;
@@ -441,8 +437,6 @@ table.table1 td {
 	padding: 4px;
 	border: 1px solid #c2d6e0;
 	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
 }
 
 /* Specific column styles */
@@ -536,8 +530,6 @@ div.dropdown-tabs > ul {
     padding: 0;
     border: solid 2px #3d87ae;
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
 }
 .old-ie div.dropdown-tabs > ul { 
     background: #f2f5f6;

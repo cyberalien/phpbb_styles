@@ -88,11 +88,11 @@
     color: #3f7b9a;
     background: url({T_THEME_PATH}/images/menu.png) top left no-repeat;
     text-decoration: none;
-    transition: none;
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
     -ms-transition: none;
+    transition: none;
 }
 #nav-header a span, #search-adv a span {
     display: inline-block;
@@ -147,8 +147,6 @@
     margin: 0;
     padding: 4px 3px;
     border-width: 0;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
     border-radius: 0;
     background: transparent;
     height: 16px;
@@ -312,8 +310,6 @@ div.rules {
     background: #f5dfdf;
     border: solid 2px #cc8f8f;
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
     text-shadow: none;
 }
 div.rules .inner > strong { 
