@@ -113,11 +113,11 @@
     color: #1e8fc7;
     background: url({T_THEME_PATH}/images/menu.png) top left no-repeat;
     text-decoration: none;
-    transition: none;
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
     -ms-transition: none;
+    transition: none;
 }
 .menu-buttons a span, #search-adv a span {
     display: inline-block;
@@ -173,8 +173,6 @@
     margin: 0;
     padding: 4px 3px;
     border-width: 0;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
     border-radius: 0;
     background: transparent;
     height: 16px;
@@ -345,16 +343,12 @@ div.rules {
     background: #faf8f6;
     border: solid 1px #ccaa8f;
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
     text-shadow: none;
 }
 div.rules .inner {
     background: #f5e9df;
     padding: 6px;
     border-radius: 8px;
-    -moz-border-radius: 8px;
-    -moz-webkit-radius: 8px;
 }
 div.rules .inner > strong { 
     color: #1e8fc7; 

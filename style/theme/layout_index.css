@@ -44,8 +44,6 @@ ul.topiclist li.header {
     background: #939393 url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
     background: url({T_THEME_PATH}/images/header_g2.png) top center repeat-y, #939393 url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
     color: rgba(255, 255, 255, 0.9);
 	text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
     font-family: Arial;
@@ -97,11 +95,11 @@ ul.topiclist dd {
 	float: left;
 	padding: 4px 0 2px;
 	border-left: 1px solid #e0e0e0;
-    transition: border-left-color 0.25s ease;
     -webkit-transition: border-left-color 0.25s ease;
     -moz-transition: border-left-color 0.25s ease;
     -o-transition: border-left-color 0.25s ease;
     -ms-transition: border-left-color 0.25s ease;
+    transition: border-left-color 0.25s ease;
 }
 ul.topiclist li:hover dd {
 	border-left-color: #d4d4d4;
@@ -415,8 +413,6 @@ li.pagination {
     background-color: #1e8fc7;
     color: #fff;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
 }
 
 .pagination span a, .pagination span a:link, .pagination span a:visited, .pagination span a:active {
@@ -426,15 +422,13 @@ li.pagination {
 	padding: 0 3px;
     border: solid 1px #d0d0d0;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     background-color: #eee;
 	line-height: 1.5em;
-    transition: none;
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
     -ms-transition: none;
+    transition: none;
 }
 
 .pagination span a:hover, .pagination span a:active {
