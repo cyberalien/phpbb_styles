@@ -374,11 +374,11 @@
 	line-height: 1em;
 	font-size: 12px;
 	font-family: Arial;
-	transition: background-position 0.25s ease;
 	-moz-transition: background-position 0.25s ease;
 	-webkit-transition: background-position 0.25s ease;
 	-o-transition: background-position 0.25s ease;
 	-ms-transition: background-position 0.25s ease;
+	transition: background-position 0.25s ease;
 }
 .phpbb a.left:hover, .phpbb a.up:hover, .phpbb a.down:hover {
 	background-position: 2px 50%;
@@ -389,8 +389,8 @@
 	padding-right: 10px;
 }
 .phpbb a.right:hover, .phpbb a.right-box.up:hover, .phpbb a.right-box.down:hover {
-	background-position: calc(100% - 2px) 50%;
 	background-position: -moz-calc(100% - 2px) 50%;
+	background-position: calc(100% - 2px) 50%;
 }
 .phpbb .submit-buttons a.up {
 	margin-top: 6px;
@@ -498,8 +498,8 @@
 }
 .phpbb #message-box textarea {
 	width: 98%;
-	width: calc(100% - 6px);
 	width: -moz-calc(100% - 6px);
+	width: calc(100% - 6px);
 }
 
 .phpbb p.error, .phpbb dd.error {
@@ -716,11 +716,11 @@
 	min-width: 90px;
 	background: transparent none 50% 0 no-repeat;
 	opacity: 0.8;
-	transition: opacity 0.25s ease;
 	-moz-transition: opacity 0.25s ease;
 	-webkit-transition: opacity 0.25s ease;
 	-o-transition: opacity 0.25s ease;
 	-ms-transition: opacity 0.25s ease;
+	transition: opacity 0.25s ease;
 }
 .phpbb .post:hover .poster-avatar.empty span {
 	opacity: 1;
@@ -1032,8 +1032,8 @@
 }
 .phpbb dl.pmlist dt textarea {
 	width: 99%;
-	width: calc(100% - 6px);
 	width: -moz-calc(100% - 6px);
+	width: calc(100% - 6px);
 }
 .phpbb dl.pmlist dd {
 	margin-bottom: 2px;
@@ -1047,9 +1047,9 @@
 }
 .phpbb .topiclist.pmlist > li > dl {
 	padding-left: 4px;
-	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .phpbb .topiclist.pmlist > li > dl dt {
 	border-left: 4px solid transparent;
@@ -1264,11 +1264,11 @@ span.zoom-container {
 }
 span.zoom-image { 
 	display: none; 
-    transition: opacity 0.25s ease;
     -webkit-transition: opacity 0.25s ease;
     -moz-transition: opacity 0.25s ease;
     -o-transition: opacity 0.25s ease;
     -ms-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
 	opacity: 0.7;
 }
 img.zoom + span.zoom-image {
