@@ -44,8 +44,6 @@ ul.topiclist li.header {
     background: #939393 url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
     background: url({T_THEME_PATH}/images/header_g2.png) top center repeat-y, #939393 url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
     color: rgba(255, 255, 255, 0.9);
 	text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
     font-family: Arial;
@@ -87,18 +85,21 @@ ul.topiclist dt {
 	width: 50%;
 	padding-left: 5px;
 	padding-right: 5px;
+	min-height: 35px;
 }
+
+ul.topiclist .header dt { min-height: 0; }
 
 ul.topiclist dd {
 	display: block;
 	float: left;
-	padding: 4px 0;
+	padding: 4px 0 2px;
 	border-left: 1px solid #e0e0e0;
-    transition: border-left-color 0.25s ease;
     -webkit-transition: border-left-color 0.25s ease;
     -moz-transition: border-left-color 0.25s ease;
     -o-transition: border-left-color 0.25s ease;
     -ms-transition: border-left-color 0.25s ease;
+    transition: border-left-color 0.25s ease;
 }
 ul.topiclist li:hover dd {
 	border-left-color: #d4d4d4;
@@ -188,9 +189,10 @@ dl.icon dt {
 	padding-left: 30px;					/* Space for folder icon */
 	background-repeat: no-repeat;
 	background-position: 12px 100%;		/* Position of topic icon */
-	font-size: 11px;
-	line-height: 1.3em;
+	font-size: 12px;
+	line-height: 1.28em;
 }
+
 dl.icon dt div.extra {
     float: right;
     padding-top: 4px;
@@ -204,9 +206,9 @@ dd.posts, dd.topics, dd.views {
 }
 
 a.forumtitle, a.topictitle {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
-    line-height: 1.4em;
+    line-height: 1.28em;
     font-family: Arial;
 }
 .unread a.forumtitle, .unread a.forumtitle:visited, 
@@ -411,8 +413,6 @@ li.pagination {
     background-color: #1e8fc7;
     color: #fff;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
 }
 
 .pagination span a, .pagination span a:link, .pagination span a:visited, .pagination span a:active {
@@ -422,15 +422,13 @@ li.pagination {
 	padding: 0 3px;
     border: solid 1px #d0d0d0;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     background-color: #eee;
 	line-height: 1.5em;
-    transition: none;
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
     -ms-transition: none;
+    transition: none;
 }
 
 .pagination span a:hover, .pagination span a:active {
@@ -448,8 +446,8 @@ li.pagination {
 	display: block;
 	float: right;
 	width: auto;
-	margin-top: 0;
-	padding: 1px 0 1px 15px;
+	margin-top: -4px;
+	padding: 1px 0 0 15px;
 	font-size: 0.9em;
 	background: none 0 50% no-repeat;
 }

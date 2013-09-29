@@ -29,26 +29,26 @@ body.simple {
 a, a:visited {
     color: #1e8fc7;
     text-decoration: none;
-    transition: color 0.25s ease;
     -webkit-transition: color 0.25s ease;
     -moz-transition: color 0.25s ease;
     -o-transition: color 0.25s ease;
     -ms-transition: color 0.25s ease;
+    transition: color 0.25s ease;
 }
 a:hover, a:active { color: #da7320; }
 a:active {
-    transform: translate(0, 1px);
     -moz-transform: translate(0, 1px);
     -webkit-transform: translate(0, 1px);
     -o-transform: translate(0, 1px);
     -ms-transform: translate(0, 1px);
+    transform: translate(0, 1px);
 }
 .buttons a:active, .profile-icons a:active, div.dropdown-tabs a:active, .nav-links a:active, #page-header a:active {
-    transform: none;
     -moz-transform: none;
     -webkit-transform: none;
     -o-transform: none;
     -ms-transform: none;
+    transform: none;
 }
 
 img { border-width: 0; }
@@ -136,23 +136,23 @@ div.forabg, div.forumbg, div.panel-wrapper {
     opacity: 0;
 }
 div.nav-links, img, .topic-actions, .profile-icons, div.rules, div.forabg, div.forumbg, div.post, .panel, .cp-mini {
-    transition: opacity 1s ease;
     -webkit-transition: opacity 1s ease;
     -moz-transition: opacity 1s ease;
     -o-transition: opacity 1s ease;
     -ms-transition: opacity 1s ease;
+    transition: opacity 1s ease;
 }
 body.transform div.nav-links {
-    transition-property: border-color, background-color, opacity;
     -webkit-transition-property: border-color, background-color, opacity;
     -moz-transition-property: border-color, background-color, opacity;
     -o-transition-property: border-color, background-color, opacity;
     -ms-transition-property: border-color, background-color, opacity;
-    transition-duration: 0.5s, 0.5s, 1s;
+    transition-property: border-color, background-color, opacity;
     -webkit-transition-duration: 0.5s, 0.5s, 1s;
     -moz-transition-duration: 0.5s, 0.5s, 1s;
     -o-transition-duration: 0.5s, 0.5s, 1s;
     -ms-transition-duration: 0.5s, 0.5s, 1s;
+    transition-duration: 0.5s, 0.5s, 1s;
 }
 body.transform div.nav-links, body.transform img, body.transform .topic-actions, body.transform .profile-icons { opacity: 1; }
 
@@ -230,21 +230,21 @@ a.top2 {
 }
 
 a.up, a.down, a.left, a.right, a.top, a.top2 {
-    transition-property: color, background-position;
     -webkit-transition-property: color, background-position;
     -moz-transition-property: color, background-position;
     -o-transition-property: color, background-position;
     -ms-transition-property: color, background-position;
-    transition-duration: 0.25s;
+    transition-property: color, background-position;
     -webkit-transition-duration: 0.25s;
     -moz-transition-duration: 0.25s;
     -o-transition-duration: 0.25s;
     -ms-transition-duration: 0.25s;
-    transition-timing-function: ease;
+    transition-duration: 0.25s;
     -webkit-transition-timing-function: ease;
     -moz-transition-timing-function: ease;
     -o-transition-timing-function: ease;
     -ms-transition-timing-function: ease;
+    transition-timing-function: ease;
 }
 
 

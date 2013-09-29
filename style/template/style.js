@@ -54,6 +54,23 @@ $(document).ready(function() {
         if(i > 0) $(this).before(' &bull; ');
     });
     
+    $('.responsive-menu-nojs .responsive-menu').each(function()
+    {
+    	var $this = $(this),
+    		link = $this.children('a'),
+    		parent = $this.parent('.responsive-menu-nojs');
+    	if (!link.length || !parent.length) return;
+    	parent.removeClass('responsive-menu-nojs');
+    	link.add(parent.find('.responsive-menu-hide')).click(function() { parent.toggleClass('responsive-menu-visible'); });
+    });
+    
+    // swap title and buttons in posts and wrap them in div
+    $('.postbody > .profile-icons:first-child + h3').each(function() {
+        var $this = $(this);
+        $this.prev().wrapAll('<div class="post-header" />');
+        $this.prev().prepend($this);
+    });
+
     // clear divs
     $('#page-body, #footer').append('<div class="clear"></div>');
     $('.cp-mini:last').after('<div class="clear"></div>');
@@ -230,6 +247,22 @@ $(document).ready(function() {
 		}
 	});
     
+	// Shorten long links in posts
+	$('a.postlink').each(function() {
+		var $this = $(this);
+		
+		if ($this.children().length)
+		{
+			return;
+		}
+		
+		var html = $this.html();
+		if (html.length > 50 && html.indexOf('://') > 0 && html.indexOf(' ') < 0)
+		{
+			$this.html(html.substr(0, 39) + ' ... ' + html.substr(-10));
+		}
+	});
+
     // show full footer
     function resizeFooter()
     {
@@ -246,15 +279,3 @@ $(document).ready(function() {
     $(window).resize(resizeFooter);
 });
 
-$(window).load(function() {
-    // set min width
-    var min = 40;
-    $('#nav-header a, #search-adv, #search-box').each(function()
-    {
-        min += $(this).width() + 20;
-    });
-    $('body').css('min-width', Math.min(
-        Math.floor(min),
-        Math.floor($('body').width())
-        ) + 'px');
-});
