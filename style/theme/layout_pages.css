@@ -264,8 +264,6 @@ ol.def-rules li {
     border: solid 1px #d0d0d0;
 	border-width: 0 3px;
 	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
 }
 
 .pmlist li.pm_message_reported_colour dl, .pm_message_reported_colour {
@@ -413,8 +411,6 @@ table.table1 th {
     border: solid 1px #969fb3;
     background: #384461 url({T_THEME_PATH}/images/th.gif) 0 0 repeat-x;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
     color: rgba(255, 255, 255, 0.9);
     font-size: 12px;
     font-family: 'Droid Sans', Verdana;
@@ -444,8 +440,6 @@ table.table1 td {
 	padding: 4px;
 	border: 1px solid #c0c0c0;
 	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
 }
 
 /* Specific column styles */
@@ -539,11 +533,7 @@ div.dropdown-tabs > ul {
     padding: 0;
     border: solid 2px #57678f;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
     box-shadow: 1px 1px 5px #57678f;
-    -moz-box-shadow: 1px 1px 5px #57678f;
-    -webkit-box-shadow: 1px 1px 5px #57678f;
 }
 div.dropdown-tabs:hover > ul { display: block; }
 .dropdown-tabs li a, .dropdown-tabs span,

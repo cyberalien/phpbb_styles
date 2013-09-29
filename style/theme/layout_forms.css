@@ -14,21 +14,19 @@ input[type="text"], input[type="password"], select, textarea {
     outline-style: none;
     border: solid 1px #b8b8b8;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
     font-family: Verdana,Helvetica,Arial,sans-serif;
     line-height: 1em;
     font-size: 12px;
-    transition-property: border-color, background-color, color;
     -webkit-transition-property: border-color, background-color, color;
     -moz-transition-property: border-color, background-color, color;
     -o-transition-property: border-color, background-color, color;
     -ms-transition-property: border-color, background-color, color;
-    transition-duration: 0.25s;
+    transition-property: border-color, background-color, color;
     -webkit-transition-duration: 0.25s;
     -moz-transition-duration: 0.25s;
     -o-transition-duration: 0.25s;
     -ms-transition-duration: 0.25s;
+    transition-duration: 0.25s;
 }
 
 input[type="text"]:hover, input[type="password"]:hover, select:hover, textarea:hover {
@@ -333,8 +331,6 @@ a.button1, input.button1 {
     background: #e8e8e8;
     border: solid 1px #b8b8b8;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
 }
 
 input.button3 {
@@ -354,8 +350,6 @@ a.button2, input.button2, input.button3 {
 	padding-right: 6px;
 	font-size: 12px;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
 }
 
 /* <a> button in the style of the form buttons */
@@ -404,11 +398,11 @@ input.search {
 /* Animated buttons */
 .search-box input.button2 {
     opacity: 0;
-    transition: opacity 0.25s ease;
     -webkit-transition: opacity 0.25s ease;
     -moz-transition: opacity 0.25s ease;
     -o-transition: opacity 0.25s ease;
     -ms-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
 }
 .search-box:hover input.button2, .search-box.focus input.button2 {
     opacity: 1;
