@@ -16,13 +16,13 @@ Branches are specific to each style. Each branch starts with style name, stylena
 
 ## STYLES
 
-* [Air](https://github.com/cyberalien/phpbb_styles/tree/air/style)
+* [Air](https://github.com/cyberalien/phpbb_styles/tree/air/style), responsive
 * [Black](https://github.com/cyberalien/phpbb_styles/tree/black/style), based on Ultra
 * [ColorizeIt](https://github.com/cyberalien/phpbb_styles/tree/colorizeit/style)
-* [Deluxe](https://github.com/cyberalien/phpbb_styles/tree/deluxe/style)
-* [Elegance](https://github.com/cyberalien/phpbb_styles/tree/elegance/style)
+* [Deluxe](https://github.com/cyberalien/phpbb_styles/tree/deluxe/style), responsive
+* [Elegance](https://github.com/cyberalien/phpbb_styles/tree/elegance/style), responsive
 * [Helion](https://github.com/cyberalien/phpbb_styles/tree/helion/style), based on Ultra
-* [Phantom](https://github.com/cyberalien/phpbb_styles/tree/phantom/style)
+* [Phantom](https://github.com/cyberalien/phpbb_styles/tree/phantom/style), responsive
 * [Ultra](https://github.com/cyberalien/phpbb_styles/tree/ultra/style)
 
 ## LICENSE

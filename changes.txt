@@ -1,4 +1,0 @@
-Changes log.
-
-12 Jun 2012:
-- [all styles] Added styles to one big repository, based on latest versions of styles for phpBB 3.0.11-rc1
