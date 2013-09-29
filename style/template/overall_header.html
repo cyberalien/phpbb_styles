@@ -77,7 +77,12 @@
     var imagesetLang = '{T_IMAGESET_LANG_PATH}';
 // ]]>
 </script>
-<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery-1.7.1.min.js"></script>
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery-1.10.2.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery-2.0.3.min.js"></script>
+<!--<![endif]-->
 <!--[if lte IE 8]><script type="text/javascript"> var oldIE = true; </script><![endif]-->
 <script type="text/javascript" src="{T_TEMPLATE_PATH}/style.js"></script>
 <script type="text/javascript" src="{T_TEMPLATE_PATH}/forum_fn.js"></script>
