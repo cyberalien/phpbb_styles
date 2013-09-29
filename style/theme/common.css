@@ -58,9 +58,11 @@ body.phpbb {
 	font-size: 12px;
 	background-position: 0 0;
 	background-repeat: repeat-x;
+	min-width: 720px;
 }
 body.simple {
 	padding: 8px;
+	min-width: 320px;
 }
 
 /*
