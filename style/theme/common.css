@@ -56,9 +56,11 @@ q:before, .phpbb q:after {
 body.phpbb {
 	font-family: Verdana;
 	font-size: 12px;
+	min-width: 720px;
 }
 body.simple {
 	padding: 8px;
+	min-width: 320px;
 }
 
 /*
