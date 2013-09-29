@@ -53,7 +53,7 @@
 }
 
 .postbody .content {
-	font-size: 12px;
+	font-size: 13px;
 }
 
 .search .postbody {
@@ -350,7 +350,7 @@ blockquote {
 	border-radius: 8px;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
-	font-size: 12px;
+	font-size: 13px;
 	margin: 0.5em 1px 0 25px;
 	overflow: hidden;
 	padding: 5px;
@@ -374,7 +374,7 @@ blockquote cite {
 	font-weight: normal;
 	margin-left: 20px;
 	display: block;
-	font-size: 11px;
+	font-size: 12px;
 	color: #999;
 }
 
@@ -397,7 +397,7 @@ dl.codebox {
 dl.codebox dt {
 	margin-bottom: 3px;
 	padding-left: 2px;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: normal;
 	display: block;
 	color: #999;
@@ -414,8 +414,9 @@ dl.codebox code {
 	height: auto;
 	max-height: 200px;
 	white-space: normal;
-	padding-top: 5px;
-	font: 0.9em Monaco, "Andale Mono","Courier New", Courier, mono;
+	padding: 5px 2px 2px;
+	font-family: Monaco, "Andale Mono","Courier New", Courier, mono;
+	font-size: 13px;
 	line-height: 1.3em;
 	color: #666;
 	margin: 2px 0;
