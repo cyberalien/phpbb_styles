@@ -328,6 +328,7 @@ dl.details dd {
 */
 #page-body > h2, #page-body > form > h2, #page-body > h3, #page-body > form > h3, div#message h2, #confirm h2, #agreement h2 {
     font-size: 20px;
+    line-height: 1.2em;
     font-weight: normal;
     text-shadow: rgba(0, 0, 0, 0.1) 2px 2px 0;
     margin: 20px 2px 10px;
