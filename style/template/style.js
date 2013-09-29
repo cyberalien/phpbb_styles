@@ -252,6 +252,28 @@ $(document).ready(function() {
 		}
 	});
 
+    // responsive menu
+    $('.responsive-menu-nojs').each(function() {
+        var $this = $(this),
+            button = $('.responsive-menu a', this),
+            menu = $('.menu-buttons', this);
+        if (!button.length || !menu.length) return;
+        $this.removeClass('responsive-menu-nojs');
+        button.click(function() {
+            $this.toggleClass('responsive-menu-visible');
+        });
+        $('a.responsive-menu-hide', this).click(function() {
+            $this.removeClass('responsive-menu-visible');
+        });
+    });
+
+    // swap title and buttons in posts and wrap them in div
+    $('.postbody > .profile-icons:first-child + h3').each(function() {
+        var $this = $(this);
+        $this.prev().wrapAll('<div class="post-header" />');
+        $this.prev().prepend($this);
+    });
+
     // show full footer
     function resizeFooter()
     {
