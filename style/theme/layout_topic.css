@@ -52,6 +52,14 @@
 	vertical-align: bottom;
 }
 
+.postbody .post-header {
+	overflow: hidden;
+}
+
+.postbody .post-header h3 {
+	float: left;
+}
+
 .postbody .content {
 	font-size: 13px;
 }
