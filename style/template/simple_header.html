@@ -41,7 +41,12 @@
 
 // ]]>
 </script>
-<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery-1.7.1.min.js"></script>
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery-1.10.2.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery-2.0.3.min.js"></script>
+<!--<![endif]-->
 <!--[if IE]><script>var clrIE = true;</script><![endif]-->
 <!--[if lte IE 8]>
     <script src="{T_IMAGESET_LANG_PATH}/texts.js"></script>
