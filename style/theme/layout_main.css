@@ -34,7 +34,9 @@
     margin: 0; 
     padding: 0;
     opacity: 1 !important;
-    max-width: 100%;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
 }
 
 #header p, #header h1 {
